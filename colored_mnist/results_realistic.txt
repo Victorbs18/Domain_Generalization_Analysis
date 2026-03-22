@@ -1,0 +1,661 @@
+============================================================
+  IRM - Train Domain Validation
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: False
+	hidden_dim: 486
+	l2_regularizer_weight: 0.0019205212018125557
+	lr: 0.0019322544016001175
+	n_restarts: 10
+	penalty_anneal_iters: 152
+	penalty_weight: 6332.041485861786
+	seed: 0
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69955         0.43942         5.76909e-05     0.54390      
+100             0.37088         0.84874         0.00359         0.10830      
+  Train acc so far: 0.8487 ± 0.0000
+  Test  acc so far: 0.1083 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69497         0.53844         1.36768e-05     0.52590      
+100             0.37076         0.84896         0.00389         0.11260      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1104 ± 0.0021
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72446         0.35300         0.00119         0.64730      
+100             0.37278         0.84880         0.00439         0.11920      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1134 ± 0.0045
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67194         0.62056         0.00037         0.35250      
+100             0.37037         0.84890         0.00369         0.11160      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1129 ± 0.0040
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67602         0.55174         0.00018         0.45950      
+100             0.37028         0.84878         0.00359         0.10630      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1116 ± 0.0044
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71813         0.41368         0.00079         0.63740      
+100             0.37256         0.84878         0.00436         0.11930      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1129 ± 0.0050
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.65821         0.73350         0.00105         0.30100      
+100             0.37051         0.84870         0.00352         0.10620      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1119 ± 0.0051
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71328         0.31868         0.00046         0.63440      
+100             0.37091         0.84886         0.00373         0.11080      
+  Train acc so far: 0.8488 ± 0.0001
+  Test  acc so far: 0.1118 ± 0.0048
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67743         0.59414         0.00017         0.40890      
+100             0.36981         0.84920         0.00383         0.11420      
+  Train acc so far: 0.8489 ± 0.0001
+  Test  acc so far: 0.1121 ± 0.0046
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69242         0.51276         7.13225e-05     0.49990      
+100             0.37364         0.84892         0.00428         0.11760      
+  Train acc so far: 0.8489 ± 0.0001
+  Test  acc so far: 0.1126 ± 0.0047
+
+=== Final results ===
+Train acc (mean ± std): 0.8489 ± 0.0001
+Test  acc (mean ± std): 0.1126 ± 0.0047
+============================================================
+  IRM - Leave One Domain Out
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: False
+	hidden_dim: 80
+	l2_regularizer_weight: 0.005598034045897476
+	lr: 0.0005372964744550523
+	n_restarts: 10
+	penalty_anneal_iters: 97
+	penalty_weight: 16573.33380333007
+	seed: 0
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68982         0.51430         2.54401e-06     0.50740      
+100             0.41947         0.84826         0.00582         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71174         0.39086         0.00043         0.62810      
+100             0.42027         0.84830         0.00592         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69821         0.49212         6.06589e-05     0.44050      
+100             0.41920         0.84830         0.00582         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68980         0.52982         4.34763e-06     0.43000      
+100             0.42185         0.84830         0.00591         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73550         0.33300         0.00228         0.66610      
+100             0.41861         0.84830         0.00577         0.09880      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68006         0.55264         8.80905e-05     0.44260      
+100             0.42022         0.84830         0.00594         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73313         0.42532         0.00233         0.59030      
+100             0.42074         0.84828         0.00583         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70431         0.47638         0.00026         0.55490      
+100             0.41864         0.84830         0.00573         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71313         0.40416         0.00053         0.61440      
+100             0.41975         0.84830         0.00581         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73634         0.28888         0.00227         0.71280      
+100             0.42016         0.84830         0.00589         0.09870      
+  Train acc so far: 0.8483 ± 0.0000
+  Test  acc so far: 0.0987 ± 0.0000
+
+=== Final results ===
+Train acc (mean ± std): 0.8483 ± 0.0000
+Test  acc (mean ± std): 0.0987 ± 0.0000
+============================================================
+  ERM - Train Domain Validation
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: False
+	hidden_dim: 256
+	l2_regularizer_weight: 0.001
+	lr: 0.001
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	steps: 501
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.74518         0.38508         0.00371         0.59390      
+100             0.37987         0.84836         0.00411         0.10360      
+200             0.35087         0.85156         0.00322         0.11330      
+300             0.33395         0.85750         0.00309         0.13630      
+400             0.31860         0.86476         0.00327         0.16000      
+500             0.30323         0.87368         0.00372         0.17450      
+  Train acc so far: 0.8737 ± 0.0000
+  Test  acc so far: 0.1745 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69052         0.51896         1.37104e-06     0.45770      
+100             0.37783         0.84826         0.00401         0.10420      
+200             0.34846         0.85310         0.00319         0.11630      
+300             0.33099         0.86072         0.00341         0.14390      
+400             0.31853         0.86612         0.00321         0.16410      
+500             0.30275         0.87308         0.00318         0.16870      
+  Train acc so far: 0.8734 ± 0.0003
+  Test  acc so far: 0.1716 ± 0.0029
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72345         0.50872         0.00190         0.49900      
+100             0.37857         0.84844         0.00405         0.10310      
+200             0.34996         0.85228         0.00335         0.12010      
+300             0.33362         0.85794         0.00312         0.14130      
+400             0.31984         0.86522         0.00308         0.15660      
+500             0.30628         0.87068         0.00308         0.17290      
+  Train acc so far: 0.8725 ± 0.0013
+  Test  acc so far: 0.1720 ± 0.0024
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67407         0.65748         0.00031         0.31540      
+100             0.37740         0.84852         0.00403         0.10410      
+200             0.34908         0.85224         0.00315         0.11410      
+300             0.33303         0.85900         0.00310         0.14760      
+400             0.31884         0.86518         0.00294         0.15950      
+500             0.30487         0.87220         0.00314         0.17260      
+  Train acc so far: 0.8724 ± 0.0011
+  Test  acc so far: 0.1722 ± 0.0021
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69530         0.50724         1.30070e-05     0.51140      
+100             0.37730         0.84840         0.00400         0.10380      
+200             0.34858         0.85270         0.00318         0.12550      
+300             0.33071         0.85980         0.00326         0.14150      
+400             0.31744         0.86524         0.00303         0.16070      
+500             0.30310         0.87310         0.00333         0.16940      
+  Train acc so far: 0.8725 ± 0.0010
+  Test  acc so far: 0.1716 ± 0.0022
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67803         0.59666         0.00016         0.41880      
+100             0.37632         0.84842         0.00400         0.10420      
+200             0.34760         0.85278         0.00319         0.11890      
+300             0.33142         0.85866         0.00288         0.14420      
+400             0.31506         0.86722         0.00323         0.15870      
+500             0.30055         0.87454         0.00342         0.17220      
+  Train acc so far: 0.8729 ± 0.0012
+  Test  acc so far: 0.1717 ± 0.0020
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68855         0.53900         9.85063e-06     0.44800      
+100             0.37470         0.84848         0.00393         0.10450      
+200             0.34592         0.85418         0.00347         0.12610      
+300             0.32950         0.86072         0.00321         0.14550      
+400             0.31295         0.86740         0.00310         0.15790      
+500             0.30648         0.87062         0.00251         0.18610      
+  Train acc so far: 0.8726 ± 0.0014
+  Test  acc so far: 0.1738 ± 0.0054
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71723         0.45850         0.00079         0.54820      
+100             0.37881         0.84848         0.00409         0.10290      
+200             0.34821         0.85270         0.00316         0.11690      
+300             0.33117         0.85874         0.00294         0.13470      
+400             0.31929         0.86428         0.00266         0.16040      
+500             0.30537         0.87270         0.00302         0.18160      
+  Train acc so far: 0.8726 ± 0.0013
+  Test  acc so far: 0.1747 ± 0.0057
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69315         0.50486         2.49496e-06     0.51830      
+100             0.37783         0.84838         0.00404         0.10340      
+200             0.34732         0.85296         0.00321         0.11850      
+300             0.32975         0.86146         0.00366         0.15370      
+400             0.31382         0.86886         0.00350         0.16530      
+500             0.30120         0.87238         0.00290         0.17550      
+  Train acc so far: 0.8726 ± 0.0012
+  Test  acc so far: 0.1748 ± 0.0053
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69186         0.50668         1.97571e-06     0.52080      
+100             0.37923         0.84860         0.00408         0.10340      
+200             0.34915         0.85254         0.00317         0.11580      
+300             0.33297         0.85826         0.00295         0.13800      
+400             0.31835         0.86524         0.00317         0.15910      
+500             0.30331         0.87330         0.00367         0.17610      
+  Train acc so far: 0.8726 ± 0.0012
+  Test  acc so far: 0.1750 ± 0.0051
+
+=== Final results ===
+Train acc (mean ± std): 0.8726 ± 0.0012
+Test  acc (mean ± std): 0.1750 ± 0.0051
+============================================================
+  ERM - Leave One Domain Out
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: False
+	hidden_dim: 256
+	l2_regularizer_weight: 0.001
+	lr: 0.001
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	steps: 501
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.74518         0.38508         0.00371         0.59390      
+100             0.37987         0.84836         0.00411         0.10360      
+200             0.35087         0.85156         0.00322         0.11330      
+300             0.33395         0.85750         0.00309         0.13630      
+400             0.31860         0.86476         0.00327         0.16000      
+500             0.30323         0.87368         0.00372         0.17450      
+  Train acc so far: 0.8737 ± 0.0000
+  Test  acc so far: 0.1745 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69052         0.51896         1.37104e-06     0.45770      
+100             0.37783         0.84826         0.00401         0.10420      
+200             0.34846         0.85310         0.00319         0.11630      
+300             0.33099         0.86072         0.00341         0.14390      
+400             0.31853         0.86612         0.00321         0.16410      
+500             0.30275         0.87308         0.00318         0.16870      
+  Train acc so far: 0.8734 ± 0.0003
+  Test  acc so far: 0.1716 ± 0.0029
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72345         0.50872         0.00190         0.49900      
+100             0.37857         0.84844         0.00405         0.10310      
+200             0.34996         0.85228         0.00335         0.12010      
+300             0.33362         0.85794         0.00312         0.14130      
+400             0.31984         0.86522         0.00308         0.15660      
+500             0.30628         0.87068         0.00308         0.17290      
+  Train acc so far: 0.8725 ± 0.0013
+  Test  acc so far: 0.1720 ± 0.0024
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67407         0.65748         0.00031         0.31540      
+100             0.37740         0.84852         0.00403         0.10410      
+200             0.34908         0.85224         0.00315         0.11410      
+300             0.33303         0.85900         0.00310         0.14760      
+400             0.31884         0.86518         0.00294         0.15950      
+500             0.30487         0.87220         0.00314         0.17260      
+  Train acc so far: 0.8724 ± 0.0011
+  Test  acc so far: 0.1722 ± 0.0021
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69530         0.50724         1.30070e-05     0.51140      
+100             0.37730         0.84840         0.00400         0.10380      
+200             0.34858         0.85270         0.00318         0.12550      
+300             0.33071         0.85980         0.00326         0.14150      
+400             0.31744         0.86524         0.00303         0.16070      
+500             0.30310         0.87310         0.00333         0.16940      
+  Train acc so far: 0.8725 ± 0.0010
+  Test  acc so far: 0.1716 ± 0.0022
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67803         0.59666         0.00016         0.41880      
+100             0.37632         0.84842         0.00400         0.10420      
+200             0.34760         0.85278         0.00319         0.11890      
+300             0.33142         0.85866         0.00288         0.14420      
+400             0.31506         0.86722         0.00323         0.15870      
+500             0.30055         0.87454         0.00342         0.17220      
+  Train acc so far: 0.8729 ± 0.0012
+  Test  acc so far: 0.1717 ± 0.0020
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68855         0.53900         9.85063e-06     0.44800      
+100             0.37470         0.84848         0.00393         0.10450      
+200             0.34592         0.85418         0.00347         0.12610      
+300             0.32950         0.86072         0.00321         0.14550      
+400             0.31295         0.86740         0.00310         0.15790      
+500             0.30648         0.87062         0.00251         0.18610      
+  Train acc so far: 0.8726 ± 0.0014
+  Test  acc so far: 0.1738 ± 0.0054
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71723         0.45850         0.00079         0.54820      
+100             0.37881         0.84848         0.00409         0.10290      
+200             0.34821         0.85270         0.00316         0.11690      
+300             0.33117         0.85874         0.00294         0.13470      
+400             0.31929         0.86428         0.00266         0.16040      
+500             0.30537         0.87270         0.00302         0.18160      
+  Train acc so far: 0.8726 ± 0.0013
+  Test  acc so far: 0.1747 ± 0.0057
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69315         0.50486         2.49496e-06     0.51830      
+100             0.37783         0.84838         0.00404         0.10340      
+200             0.34732         0.85296         0.00321         0.11850      
+300             0.32975         0.86146         0.00366         0.15370      
+400             0.31382         0.86886         0.00350         0.16530      
+500             0.30120         0.87238         0.00290         0.17550      
+  Train acc so far: 0.8726 ± 0.0012
+  Test  acc so far: 0.1748 ± 0.0053
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69186         0.50668         1.97571e-06     0.52080      
+100             0.37923         0.84860         0.00408         0.10340      
+200             0.34915         0.85254         0.00317         0.11580      
+300             0.33297         0.85826         0.00295         0.13800      
+400             0.31835         0.86524         0.00317         0.15910      
+500             0.30331         0.87330         0.00367         0.17610      
+  Train acc so far: 0.8726 ± 0.0012
+  Test  acc so far: 0.1750 ± 0.0051
+
+=== Final results ===
+Train acc (mean ± std): 0.8726 ± 0.0012
+Test  acc (mean ± std): 0.1750 ± 0.0051
+============================================================
+  Grayscale - Train Domain Validation
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: True
+	hidden_dim: 88
+	l2_regularizer_weight: 0.0011198164932559394
+	lr: 0.0017569611396615358
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	steps: 201
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70697         0.48264         0.00056         0.48960      
+100             0.57740         0.73402         0.00018         0.73020      
+200             0.56149         0.74292         0.00036         0.73420      
+  Train acc so far: 0.7429 ± 0.0000
+  Test  acc so far: 0.7342 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69323         0.53498         1.22942e-05     0.53590      
+100             0.57405         0.73656         0.00024         0.73190      
+200             0.55949         0.74400         0.00036         0.73270      
+  Train acc so far: 0.7435 ± 0.0005
+  Test  acc so far: 0.7334 ± 0.0008
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68648         0.55784         1.48575e-05     0.56610      
+100             0.57079         0.73948         0.00026         0.73260      
+200             0.55591         0.74598         0.00045         0.73320      
+  Train acc so far: 0.7443 ± 0.0013
+  Test  acc so far: 0.7334 ± 0.0006
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71706         0.50740         0.00165         0.49950      
+100             0.57679         0.73396         0.00023         0.72930      
+200             0.56118         0.74252         0.00038         0.73260      
+  Train acc so far: 0.7439 ± 0.0013
+  Test  acc so far: 0.7332 ± 0.0006
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69536         0.51754         3.71981e-05     0.51630      
+100             0.57410         0.73716         0.00026         0.73190      
+200             0.55972         0.74398         0.00037         0.73380      
+  Train acc so far: 0.7439 ± 0.0012
+  Test  acc so far: 0.7333 ± 0.0006
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69371         0.51370         0.00015         0.50140      
+100             0.57638         0.73520         0.00022         0.73110      
+200             0.56129         0.74356         0.00040         0.73230      
+  Train acc so far: 0.7438 ± 0.0011
+  Test  acc so far: 0.7331 ± 0.0007
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69555         0.49922         2.68455e-05     0.50420      
+100             0.57424         0.73694         0.00025         0.73020      
+200             0.55958         0.74346         0.00039         0.73370      
+  Train acc so far: 0.7438 ± 0.0010
+  Test  acc so far: 0.7332 ± 0.0007
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69262         0.52026         6.25087e-06     0.51910      
+100             0.57363         0.73716         0.00025         0.73140      
+200             0.56045         0.74376         0.00035         0.73360      
+  Train acc so far: 0.7438 ± 0.0010
+  Test  acc so far: 0.7333 ± 0.0006
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71099         0.47162         0.00067         0.46100      
+100             0.57567         0.73542         0.00023         0.73140      
+200             0.56031         0.74314         0.00035         0.73430      
+  Train acc so far: 0.7437 ± 0.0009
+  Test  acc so far: 0.7334 ± 0.0007
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70063         0.47978         0.00012         0.47930      
+100             0.57496         0.73638         0.00024         0.72960      
+200             0.56046         0.74262         0.00031         0.73250      
+  Train acc so far: 0.7436 ± 0.0009
+  Test  acc so far: 0.7333 ± 0.0007
+
+=== Final results ===
+Train acc (mean ± std): 0.7436 ± 0.0009
+Test  acc (mean ± std): 0.7333 ± 0.0007
+============================================================
+  Grayscale - Leave One Domain Out
+============================================================
+Using device: cuda
+
+Flags:
+	grayscale_model: True
+	hidden_dim: 255
+	l2_regularizer_weight: 0.001304656360450818
+	lr: 0.0019086620171489411
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	steps: 401
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69118         0.52536         2.07495e-07     0.52550      
+100             0.57057         0.74038         0.00032         0.73360      
+200             0.55853         0.74512         0.00046         0.73500      
+300             0.55155         0.74664         0.00051         0.73040      
+400             0.54457         0.74928         0.00056         0.72920      
+  Train acc so far: 0.7493 ± 0.0000
+  Test  acc so far: 0.7292 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69664         0.50972         4.45652e-05     0.50890      
+100             0.57073         0.73912         0.00032         0.73380      
+200             0.55805         0.74494         0.00050         0.73420      
+300             0.55065         0.74736         0.00049         0.73170      
+400             0.54172         0.75090         0.00076         0.73210      
+  Train acc so far: 0.7501 ± 0.0008
+  Test  acc so far: 0.7307 ± 0.0015
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70188         0.48264         0.00023         0.49200      
+100             0.57123         0.73880         0.00030         0.73360      
+200             0.55803         0.74476         0.00053         0.73360      
+300             0.55059         0.74650         0.00049         0.73200      
+400             0.53886         0.75124         0.00094         0.73320      
+  Train acc so far: 0.7505 ± 0.0009
+  Test  acc so far: 0.7315 ± 0.0017
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69574         0.51808         5.51279e-05     0.51000      
+100             0.57043         0.73984         0.00032         0.73310      
+200             0.55743         0.74466         0.00051         0.73400      
+300             0.54752         0.74878         0.00072         0.73450      
+400             0.54551         0.74896         0.00055         0.72790      
+  Train acc so far: 0.7501 ± 0.0010
+  Test  acc so far: 0.7306 ± 0.0021
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69616         0.49580         2.54316e-05     0.49690      
+100             0.56716         0.74066         0.00034         0.73400      
+200             0.55575         0.74566         0.00057         0.73410      
+300             0.54680         0.74912         0.00072         0.73400      
+400             0.53702         0.75210         0.00097         0.73380      
+  Train acc so far: 0.7505 ± 0.0012
+  Test  acc so far: 0.7312 ± 0.0023
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69427         0.50410         8.27851e-06     0.51360      
+100             0.57144         0.73814         0.00029         0.73300      
+200             0.55788         0.74454         0.00047         0.73460      
+300             0.55251         0.74612         0.00042         0.73150      
+400             0.54231         0.74984         0.00078         0.73280      
+  Train acc so far: 0.7504 ± 0.0011
+  Test  acc so far: 0.7315 ± 0.0022
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69881         0.47590         6.53948e-05     0.47580      
+100             0.57185         0.73788         0.00026         0.73020      
+200             0.56012         0.74342         0.00028         0.73160      
+300             0.54864         0.74836         0.00073         0.73320      
+400             0.54321         0.75052         0.00085         0.73330      
+  Train acc so far: 0.7504 ± 0.0010
+  Test  acc so far: 0.7318 ± 0.0021
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69939         0.49472         0.00012         0.49760      
+100             0.57273         0.73778         0.00024         0.73160      
+200             0.55841         0.74488         0.00054         0.73460      
+300             0.54952         0.74744         0.00058         0.73580      
+400             0.54157         0.75038         0.00089         0.73420      
+  Train acc so far: 0.7504 ± 0.0010
+  Test  acc so far: 0.7321 ± 0.0021
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71639         0.50896         0.00268         0.50140      
+100             0.57308         0.73714         0.00031         0.73250      
+200             0.56195         0.74330         0.00035         0.73080      
+300             0.55206         0.74656         0.00055         0.73060      
+400             0.54243         0.74994         0.00085         0.73210      
+  Train acc so far: 0.7504 ± 0.0009
+  Test  acc so far: 0.7321 ± 0.0020
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69488         0.49684         1.16152e-05     0.48560      
+100             0.56825         0.73992         0.00034         0.73310      
+200             0.55817         0.74386         0.00044         0.73170      
+300             0.55127         0.74546         0.00034         0.72930      
+400             0.53906         0.75116         0.00092         0.73250      
+  Train acc so far: 0.7504 ± 0.0009
+  Test  acc so far: 0.7321 ± 0.0019
+
+=== Final results ===
+Train acc (mean ± std): 0.7504 ± 0.0009
+Test  acc (mean ± std): 0.7321 ± 0.0019
+All realistic experiments finished.
