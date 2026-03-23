@@ -1,0 +1,13 @@
+============================================================
+  Proximity vs Diversity 2x2 Search
+============================================================
+  A: {0.1, 0.2} Low diversity,  Low proximity
+  B: {0.7, 0.8} Low diversity,  High proximity
+  C: {0.1, 0.5} High diversity, Low proximity
+  D: {0.1, 0.8} High diversity, High proximity
+============================================================
+--- Config A: Low diversity, Low proximity ---
+--- Config B: Low diversity, High proximity ---
+--- Config C: High diversity, Low proximity ---
+--- Config D: High diversity, High proximity ---
+All searches finished.
