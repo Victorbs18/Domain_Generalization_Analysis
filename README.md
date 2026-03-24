@@ -258,6 +258,71 @@ run_similar_env_experiments.bat > results_similar_env_experiments.txt 2>&1
 | 4 | {0.1, 0.133, 0.167, 0.2} | 66.31% ± 1.53% | 10.24% ± 0.08% | 10.56% ± 0.24% |
 | 5 | {0.1, 0.125, 0.15, 0.175, 0.2} | 65.43% ± 0.67% | 15.06% ± 1.50% | 10.23% ± 0.01% |
 
+## Experiment 5 — Proximity vs Diversity 2x2
+
+Experiments 3 and 4 together showed that environment diversity is the key
+factor for IRM to recover under realistic model selection — not quantity.
+However, a confound remained: in Experiment 3, adding more diverse
+environments also increased their proximity to the test distribution
+(e=0.9). This experiment disentangles the two factors with a clean 2x2
+design.
+
+**Research question:** Is IRM's recovery under realistic model selection
+driven by environment *diversity*, environment *proximity* to the test
+distribution, or both?
+
+### Design
+
+Always n=2 training environments. Test environment always fixed at e=0.9.
+
+| Config | e values | Diversity | Proximity to test (e=0.9) |
+|--------|---------|-----------|--------------------------|
+| A | {0.1, 0.2} | Low | Low |
+| B | {0.7, 0.8} | Low | **High** |
+| C | {0.1, 0.5} | **High** | Low |
+| D | {0.1, 0.8} | **High** | **High** |
+
+**Prediction logic:**
+- If diversity is the key factor → C and D recover, A and B fail
+- If proximity is the key factor → B and D recover, A and C fail
+- If both matter equally → only D fully recovers
+
+### How to run
+```bash
+# Step 1 — Find hyperparameters (12 combinations)
+run_prox_div_search.bat > results_prox_div_search.txt 2>&1
+
+# Step 2 — Run final experiments
+run_prox_div_experiments.bat > results_prox_div_experiments.txt 2>&1
+```
+
+### Hyperparameters found
+
+| Config | Selection | hidden_dim | lr | l2_reg | penalty_anneal_iters | penalty_weight | steps |
+|--------|:---------:|:----------:|:--:|:------:|:--------------------:|:--------------:|:-----:|
+| A | Oracle | 102 | 0.000366 | 0.000461 | 221 | 33624.6 | 501 |
+| A | Train domain val | 237 | 0.000387 | 0.000122 | 118 | 704029.2 | 101 |
+| A | Leave one domain out | 95 | 0.000350 | 0.000251 | 159 | 53975.4 | 101 |
+| B | Oracle | 437 | 0.001136 | 1.19e-05 | 79 | 265.2 | 401 |
+| B | Train domain val | 253 | 0.000393 | 0.000132 | 197 | 1121.6 | 401 |
+| B | Leave one domain out | 253 | 0.000393 | 0.000132 | 197 | 1121.6 | 401 |
+| C | Oracle | 99 | 0.002256 | 0.000168 | 56 | 171.1 | 201 |
+| C | Train domain val | 176 | 0.002740 | 0.000297 | 82 | 7833.5 | 301 |
+| C | Leave one domain out | 119 | 0.001455 | 0.000292 | 112 | 1398.9 | 501 |
+| D | Oracle | 215 | 0.000384 | 0.000890 | 201 | 146.7 | 301 |
+| D | Train domain val | 215 | 0.000384 | 0.000890 | 201 | 146.7 | 301 |
+| D | Leave one domain out | 176 | 0.002740 | 0.000297 | 82 | 7833.5 | 301 |
+
+### Results
+
+| Config | e values | Diversity | Proximity | Oracle | Train Domain Val | Leave One Domain Out |
+|--------|---------|:---------:|:---------:|:------:|:----------------:|:--------------------:|
+| A | {0.1, 0.2} | Low | Low | 67.56% ± 0.68% | 10.59% ± 0.15% | 10.25% ± 0.08% |
+| B | {0.7, 0.8} | Low | **High** | 81.69% ± 0.35% | **77.93% ± 0.13%** | **77.04% ± 0.27%** |
+| C | {0.1, 0.5} | **High** | Low | 71.71% ± 0.19% | 69.44% ± 1.82% | 71.17% ± 0.23% |
+| D | {0.1, 0.8} | **High** | **High** | 72.80% ± 0.06% | 72.58% ± 0.11% | 70.47% ± 5.68% |
+
+
 ---
 
 ## Key Findings
@@ -280,21 +345,35 @@ methods converge to ~67-70%, matching oracle performance.
 **4. Environment quantity alone does not help** — Experiment 4 shows that
 adding more environments within the fixed range {0.1, 0.2} provides no
 benefit under realistic selection, regardless of how many environments are
-used. Test accuracy stays at ~10% for all n_envs under train domain val
-and leave one domain out.
+used. This isolates diversity as the active ingredient, not quantity.
 
-**5. The key factor is diversity, not quantity** — Comparing Experiments 3
-and 4 directly isolates the confound: it is the spread of e values across
-environments, not their number, that determines whether IRM can be reliably
-selected without oracle access to the test distribution.
+**5. Proximity to the test distribution is the dominant factor** —
+Experiment 5 directly disentangles diversity and proximity. Config B
+({0.7, 0.8} — low diversity, high proximity) achieves 77-78% under
+realistic selection, outperforming Config C ({0.1, 0.5} — high diversity,
+low proximity) at ~69-71%. Proximity alone is sufficient and more powerful
+than diversity alone.
 
-**6. Hyperparameter sensitivity is the root cause** — The `penalty_weight`
-hyperparameter varies by 4 orders of magnitude across successful configs
-(238 to 704029). Realistic selection consistently finds degenerate configs
-with very short training (steps=101) and high penalty weights that collapse
-test accuracy, confirming that IRM's instability is fundamentally a
-hyperparameter sensitivity problem.
+**6. Diversity provides a secondary stabilizing effect** — Config C
+recovers to ~71% with high diversity alone, confirming diversity
+independently helps even without proximity. However the recovery is less
+stable (std up to 1.82%) compared to proximity-based recovery (std
+0.13-0.27% for Config B).
 
+**7. The combined effect does not compound** — Config D ({0.1, 0.8} —
+high diversity, high proximity) does not outperform Config B alone. Oracle
+accuracy is actually lower for D (72.8%) than B (81.7%), suggesting the
+two environments {0.1, 0.8} present a harder optimization problem despite
+covering both factors.
+
+**8. Hyperparameter sensitivity is the root cause of collapse** — The
+`penalty_weight` hyperparameter varies by 4 orders of magnitude across
+successful configs (146 to 704029). Realistic selection consistently finds
+degenerate configs with very short training (steps=101) and extreme penalty
+weights that collapse test accuracy, confirming that IRM's instability is
+fundamentally a hyperparameter sensitivity problem. Proximity and diversity
+help because they make the invariant solution easier to find and more
+robustly identifiable by realistic selection criteria.
 ---
 
 ## Notes

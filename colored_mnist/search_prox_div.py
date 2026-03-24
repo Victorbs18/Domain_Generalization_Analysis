@@ -27,12 +27,11 @@ import torch
 from types import SimpleNamespace
 
 from search import sample_irm
-from colored_mnist.main_prox_div import (
+from main_prox_div import (
     load_environments,
     train_one_restart,
     ENV_CONFIGS,
 )
-
 
 # ---------------------------------------------------------------------------
 # Selection criteria
