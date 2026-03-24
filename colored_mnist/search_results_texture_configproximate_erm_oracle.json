@@ -1,0 +1,37 @@
+{
+  "best": {
+    "hidden_dim": 256,
+    "l2_regularizer_weight": 0.001,
+    "lr": 0.001,
+    "penalty_anneal_iters": 0,
+    "penalty_weight": 0.0,
+    "steps": 501,
+    "grayscale_model": false,
+    "mode": "erm"
+  },
+  "all_trials": [
+    {
+      "train_accs": [
+        0.776479959487915,
+        0.8531999588012695
+      ],
+      "val_accs": [
+        0.7742799520492554,
+        0.8465999960899353
+      ],
+      "test_acc": 0.914199948310852,
+      "mean_train": 0.8148399591445923,
+      "mean_val": 0.8104399740695953
+    }
+  ],
+  "config": "proximate",
+  "cfg": {
+    "e_values": [
+      0.7,
+      0.8
+    ],
+    "description": "High proximity, both spurious features"
+  },
+  "mode": "erm",
+  "selection_method": "oracle"
+}

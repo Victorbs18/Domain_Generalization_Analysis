@@ -322,6 +322,84 @@ run_prox_div_experiments.bat > results_prox_div_experiments.txt 2>&1
 | C | {0.1, 0.5} | **High** | Low | 71.71% ± 0.19% | 69.44% ± 1.82% | 71.17% ± 0.23% |
 | D | {0.1, 0.8} | **High** | **High** | 72.80% ± 0.06% | 72.58% ± 0.11% | 70.47% ± 5.68% |
 
+---
+
+## Experiment 6 — Two Correlated Spurious Features (Color + Texture)
+
+Extends the Colored MNIST setup with a **second spurious feature**: a
+stripe texture pattern applied to background pixels. Both spurious
+features (color and texture) share the same correlation parameter e,
+so they vary together across environments.
+
+**Causal feature:** digit shape (invariant, always predicts the label)
+**Spurious feature 1:** digit color (red/green, correlation = e)
+**Spurious feature 2:** background stripe pattern (A/B, correlation = e)
+
+This experiment directly tests whether IRM's ability to identify the
+invariant feature degrades when two spurious correlations are present
+simultaneously, and whether the diversity and proximity insights from
+Experiments 3–5 still hold.
+
+### Implementation
+
+The stripe texture is applied exclusively to **background pixels**
+(pixels with value 0 in the original MNIST image), preserving the
+digit shape exactly. Two stripe patterns are used:
+
+- **Pattern A:** even rows lit (correlated with label=0)
+- **Pattern B:** odd rows lit (correlated with label=1)
+
+The texture correlation strength equals the color correlation strength
+`e` in all environments, so both spurious features are equally strong.
+
+### Experimental design
+
+Three environment configurations, mirroring Experiment 5:
+
+| Config | e values | Diversity | Proximity to test (e=0.9) |
+|--------|---------|-----------|--------------------------|
+| original | {0.1, 0.2} | Low | Low |
+| diverse | {0.1, 0.5} | High | Low |
+| proximate | {0.7, 0.8} | Low | High |
+
+### How to run
+```bash
+# Step 1 — Find hyperparameters
+run_texture_search.bat > results_texture_search.txt 2>&1
+
+# Step 2 — Run final experiments
+run_texture_experiments.bat > results_texture_experiments.txt 2>&1
+```
+
+### Hyperparameters found
+
+| Config | Mode | Selection | hidden_dim | lr | l2_reg | penalty_anneal_iters | penalty_weight | steps |
+|--------|:----:|:---------:|:----------:|:--:|:------:|:--------------------:|:--------------:|:-----:|
+| original | IRM | Oracle | 87 | 0.000883 | 0.001227 | 83 | 1607.1 | 201 |
+| original | IRM | Train domain val | 215 | 0.000384 | 0.000890 | 201 | 146.7 | 301 |
+| original | IRM | Leave one domain out | 254 | 0.002061 | 0.000166 | 114 | 123.3 | 101 |
+| diverse | IRM | All methods | 437 | 0.001136 | 1.19e-05 | 79 | 265.2 | 401 |
+| proximate | IRM | All methods | 340 | 0.001926 | 0.000252 | 219 | 273.3 | 101 |
+| All | ERM | Oracle | 256 | 0.001 | 0.001 | 0 | 0.0 | 501 |
+
+### Results
+
+| Config | e values | Method | Oracle | Train Domain Val | Leave One Domain Out |
+|--------|---------|:------:|:------:|:----------------:|:--------------------:|
+| original | {0.1, 0.2} | ERM | 12.97% ± 0.15% | — | — |
+| original | {0.1, 0.2} | IRM | 54.79% ± 5.71% | 34.13% ± 0.53% | 12.39% ± 0.88% |
+| diverse | {0.1, 0.5} | ERM | 31.92% ± 0.66% | — | — |
+| diverse | {0.1, 0.5} | IRM | 70.14% ± 0.33% | **70.54% ± 0.27%** | **70.14% ± 0.33%** |
+| proximate | {0.7, 0.8} | ERM | **91.67% ± 0.55%** | — | — |
+| proximate | {0.7, 0.8} | IRM | **90.60% ± 0.76%** | **90.70% ± 0.19%** | **90.60% ± 0.76%** |
+
+### Comparison with single spurious feature (Experiment 5)
+
+| Config | IRM oracle — 1 spurious | IRM oracle — 2 spurious | Δ |
+|--------|:-----------------------:|:-----------------------:|:-:|
+| original {0.1, 0.2} | 66.27% ± 1.44% | 54.79% ± 5.71% | **-11.5%** ↓ |
+| diverse {0.1, 0.5} | 71.71% ± 0.19% | 70.14% ± 0.33% | -1.6% ≈ |
+| proximate {0.7, 0.8} | 81.69% ± 0.35% | 90.60% ± 0.76% | **+8.9%** ↑ |
 
 ---
 
@@ -374,6 +452,32 @@ weights that collapse test accuracy, confirming that IRM's instability is
 fundamentally a hyperparameter sensitivity problem. Proximity and diversity
 help because they make the invariant solution easier to find and more
 robustly identifiable by realistic selection criteria.
+
+**9. Two spurious features degrade IRM under weak environments** — With
+low diversity environments {0.1, 0.2}, adding a second spurious feature
+(texture) causes a significant drop in IRM oracle accuracy from 66.3% to
+54.8%, and increases variance substantially (std 1.4% → 5.7%). This
+confirms the theoretical expectation that multiple spurious correlations
+make the invariant feature harder to identify.
+
+**10. Environment diversity makes IRM robust to multiple spurious
+features** — With diverse environments {0.1, 0.5}, IRM oracle accuracy
+drops only marginally (-1.6%) when a second spurious feature is added.
+More strikingly, realistic selection fully recovers to ~70% across all
+selection methods — matching oracle performance. Diversity not only helps
+with model selection but also buffers against the added difficulty of
+multiple spurious correlations.
+
+**11. Proximity can make the problem trivially easy — for the wrong
+reasons** — With proximate environments {0.7, 0.8}, ERM achieves 91.7%
+test accuracy with two spurious features — higher than IRM oracle in the
+single-spurious case. This is not because the model learned the invariant
+feature, but because the test distribution (e=0.9) is so close to the
+training environments that spurious features remain predictive at test
+time. This is a cautionary result: high test accuracy does not imply
+invariant learning, and proximity to the test distribution can mask
+IRM's failure to generalize causally.
+
 ---
 
 ## Notes

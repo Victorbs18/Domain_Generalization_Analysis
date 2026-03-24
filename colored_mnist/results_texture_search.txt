@@ -1,0 +1,773 @@
+============================================================
+  Two Correlated Spurious Features — Hyperparameter Search
+============================================================
+  Spurious feature 1: color (e controls correlation)
+  Spurious feature 2: background texture (same e as color)
+  Causal feature: digit shape
+============================================================
+--- Config: original e=[0.1, 0.2] ---
+Device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: erm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+ERM (fixed hparams)
+  score=0.1251  train=0.8836  val=0.8792  te=0.1251
+
+Results saved to search_results_texture_configoriginal_erm_oracle.json
+Device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.4906  train=0.5017  val=0.4961  te=0.4906  (21.1s) << best
+[  1]  score=0.1180  train=0.8609  val=0.8634  te=0.1180  (8.0s)
+[  2]  score=0.5502  train=0.5550  val=0.5529  te=0.5727  (14.5s) << best
+[  3]  score=0.5552  train=0.6506  val=0.6452  te=0.5552  (12.2s) << best
+[  4]  score=0.5760  train=0.5791  val=0.5739  te=0.6503  (23.8s) << best
+[  5]  score=0.1036  train=0.8486  val=0.8517  te=0.1036  (2.3s)
+[  6]  score=0.1043  train=0.8494  val=0.8526  te=0.1043  (9.6s)
+[  7]  score=0.4308  train=0.7338  val=0.7311  te=0.4308  (4.9s)
+[  8]  score=0.4936  train=0.4994  val=0.4938  te=0.4936  (6.1s)
+[  9]  score=0.3859  train=0.7962  val=0.7911  te=0.3859  (21.2s)
+[ 10]  score=0.5724  train=0.6923  val=0.6881  te=0.5724  (9.4s)
+[ 11]  score=0.4273  train=0.7202  val=0.7197  te=0.4273  (5.2s)
+[ 12]  score=0.5641  train=0.6633  val=0.6584  te=0.5641  (15.7s)
+[ 13]  score=0.1215  train=0.8653  val=0.8669  te=0.1215  (3.5s)
+[ 14]  score=0.4356  train=0.7540  val=0.7479  te=0.4356  (4.9s)
+[ 15]  score=0.5621  train=0.6676  val=0.6608  te=0.5621  (7.5s)
+[ 16]  score=0.1308  train=0.8716  val=0.8723  te=0.1308  (4.0s)
+[ 17]  score=0.1088  train=0.8531  val=0.8558  te=0.1088  (2.3s)
+[ 18]  score=0.6034  train=0.6123  val=0.6101  te=0.6034  (4.8s) << best
+[ 19]  score=0.1171  train=0.8617  val=0.8628  te=0.1171  (4.0s)
+[ 20]  score=0.5486  train=0.6730  val=0.6663  te=0.5486  (40.0s)
+[ 21]  score=0.4220  train=0.6606  val=0.6637  te=0.4220  (5.0s)
+[ 22]  score=0.3787  train=0.7990  val=0.7962  te=0.3787  (9.9s)
+[ 23]  score=0.4914  train=0.7265  val=0.7207  te=0.4914  (17.8s)
+[ 24]  score=0.3117  train=0.8106  val=0.8107  te=0.3117  (11.2s)
+[ 25]  score=0.1141  train=0.8582  val=0.8590  te=0.1141  (3.4s)
+[ 26]  score=0.1036  train=0.8486  val=0.8517  te=0.1036  (5.4s)
+[ 27]  score=0.4894  train=0.5301  val=0.5363  te=0.4894  (10.3s)
+[ 28]  score=0.5436  train=0.6730  val=0.6670  te=0.5436  (9.7s)
+[ 29]  score=0.2902  train=0.8372  val=0.8360  te=0.2902  (8.3s)
+[ 30]  score=0.4816  train=0.5697  val=0.5749  te=0.4816  (17.0s)
+[ 31]  score=0.5703  train=0.6572  val=0.6498  te=0.5703  (18.5s)
+[ 32]  score=0.1036  train=0.8486  val=0.8517  te=0.1036  (2.4s)
+[ 33]  score=0.1230  train=0.8657  val=0.8671  te=0.1230  (6.2s)
+[ 34]  score=0.4461  train=0.7613  val=0.7562  te=0.4461  (13.4s)
+[ 35]  score=0.5169  train=0.6676  val=0.6632  te=0.5169  (13.5s)
+[ 36]  score=0.4865  train=0.5339  val=0.5397  te=0.4865  (15.4s)
+[ 37]  score=0.4752  train=0.7428  val=0.7366  te=0.4752  (16.6s)
+[ 38]  score=0.4606  train=0.6906  val=0.6871  te=0.4606  (37.2s)
+[ 39]  score=0.1047  train=0.8494  val=0.8523  te=0.1047  (2.5s)
+[ 40]  score=0.1036  train=0.8486  val=0.8517  te=0.1036  (5.4s)
+[ 41]  score=0.1209  train=0.8668  val=0.8683  te=0.1209  (2.6s)
+[ 42]  score=0.5112  train=0.7190  val=0.7123  te=0.5112  (24.1s)
+[ 43]  score=0.5210  train=0.7043  val=0.6997  te=0.5210  (24.5s)
+[ 44]  score=0.4941  train=0.7081  val=0.7018  te=0.4941  (14.2s)
+[ 45]  score=0.4783  train=0.5328  val=0.5381  te=0.4783  (32.0s)
+[ 46]  score=0.4975  train=0.6804  val=0.6749  te=0.4975  (7.5s)
+[ 47]  score=0.1247  train=0.8705  val=0.8707  te=0.1247  (5.6s)
+[ 48]  score=0.5435  train=0.6731  val=0.6671  te=0.5435  (17.3s)
+[ 49]  score=0.4715  train=0.5425  val=0.5363  te=0.4715  (16.0s)
+
+============================================================
+Best score (original / irm / oracle): 0.6034
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 87
+    l2_regularizer_weight: 0.0012273293649724259
+    lr: 0.0008833977231323628
+    mode: irm
+    penalty_anneal_iters: 83
+    penalty_weight: 1607.120188116246
+    steps: 201
+
+Results saved to search_results_texture_configoriginal_irm_oracle.json
+
+Best command:
+
+python main_texture.py \
+  --config=original \
+  --mode=irm \
+  --selection_method=oracle \
+  --hidden_dim=87 \
+  --l2_regularizer_weight=0.0012273293649724259 \
+  --lr=0.0008833977231323628 \
+  --penalty_anneal_iters=83 \
+  --penalty_weight=1607.120188116246 \
+  --steps=201 \
+  --n_restarts=10
+Device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection: train_domain_val  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6572  train=0.6631  val=0.6628  te=0.4736  (18.0s) << best
+[  1]  score=0.8258  train=0.8674  val=0.8723  te=0.1102  (7.6s) << best
+[  2]  score=0.4828  train=0.4997  val=0.4945  te=0.4988  (13.6s)
+[  3]  score=0.6446  train=0.6563  val=0.6535  te=0.5161  (11.9s)
+[  4]  score=0.5592  train=0.5678  val=0.5689  te=0.6495  (19.3s)
+[  5]  score=0.8046  train=0.8522  val=0.8554  te=0.0945  (2.3s)
+[  6]  score=0.8050  train=0.8525  val=0.8558  te=0.0947  (7.9s)
+[  7]  score=0.7140  train=0.7240  val=0.7250  te=0.4684  (4.6s)
+[  8]  score=0.5056  train=0.5209  val=0.5118  te=0.6360  (5.5s)
+[  9]  score=0.7458  train=0.7471  val=0.7550  te=0.4362  (18.7s)
+[ 10]  score=0.6384  train=0.6502  val=0.6435  te=0.5924  (8.3s)
+[ 11]  score=0.6652  train=0.6754  val=0.6707  te=0.4168  (4.3s)
+[ 12]  score=0.6346  train=0.6384  val=0.6402  te=0.5701  (12.9s)
+[ 13]  score=0.8292  train=0.8675  val=0.8734  te=0.1084  (3.0s) << best
+[ 14]  score=0.7236  train=0.7342  val=0.7309  te=0.4334  (4.5s)
+[ 15]  score=0.6798  train=0.6844  val=0.6858  te=0.5274  (6.9s)
+[ 16]  score=0.8328  train=0.8720  val=0.8762  te=0.1188  (3.3s) << best
+[ 17]  score=0.8102  train=0.8558  val=0.8599  te=0.0955  (2.2s)
+[ 18]  score=0.6146  train=0.6185  val=0.6190  te=0.6084  (4.6s)
+[ 19]  score=0.8234  train=0.8651  val=0.8705  te=0.1041  (3.4s)
+[ 20]  score=0.6306  train=0.6269  val=0.6318  te=0.6027  (33.1s)
+[ 21]  score=0.8150  train=0.8438  val=0.8532  te=0.2074  (3.8s)
+[ 22]  score=0.7382  train=0.7523  val=0.7493  te=0.4450  (8.0s)
+[ 23]  score=0.6922  train=0.6928  val=0.6949  te=0.5268  (14.3s)
+[ 24]  score=0.8374  train=0.8714  val=0.8775  te=0.1398  (9.0s) << best
+[ 25]  score=0.8156  train=0.8593  val=0.8646  te=0.0987  (3.0s)
+[ 26]  score=0.5546  train=0.5655  val=0.5583  te=0.5758  (4.4s)
+[ 27]  score=0.4940  train=0.5087  val=0.5050  te=0.4963  (8.4s)
+[ 28]  score=0.5740  train=0.5868  val=0.5800  te=0.6128  (7.9s)
+[ 29]  score=0.8202  train=0.8472  val=0.8507  te=0.2466  (6.8s)
+[ 30]  score=0.5478  train=0.5689  val=0.5682  te=0.4876  (13.6s)
+[ 31]  score=0.4938  train=0.5002  val=0.5055  te=0.5012  (14.7s)
+[ 32]  score=0.8046  train=0.8521  val=0.8554  te=0.0945  (2.0s)
+[ 33]  score=0.8306  train=0.8692  val=0.8736  te=0.1086  (4.8s)
+[ 34]  score=0.7010  train=0.7033  val=0.7071  te=0.4772  (11.4s)
+[ 35]  score=0.5304  train=0.5427  val=0.5403  te=0.5922  (10.6s)
+[ 36]  score=0.6416  train=0.6427  val=0.6422  te=0.5128  (13.2s)
+[ 37]  score=0.7414  train=0.7520  val=0.7525  te=0.4639  (13.2s)
+[ 38]  score=0.7382  train=0.7493  val=0.7506  te=0.4420  (31.9s)
+[ 39]  score=0.7692  train=0.8023  val=0.8106  te=0.2224  (2.4s)
+[ 40]  score=0.8046  train=0.8521  val=0.8554  te=0.0945  (4.2s)
+[ 41]  score=0.8294  train=0.8689  val=0.8750  te=0.1108  (2.4s)
+[ 42]  score=0.6854  train=0.6861  val=0.6869  te=0.5853  (19.4s)
+[ 43]  score=0.6756  train=0.6688  val=0.6768  te=0.5516  (19.2s)
+[ 44]  score=0.6354  train=0.6333  val=0.6361  te=0.5413  (11.2s)
+[ 45]  score=0.7838  train=0.8001  val=0.8029  te=0.3645  (27.3s)
+[ 46]  score=0.6746  train=0.6812  val=0.6786  te=0.5366  (6.5s)
+[ 47]  score=0.8344  train=0.8734  val=0.8764  te=0.1151  (4.3s)
+[ 48]  score=0.6550  train=0.6578  val=0.6557  te=0.5673  (13.6s)
+[ 49]  score=0.6876  train=0.6941  val=0.6914  te=0.5256  (12.7s)
+
+============================================================
+Best score (original / irm / train_domain_val): 0.8374
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 215
+    l2_regularizer_weight: 0.0008903070341397012
+    lr: 0.000384100012359557
+    mode: irm
+    penalty_anneal_iters: 201
+    penalty_weight: 146.70897925451902
+    steps: 301
+
+Results saved to search_results_texture_configoriginal_irm_train_domain_val.json
+
+Best command:
+
+python main_texture.py \
+  --config=original \
+  --mode=irm \
+  --selection_method=train_domain_val \
+  --hidden_dim=215 \
+  --l2_regularizer_weight=0.0008903070341397012 \
+  --lr=0.000384100012359557 \
+  --penalty_anneal_iters=201 \
+  --penalty_weight=146.70897925451902 \
+  --steps=301 \
+  --n_restarts=10
+Device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection: leave_one_domain_out  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.5027  train=0.5090  val=0.5066  te=0.5025  (19.3s) << best
+[  1]  score=0.8194  train=0.8659  val=0.8645  te=0.1053  (7.3s) << best
+[  2]  score=0.5024  train=0.5020  val=0.5052  te=0.5035  (13.5s)
+[  3]  score=0.6557  train=0.6625  val=0.6661  te=0.5659  (11.9s)
+[  4]  score=0.5918  train=0.5934  val=0.5946  te=0.6399  (22.8s)
+[  5]  score=0.8003  train=0.8517  val=0.8499  te=0.0944  (2.2s)
+[  6]  score=0.8019  train=0.8528  val=0.8512  te=0.0952  (9.1s)
+[  7]  score=0.7013  train=0.7204  val=0.7227  te=0.4473  (4.7s)
+[  8]  score=0.5290  train=0.5291  val=0.5300  te=0.5999  (5.9s)
+[  9]  score=0.7678  train=0.7882  val=0.7894  te=0.3751  (20.1s)
+[ 10]  score=0.6359  train=0.6436  val=0.6427  te=0.5778  (9.6s)
+[ 11]  score=0.5986  train=0.6219  val=0.6190  te=0.4254  (5.0s)
+[ 12]  score=0.5829  train=0.5890  val=0.5922  te=0.5958  (14.9s)
+[ 13]  score=0.8201  train=0.8669  val=0.8646  te=0.1074  (3.5s) << best
+[ 14]  score=0.6894  train=0.7107  val=0.7101  te=0.4947  (5.0s)
+[ 15]  score=0.5758  train=0.5868  val=0.5880  te=0.5471  (7.2s)
+[ 16]  score=0.8299  train=0.8741  val=0.8720  te=0.1213  (3.9s) << best
+[ 17]  score=0.8052  train=0.8554  val=0.8539  te=0.0974  (2.2s)
+[ 18]  score=0.6017  train=0.6119  val=0.6132  te=0.5676  (4.6s)
+[ 19]  score=0.8152  train=0.8631  val=0.8611  te=0.1058  (3.7s)
+[ 20]  score=0.6557  train=0.6631  val=0.6642  te=0.5869  (36.9s)
+[ 21]  score=0.7705  train=0.8123  val=0.8101  te=0.2419  (4.5s)
+[ 22]  score=0.7349  train=0.7561  val=0.7562  te=0.4225  (9.0s)
+[ 23]  score=0.6838  train=0.6993  val=0.6992  te=0.5419  (16.5s)
+[ 24]  score=0.7914  train=0.8304  val=0.8276  te=0.2653  (10.5s)
+[ 25]  score=0.8096  train=0.8592  val=0.8572  te=0.1005  (3.2s)
+[ 26]  score=0.5106  train=0.5179  val=0.5143  te=0.5055  (4.6s)
+[ 27]  score=0.5005  train=0.4999  val=0.5045  te=0.5181  (9.1s)
+[ 28]  score=0.6269  train=0.6271  val=0.6315  te=0.5876  (8.9s)
+[ 29]  score=0.8004  train=0.8355  val=0.8319  te=0.2905  (7.3s)
+[ 30]  score=0.5676  train=0.5874  val=0.5840  te=0.4647  (16.0s)
+[ 31]  score=0.6249  train=0.6295  val=0.6293  te=0.6341  (17.2s)
+[ 32]  score=0.8003  train=0.8517  val=0.8499  te=0.0944  (2.2s)
+[ 33]  score=0.8210  train=0.8684  val=0.8657  te=0.1079  (5.5s)
+[ 34]  score=0.7323  train=0.7474  val=0.7477  te=0.4896  (12.1s)
+[ 35]  score=0.5838  train=0.5801  val=0.5846  te=0.6400  (11.4s)
+[ 36]  score=0.8032  train=0.8530  val=0.8520  te=0.0955  (14.5s)
+[ 37]  score=0.7324  train=0.7496  val=0.7499  te=0.4825  (15.4s)
+[ 38]  score=0.7240  train=0.7424  val=0.7392  te=0.4118  (34.6s)
+[ 39]  score=0.8003  train=0.8517  val=0.8499  te=0.0945  (2.2s)
+[ 40]  score=0.8003  train=0.8517  val=0.8499  te=0.0944  (4.9s)
+[ 41]  score=0.8195  train=0.8659  val=0.8635  te=0.1082  (2.3s)
+[ 42]  score=0.6597  train=0.6668  val=0.6655  te=0.5948  (22.1s)
+[ 43]  score=0.6431  train=0.6487  val=0.6478  te=0.5899  (22.8s)
+[ 44]  score=0.6780  train=0.6841  val=0.6864  te=0.5592  (12.9s)
+[ 45]  score=0.5009  train=0.5009  val=0.5032  te=0.4933  (29.9s)
+[ 46]  score=0.6989  train=0.7167  val=0.7196  te=0.4699  (6.8s)
+[ 47]  score=0.8281  train=0.8723  val=0.8711  te=0.1151  (5.1s)
+[ 48]  score=0.6445  train=0.6527  val=0.6570  te=0.5769  (16.1s)
+[ 49]  score=0.4961  train=0.4962  val=0.4991  te=0.4946  (15.1s)
+
+============================================================
+Best score (original / irm / leave_one_domain_out): 0.8299
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 254
+    l2_regularizer_weight: 0.0001656382312621769
+    lr: 0.0020607266362084172
+    mode: irm
+    penalty_anneal_iters: 114
+    penalty_weight: 123.26741610799746
+    steps: 101
+
+Results saved to search_results_texture_configoriginal_irm_leave_one_domain_out.json
+
+Best command:
+
+python main_texture.py \
+  --config=original \
+  --mode=irm \
+  --selection_method=leave_one_domain_out \
+  --hidden_dim=254 \
+  --l2_regularizer_weight=0.0001656382312621769 \
+  --lr=0.0020607266362084172 \
+  --penalty_anneal_iters=114 \
+  --penalty_weight=123.26741610799746 \
+  --steps=101 \
+  --n_restarts=10
+--- Config: diverse e=[0.1, 0.5] ---
+Device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: erm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+ERM (fixed hparams)
+  score=0.3186  train=0.7627  val=0.7558  te=0.3186
+
+Results saved to search_results_texture_configdiverse_erm_oracle.json
+Device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6707  train=0.6719  val=0.6691  te=0.6853  (19.2s) << best
+[  1]  score=0.3517  train=0.7436  val=0.7393  te=0.3517  (7.4s)
+[  2]  score=0.5144  train=0.5833  val=0.5842  te=0.5144  (13.8s)
+[  3]  score=0.6424  train=0.6462  val=0.6409  te=0.6871  (12.1s)
+[  4]  score=0.5864  train=0.6056  val=0.6030  te=0.6910  (23.0s)
+[  5]  score=0.2947  train=0.7337  val=0.7301  te=0.2947  (2.2s)
+[  6]  score=0.1826  train=0.7193  val=0.7158  te=0.1826  (9.0s)
+[  7]  score=0.6461  train=0.6462  val=0.6422  te=0.6978  (4.7s)
+[  8]  score=0.4850  train=0.5688  val=0.5703  te=0.4850  (5.8s)
+[  9]  score=0.6823  train=0.6850  val=0.6811  te=0.6998  (20.0s) << best
+[ 10]  score=0.6652  train=0.6668  val=0.6622  te=0.6978  (9.6s)
+[ 11]  score=0.6066  train=0.6184  val=0.6184  te=0.6606  (4.8s)
+[ 12]  score=0.6251  train=0.6332  val=0.6315  te=0.6822  (14.8s)
+[ 13]  score=0.3517  train=0.7504  val=0.7445  te=0.3517  (3.5s)
+[ 14]  score=0.6514  train=0.6585  val=0.6555  te=0.6924  (4.5s)
+[ 15]  score=0.5926  train=0.6120  val=0.6105  te=0.6980  (7.3s)
+[ 16]  score=0.3667  train=0.7508  val=0.7434  te=0.3667  (3.7s)
+[ 17]  score=0.3086  train=0.7404  val=0.7363  te=0.3086  (2.5s)
+[ 18]  score=0.6148  train=0.6215  val=0.6148  te=0.6750  (4.6s)
+[ 19]  score=0.3567  train=0.7483  val=0.7407  te=0.3567  (3.8s)
+[ 20]  score=0.6778  train=0.6782  val=0.6728  te=0.7120  (36.6s)
+[ 21]  score=0.6275  train=0.6379  val=0.6359  te=0.6999  (4.6s)
+[ 22]  score=0.6930  train=0.6944  val=0.6868  te=0.7115  (9.1s) << best
+[ 23]  score=0.6321  train=0.6408  val=0.6400  te=0.6820  (16.5s)
+[ 24]  score=0.6871  train=0.6912  val=0.6884  te=0.7076  (10.5s)
+[ 25]  score=0.3476  train=0.7448  val=0.7402  te=0.3476  (3.3s)
+[ 26]  score=0.4994  train=0.5332  val=0.5357  te=0.4994  (4.6s)
+[ 27]  score=0.4985  train=0.5098  val=0.5149  te=0.5550  (9.1s)
+[ 28]  score=0.5764  train=0.5827  val=0.5773  te=0.5985  (8.9s)
+[ 29]  score=0.6916  train=0.6935  val=0.6880  te=0.7107  (7.5s)
+[ 30]  score=0.5789  train=0.5844  val=0.5815  te=0.6116  (16.0s)
+[ 31]  score=0.6602  train=0.6661  val=0.6616  te=0.7031  (17.2s)
+[ 32]  score=0.0987  train=0.7026  val=0.6999  te=0.0987  (2.3s)
+[ 33]  score=0.3574  train=0.7510  val=0.7470  te=0.3574  (5.4s)
+[ 34]  score=0.6952  train=0.6956  val=0.6916  te=0.7127  (12.2s) << best
+[ 35]  score=0.5416  train=0.5727  val=0.5711  te=0.6851  (11.5s)
+[ 36]  score=0.5844  train=0.5866  val=0.5829  te=0.5982  (14.6s)
+[ 37]  score=0.6892  train=0.6903  val=0.6834  te=0.7094  (15.3s)
+[ 38]  score=0.6833  train=0.6837  val=0.6787  te=0.6905  (34.7s)
+[ 39]  score=0.5683  train=0.5876  val=0.5824  te=0.6762  (2.3s)
+[ 40]  score=0.1249  train=0.7086  val=0.7049  te=0.1249  (4.9s)
+[ 41]  score=0.3776  train=0.7487  val=0.7407  te=0.3776  (2.4s)
+[ 42]  score=0.6856  train=0.6859  val=0.6805  te=0.7112  (22.1s)
+[ 43]  score=0.6829  train=0.6830  val=0.6785  te=0.7057  (22.7s)
+[ 44]  score=0.6530  train=0.6582  val=0.6534  te=0.7122  (13.0s)
+[ 45]  score=0.7027  train=0.7104  val=0.7072  te=0.7027  (30.2s) << best
+[ 46]  score=0.5472  train=0.5727  val=0.5717  te=0.6749  (6.6s)
+[ 47]  score=0.3774  train=0.7513  val=0.7455  te=0.3774  (5.1s)
+[ 48]  score=0.6384  train=0.6405  val=0.6363  te=0.6800  (16.1s)
+[ 49]  score=0.6650  train=0.6659  val=0.6598  te=0.6976  (15.3s)
+
+============================================================
+Best score (diverse / irm / oracle): 0.7027
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 437
+    l2_regularizer_weight: 1.1873492278636356e-05
+    lr: 0.0011355285091982394
+    mode: irm
+    penalty_anneal_iters: 79
+    penalty_weight: 265.2098286875673
+    steps: 401
+
+Results saved to search_results_texture_configdiverse_irm_oracle.json
+
+Best command:
+
+python main_texture.py \
+  --config=diverse \
+  --mode=irm \
+  --selection_method=oracle \
+  --hidden_dim=437 \
+  --l2_regularizer_weight=1.1873492278636356e-05 \
+  --lr=0.0011355285091982394 \
+  --penalty_anneal_iters=79 \
+  --penalty_weight=265.2098286875673 \
+  --steps=401 \
+  --n_restarts=10
+Device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection: train_domain_val  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6550  train=0.6787  val=0.6654  te=0.6855  (16.4s) << best
+[  1]  score=0.6134  train=0.7442  val=0.7368  te=0.3314  (7.1s)
+[  2]  score=0.4958  train=0.5317  val=0.5200  te=0.6103  (12.8s)
+[  3]  score=0.6364  train=0.6544  val=0.6427  te=0.7039  (10.6s)
+[  4]  score=0.5996  train=0.6325  val=0.6167  te=0.6760  (19.6s)
+[  5]  score=0.5974  train=0.7310  val=0.7313  te=0.2917  (2.2s)
+[  6]  score=0.5414  train=0.7158  val=0.7175  te=0.1715  (7.8s)
+[  7]  score=0.6224  train=0.6448  val=0.6285  te=0.6793  (4.5s)
+[  8]  score=0.4790  train=0.5259  val=0.5165  te=0.6397  (5.2s)
+[  9]  score=0.6780  train=0.6955  val=0.6786  te=0.6964  (17.1s) << best
+[ 10]  score=0.6524  train=0.6675  val=0.6540  te=0.6913  (8.5s)
+[ 11]  score=0.6216  train=0.6374  val=0.6221  te=0.6650  (4.1s)
+[ 12]  score=0.6062  train=0.6344  val=0.6240  te=0.6751  (13.0s)
+[ 13]  score=0.6254  train=0.7516  val=0.7418  te=0.3552  (3.1s)
+[ 14]  score=0.6348  train=0.6579  val=0.6492  te=0.6909  (4.5s)
+[ 15]  score=0.6178  train=0.6375  val=0.6253  te=0.6766  (6.8s)
+[ 16]  score=0.6348  train=0.7493  val=0.7421  te=0.3748  (3.2s)
+[ 17]  score=0.6046  train=0.7403  val=0.7354  te=0.3031  (2.2s)
+[ 18]  score=0.6158  train=0.6328  val=0.6242  te=0.6426  (4.1s)
+[ 19]  score=0.6246  train=0.7472  val=0.7435  te=0.3542  (3.3s)
+[ 20]  score=0.6646  train=0.6819  val=0.6650  te=0.7037  (33.6s)
+[ 21]  score=0.6030  train=0.6381  val=0.6257  te=0.6994  (3.9s)
+[ 22]  score=0.6774  train=0.6965  val=0.6798  te=0.7033  (8.0s)
+[ 23]  score=0.5994  train=0.6218  val=0.6089  te=0.6723  (14.1s)
+[ 24]  score=0.6820  train=0.6991  val=0.6851  te=0.7000  (9.3s) << best
+[ 25]  score=0.6210  train=0.7438  val=0.7392  te=0.3455  (2.7s)
+[ 26]  score=0.5122  train=0.5247  val=0.5137  te=0.5410  (4.2s)
+[ 27]  score=0.4854  train=0.5049  val=0.5102  te=0.5562  (8.7s)
+[ 28]  score=0.5644  train=0.5829  val=0.5796  te=0.6142  (7.9s)
+[ 29]  score=0.6798  train=0.6967  val=0.6811  te=0.7020  (6.8s)
+[ 30]  score=0.5718  train=0.5813  val=0.5743  te=0.6225  (13.6s)
+[ 31]  score=0.6630  train=0.6778  val=0.6657  te=0.7054  (14.7s)
+[ 32]  score=0.5026  train=0.7003  val=0.7057  te=0.0970  (2.1s)
+[ 33]  score=0.6296  train=0.7488  val=0.7418  te=0.3650  (5.0s)
+[ 34]  score=0.6838  train=0.7045  val=0.6860  te=0.7116  (10.8s) << best
+[ 35]  score=0.5636  train=0.5960  val=0.5811  te=0.5642  (10.6s)
+[ 36]  score=0.5576  train=0.5671  val=0.5697  te=0.5151  (13.0s)
+[ 37]  score=0.6740  train=0.6942  val=0.6775  te=0.7088  (13.2s)
+[ 38]  score=0.6708  train=0.6876  val=0.6740  te=0.6872  (31.6s)
+[ 39]  score=0.5522  train=0.5877  val=0.5759  te=0.6649  (2.1s)
+[ 40]  score=0.5126  train=0.7033  val=0.7094  te=0.1127  (4.2s)
+[ 41]  score=0.6304  train=0.7483  val=0.7407  te=0.3707  (2.3s)
+[ 42]  score=0.6716  train=0.6876  val=0.6725  te=0.7087  (19.2s)
+[ 43]  score=0.6682  train=0.6892  val=0.6729  te=0.6994  (19.1s)
+[ 44]  score=0.6338  train=0.6514  val=0.6369  te=0.6973  (11.4s)
+[ 45]  score=0.6988  train=0.7117  val=0.6994  te=0.6951  (27.3s) << best
+[ 46]  score=0.5448  train=0.5849  val=0.5763  te=0.6713  (7.0s)
+[ 47]  score=0.6274  train=0.7379  val=0.7326  te=0.3839  (4.1s)
+[ 48]  score=0.6130  train=0.6290  val=0.6131  te=0.6637  (13.4s)
+[ 49]  score=0.6370  train=0.6532  val=0.6390  te=0.6637  (12.5s)
+
+============================================================
+Best score (diverse / irm / train_domain_val): 0.6988
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 437
+    l2_regularizer_weight: 1.1873492278636356e-05
+    lr: 0.0011355285091982394
+    mode: irm
+    penalty_anneal_iters: 79
+    penalty_weight: 265.2098286875673
+    steps: 401
+
+Results saved to search_results_texture_configdiverse_irm_train_domain_val.json
+
+Best command:
+
+python main_texture.py \
+  --config=diverse \
+  --mode=irm \
+  --selection_method=train_domain_val \
+  --hidden_dim=437 \
+  --l2_regularizer_weight=1.1873492278636356e-05 \
+  --lr=0.0011355285091982394 \
+  --penalty_anneal_iters=79 \
+  --penalty_weight=265.2098286875673 \
+  --steps=401 \
+  --n_restarts=10
+Device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection: leave_one_domain_out  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6646  train=0.6695  val=0.6653  te=0.6860  (19.2s) << best
+[  1]  score=0.6290  train=0.7498  val=0.7449  te=0.3578  (7.4s)
+[  2]  score=0.5122  train=0.5372  val=0.5379  te=0.6327  (13.7s)
+[  3]  score=0.6426  train=0.6489  val=0.6447  te=0.7035  (12.1s)
+[  4]  score=0.6086  train=0.6173  val=0.6139  te=0.6514  (22.8s)
+[  5]  score=0.5917  train=0.7333  val=0.7280  te=0.3031  (2.3s)
+[  6]  score=0.5433  train=0.7225  val=0.7161  te=0.1931  (9.1s)
+[  7]  score=0.6456  train=0.6561  val=0.6529  te=0.6845  (4.6s)
+[  8]  score=0.5351  train=0.5733  val=0.5701  te=0.4622  (6.0s)
+[  9]  score=0.6794  train=0.6873  val=0.6827  te=0.7052  (20.3s) << best
+[ 10]  score=0.6618  train=0.6698  val=0.6635  te=0.7150  (9.9s)
+[ 11]  score=0.6215  train=0.6279  val=0.6241  te=0.6331  (4.9s)
+[ 12]  score=0.6407  train=0.6475  val=0.6449  te=0.6928  (15.2s)
+[ 13]  score=0.6316  train=0.7516  val=0.7450  te=0.3677  (3.4s)
+[ 14]  score=0.5983  train=0.6152  val=0.6147  te=0.7120  (4.7s)
+[ 15]  score=0.6379  train=0.6414  val=0.6395  te=0.6845  (7.4s)
+[ 16]  score=0.6315  train=0.7467  val=0.7402  te=0.3822  (3.8s)
+[ 17]  score=0.6042  train=0.7419  val=0.7360  te=0.3093  (2.3s)
+[ 18]  score=0.6252  train=0.6281  val=0.6253  te=0.6511  (4.4s)
+[ 19]  score=0.6278  train=0.7489  val=0.7443  te=0.3609  (3.8s)
+[ 20]  score=0.6595  train=0.6689  val=0.6658  te=0.7050  (36.6s)
+[ 21]  score=0.6324  train=0.6416  val=0.6394  te=0.7086  (4.6s)
+[ 22]  score=0.6692  train=0.6781  val=0.6739  te=0.7026  (9.0s)
+[ 23]  score=0.6413  train=0.6420  val=0.6427  te=0.6903  (16.5s)
+[ 24]  score=0.6846  train=0.6955  val=0.6917  te=0.7054  (10.5s) << best
+[ 25]  score=0.6200  train=0.7460  val=0.7388  te=0.3507  (3.1s)
+[ 26]  score=0.5266  train=0.5470  val=0.5431  te=0.4807  (4.3s)
+[ 27]  score=0.5524  train=0.5625  val=0.5626  te=0.5558  (9.1s)
+[ 28]  score=0.5782  train=0.5807  val=0.5794  te=0.6078  (8.7s)
+[ 29]  score=0.6832  train=0.6991  val=0.6937  te=0.7057  (7.5s)
+[ 30]  score=0.5996  train=0.6020  val=0.6021  te=0.6458  (15.9s)
+[ 31]  score=0.6702  train=0.6828  val=0.6761  te=0.7156  (17.2s)
+[ 32]  score=0.4972  train=0.7011  val=0.6991  te=0.1033  (2.3s)
+[ 33]  score=0.6317  train=0.7524  val=0.7473  te=0.3562  (5.4s)
+[ 34]  score=0.6814  train=0.6910  val=0.6874  te=0.7143  (12.6s)
+[ 35]  score=0.5586  train=0.5845  val=0.5829  te=0.6898  (11.1s)
+[ 36]  score=0.5842  train=0.5900  val=0.5904  te=0.6438  (14.4s)
+[ 37]  score=0.6813  train=0.6911  val=0.6860  te=0.7136  (15.3s)
+[ 38]  score=0.6779  train=0.6858  val=0.6820  te=0.6941  (34.5s)
+[ 39]  score=0.5759  train=0.5970  val=0.5916  te=0.6644  (2.3s)
+[ 40]  score=0.5120  train=0.7069  val=0.7042  te=0.1338  (4.9s)
+[ 41]  score=0.6355  train=0.7495  val=0.7437  te=0.3818  (2.4s)
+[ 42]  score=0.6692  train=0.6819  val=0.6761  te=0.7088  (22.0s)
+[ 43]  score=0.6696  train=0.6786  val=0.6739  te=0.7029  (22.4s)
+[ 44]  score=0.6646  train=0.6708  val=0.6650  te=0.6993  (12.8s)
+[ 45]  score=0.6967  train=0.7045  val=0.6998  te=0.7007  (29.7s) << best
+[ 46]  score=0.5725  train=0.5836  val=0.5828  te=0.5753  (6.6s)
+[ 47]  score=0.6242  train=0.7474  val=0.7435  te=0.3533  (4.9s)
+[ 48]  score=0.6275  train=0.6335  val=0.6303  te=0.6655  (16.0s)
+[ 49]  score=0.6443  train=0.6463  val=0.6452  te=0.6852  (15.2s)
+
+============================================================
+Best score (diverse / irm / leave_one_domain_out): 0.6967
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 437
+    l2_regularizer_weight: 1.1873492278636356e-05
+    lr: 0.0011355285091982394
+    mode: irm
+    penalty_anneal_iters: 79
+    penalty_weight: 265.2098286875673
+    steps: 401
+
+Results saved to search_results_texture_configdiverse_irm_leave_one_domain_out.json
+
+Best command:
+
+python main_texture.py \
+  --config=diverse \
+  --mode=irm \
+  --selection_method=leave_one_domain_out \
+  --hidden_dim=437 \
+  --l2_regularizer_weight=1.1873492278636356e-05 \
+  --lr=0.0011355285091982394 \
+  --penalty_anneal_iters=79 \
+  --penalty_weight=265.2098286875673 \
+  --steps=401 \
+  --n_restarts=10
+--- Config: proximate e=[0.7, 0.8] ---
+Device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: erm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+ERM (fixed hparams)
+  score=0.7765  train=0.8148  val=0.8104  te=0.9142
+
+Results saved to search_results_texture_configproximate_erm_oracle.json
+Device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection: oracle  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.7125  train=0.7194  val=0.7160  te=0.7627  (19.2s) << best
+[  1]  score=0.7373  train=0.7809  val=0.7793  te=0.9070  (7.2s) << best
+[  2]  score=0.6074  train=0.6076  val=0.6048  te=0.6177  (13.5s)
+[  3]  score=0.6615  train=0.6677  val=0.6611  te=0.6961  (11.7s)
+[  4]  score=0.6222  train=0.6229  val=0.6171  te=0.6291  (22.7s)
+[  5]  score=0.7091  train=0.7586  val=0.7577  te=0.9019  (2.2s)
+[  6]  score=0.7178  train=0.7660  val=0.7641  te=0.9051  (9.2s)
+[  7]  score=0.6695  train=0.6800  val=0.6745  te=0.7153  (4.8s)
+[  8]  score=0.6216  train=0.6256  val=0.6220  te=0.6419  (6.1s)
+[  9]  score=0.6998  train=0.7072  val=0.7026  te=0.7453  (20.4s)
+[ 10]  score=0.6663  train=0.6728  val=0.6676  te=0.7018  (9.3s)
+[ 11]  score=0.6698  train=0.6831  val=0.6812  te=0.7174  (5.0s)
+[ 12]  score=0.6134  train=0.6139  val=0.6107  te=0.6198  (15.2s)
+[ 13]  score=0.7477  train=0.7878  val=0.7837  te=0.9054  (3.5s) << best
+[ 14]  score=0.6821  train=0.6965  val=0.6943  te=0.7431  (4.7s)
+[ 15]  score=0.6326  train=0.6378  val=0.6349  te=0.6582  (7.3s)
+[ 16]  score=0.7499  train=0.7889  val=0.7873  te=0.9058  (3.9s) << best
+[ 17]  score=0.7392  train=0.7814  val=0.7792  te=0.9059  (2.2s)
+[ 18]  score=0.6306  train=0.6367  val=0.6340  te=0.6648  (4.6s)
+[ 19]  score=0.7449  train=0.7861  val=0.7839  te=0.9058  (3.8s)
+[ 20]  score=0.6584  train=0.6629  val=0.6566  te=0.6796  (36.5s)
+[ 21]  score=0.6706  train=0.6863  val=0.6841  te=0.7244  (4.5s)
+[ 22]  score=0.7015  train=0.7112  val=0.7040  te=0.7523  (8.8s)
+[ 23]  score=0.6836  train=0.6918  val=0.6863  te=0.7227  (16.7s)
+[ 24]  score=0.7215  train=0.7377  val=0.7330  te=0.7893  (10.5s)
+[ 25]  score=0.7439  train=0.7853  val=0.7840  te=0.9056  (3.3s)
+[ 26]  score=0.6280  train=0.6348  val=0.6334  te=0.6610  (4.6s)
+[ 27]  score=0.6259  train=0.6371  val=0.6333  te=0.6773  (8.9s)
+[ 28]  score=0.6223  train=0.6252  val=0.6220  te=0.6383  (8.9s)
+[ 29]  score=0.7362  train=0.7547  val=0.7483  te=0.8099  (7.3s)
+[ 30]  score=0.6413  train=0.6500  val=0.6470  te=0.6860  (15.9s)
+[ 31]  score=0.6566  train=0.6569  val=0.6500  te=0.6568  (17.3s)
+[ 32]  score=0.6989  train=0.7507  val=0.7491  te=0.9013  (2.4s)
+[ 33]  score=0.7489  train=0.7888  val=0.7841  te=0.9082  (5.3s)
+[ 34]  score=0.7063  train=0.7116  val=0.7036  te=0.7431  (12.1s)
+[ 35]  score=0.5856  train=0.5884  val=0.5872  te=0.5859  (11.4s)
+[ 36]  score=0.6466  train=0.6559  val=0.6525  te=0.6935  (14.5s)
+[ 37]  score=0.6890  train=0.6950  val=0.6877  te=0.7214  (15.6s)
+[ 38]  score=0.7150  train=0.7176  val=0.7126  te=0.7549  (34.8s)
+[ 39]  score=0.6482  train=0.6581  val=0.6546  te=0.6905  (2.2s)
+[ 40]  score=0.7070  train=0.7576  val=0.7575  te=0.9039  (5.1s)
+[ 41]  score=0.7468  train=0.7871  val=0.7862  te=0.9063  (2.4s)
+[ 42]  score=0.6520  train=0.6537  val=0.6474  te=0.6707  (22.7s)
+[ 43]  score=0.6456  train=0.6457  val=0.6396  te=0.6553  (22.5s)
+[ 44]  score=0.6520  train=0.6543  val=0.6512  te=0.6809  (12.7s)
+[ 45]  score=0.7371  train=0.7433  val=0.7376  te=0.7868  (30.0s)
+[ 46]  score=0.6357  train=0.6420  val=0.6402  te=0.6673  (6.9s)
+[ 47]  score=0.7537  train=0.7920  val=0.7898  te=0.9067  (4.9s) << best
+[ 48]  score=0.6496  train=0.6553  val=0.6519  te=0.6795  (16.1s)
+[ 49]  score=0.6532  train=0.6600  val=0.6561  te=0.6815  (15.5s)
+
+============================================================
+Best score (proximate / irm / oracle): 0.7537
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 340
+    l2_regularizer_weight: 0.0002524322304507403
+    lr: 0.001926475318213037
+    mode: irm
+    penalty_anneal_iters: 219
+    penalty_weight: 273.2599515914586
+    steps: 101
+
+Results saved to search_results_texture_configproximate_irm_oracle.json
+
+Best command:
+
+python main_texture.py \
+  --config=proximate \
+  --mode=irm \
+  --selection_method=oracle \
+  --hidden_dim=340 \
+  --l2_regularizer_weight=0.0002524322304507403 \
+  --lr=0.001926475318213037 \
+  --penalty_anneal_iters=219 \
+  --penalty_weight=273.2599515914586 \
+  --steps=101 \
+  --n_restarts=10
+Device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection: train_domain_val  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6878  train=0.7127  val=0.7132  te=0.7695  (16.4s) << best
+[  1]  score=0.7308  train=0.7757  val=0.7760  te=0.9007  (7.0s) << best
+[  2]  score=0.5988  train=0.6059  val=0.6032  te=0.6130  (12.8s)
+[  3]  score=0.6204  train=0.6352  val=0.6278  te=0.6480  (11.3s)
+[  4]  score=0.5720  train=0.5876  val=0.5834  te=0.5973  (19.2s)
+[  5]  score=0.7046  train=0.7565  val=0.7532  te=0.9092  (2.2s)
+[  6]  score=0.7144  train=0.7639  val=0.7636  te=0.9120  (7.8s)
+[  7]  score=0.6356  train=0.6584  val=0.6545  te=0.6828  (4.6s)
+[  8]  score=0.6096  train=0.6198  val=0.6171  te=0.6357  (5.4s)
+[  9]  score=0.7050  train=0.7325  val=0.7295  te=0.7852  (17.3s)
+[ 10]  score=0.6238  train=0.6431  val=0.6345  te=0.6420  (8.8s)
+[ 11]  score=0.6602  train=0.6913  val=0.6862  te=0.7360  (4.1s)
+[ 12]  score=0.5940  train=0.6169  val=0.6033  te=0.6242  (13.1s)
+[ 13]  score=0.7350  train=0.7883  val=0.7827  te=0.9138  (2.9s) << best
+[ 14]  score=0.6524  train=0.6709  val=0.6647  te=0.6994  (4.5s)
+[ 15]  score=0.5918  train=0.6022  val=0.5996  te=0.6070  (7.0s)
+[ 16]  score=0.7362  train=0.7892  val=0.7835  te=0.9119  (3.5s) << best
+[ 17]  score=0.7312  train=0.7797  val=0.7795  te=0.9147  (2.0s)
+[ 18]  score=0.6198  train=0.6339  val=0.6327  te=0.6566  (4.3s)
+[ 19]  score=0.7330  train=0.7852  val=0.7787  te=0.9129  (3.1s)
+[ 20]  score=0.6200  train=0.6317  val=0.6251  te=0.6361  (33.5s)
+[ 21]  score=0.6608  train=0.6958  val=0.6887  te=0.7511  (3.9s)
+[ 22]  score=0.6746  train=0.7090  val=0.6967  te=0.7473  (8.0s)
+[ 23]  score=0.6548  train=0.6791  val=0.6701  te=0.6995  (14.0s)
+[ 24]  score=0.6962  train=0.7253  val=0.7174  te=0.7700  (9.1s)
+[ 25]  score=0.7364  train=0.7861  val=0.7810  te=0.9118  (2.6s) << best
+[ 26]  score=0.6104  train=0.6265  val=0.6181  te=0.6363  (4.4s)
+[ 27]  score=0.6162  train=0.6277  val=0.6219  te=0.6448  (8.8s)
+[ 28]  score=0.5584  train=0.5649  val=0.5602  te=0.5491  (7.7s)
+[ 29]  score=0.7110  train=0.7548  val=0.7419  te=0.8047  (6.7s)
+[ 30]  score=0.6252  train=0.6421  val=0.6480  te=0.6756  (13.4s)
+[ 31]  score=0.6486  train=0.6708  val=0.6626  te=0.6892  (14.9s)
+[ 32]  score=0.6944  train=0.7476  val=0.7453  te=0.9059  (2.2s)
+[ 33]  score=0.7388  train=0.7910  val=0.7851  te=0.9146  (5.1s) << best
+[ 34]  score=0.6820  train=0.7036  val=0.6957  te=0.7260  (11.4s)
+[ 35]  score=0.5564  train=0.5612  val=0.5565  te=0.5463  (10.8s)
+[ 36]  score=0.6392  train=0.6646  val=0.6585  te=0.7025  (13.1s)
+[ 37]  score=0.6632  train=0.6806  val=0.6732  te=0.6997  (13.3s)
+[ 38]  score=0.6962  train=0.7221  val=0.7193  te=0.7733  (31.6s)
+[ 39]  score=0.6358  train=0.6621  val=0.6599  te=0.7028  (2.1s)
+[ 40]  score=0.7060  train=0.7557  val=0.7557  te=0.9096  (4.2s)
+[ 41]  score=0.7386  train=0.7876  val=0.7846  te=0.9128  (2.2s)
+[ 42]  score=0.6376  train=0.6566  val=0.6459  te=0.6689  (19.4s)
+[ 43]  score=0.6146  train=0.6325  val=0.6240  te=0.6328  (19.2s)
+[ 44]  score=0.6226  train=0.6347  val=0.6287  te=0.6466  (11.1s)
+[ 45]  score=0.6302  train=0.6598  val=0.6605  te=0.7486  (27.2s)
+[ 46]  score=0.6144  train=0.6274  val=0.6251  te=0.6393  (6.5s)
+[ 47]  score=0.7454  train=0.7962  val=0.7886  te=0.9131  (4.1s) << best
+[ 48]  score=0.6232  train=0.6466  val=0.6398  te=0.6676  (13.5s)
+[ 49]  score=0.6310  train=0.6594  val=0.6499  te=0.6821  (12.6s)
+
+============================================================
+Best score (proximate / irm / train_domain_val): 0.7454
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 340
+    l2_regularizer_weight: 0.0002524322304507403
+    lr: 0.001926475318213037
+    mode: irm
+    penalty_anneal_iters: 219
+    penalty_weight: 273.2599515914586
+    steps: 101
+
+Results saved to search_results_texture_configproximate_irm_train_domain_val.json
+
+Best command:
+
+python main_texture.py \
+  --config=proximate \
+  --mode=irm \
+  --selection_method=train_domain_val \
+  --hidden_dim=340 \
+  --l2_regularizer_weight=0.0002524322304507403 \
+  --lr=0.001926475318213037 \
+  --penalty_anneal_iters=219 \
+  --penalty_weight=273.2599515914586 \
+  --steps=101 \
+  --n_restarts=10
+Device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection: leave_one_domain_out  |  Trials: 50  |  Seed: 42
+
+[  0]  score=0.6792  train=0.6953  val=0.6906  te=0.7346  (19.3s) << best
+[  1]  score=0.7414  train=0.7842  val=0.7816  te=0.9041  (7.4s) << best
+[  2]  score=0.6039  train=0.6068  val=0.6041  te=0.6198  (13.4s)
+[  3]  score=0.6343  train=0.6391  val=0.6365  te=0.6613  (11.8s)
+[  4]  score=0.5711  train=0.5774  val=0.5748  te=0.5776  (23.0s)
+[  5]  score=0.7112  train=0.7582  val=0.7576  te=0.9003  (2.3s)
+[  6]  score=0.7210  train=0.7661  val=0.7665  te=0.9045  (9.1s)
+[  7]  score=0.6594  train=0.6721  val=0.6700  te=0.7169  (4.9s)
+[  8]  score=0.6092  train=0.6146  val=0.6139  te=0.6383  (5.7s)
+[  9]  score=0.6920  train=0.7050  val=0.6999  te=0.7360  (20.0s)
+[ 10]  score=0.6400  train=0.6478  val=0.6423  te=0.6621  (9.5s)
+[ 11]  score=0.6687  train=0.6834  val=0.6819  te=0.7300  (5.1s)
+[ 12]  score=0.5941  train=0.6017  val=0.5971  te=0.6052  (14.9s)
+[ 13]  score=0.7450  train=0.7892  val=0.7877  te=0.9107  (3.4s) << best
+[ 14]  score=0.6606  train=0.6751  val=0.6724  te=0.7132  (4.8s)
+[ 15]  score=0.5978  train=0.6012  val=0.5990  te=0.6060  (7.3s)
+[ 16]  score=0.7514  train=0.7910  val=0.7881  te=0.8969  (3.7s) << best
+[ 17]  score=0.7393  train=0.7834  val=0.7809  te=0.9088  (2.2s)
+[ 18]  score=0.6246  train=0.6314  val=0.6301  te=0.6605  (4.3s)
+[ 19]  score=0.7457  train=0.7893  val=0.7854  te=0.9076  (3.7s)
+[ 20]  score=0.6213  train=0.6279  val=0.6224  te=0.6403  (36.8s)
+[ 21]  score=0.6714  train=0.6907  val=0.6884  te=0.7412  (4.5s)
+[ 22]  score=0.6860  train=0.7068  val=0.6984  te=0.7411  (8.7s)
+[ 23]  score=0.6747  train=0.6868  val=0.6833  te=0.7248  (16.7s)
+[ 24]  score=0.7040  train=0.7265  val=0.7212  te=0.7777  (10.6s)
+[ 25]  score=0.7465  train=0.7895  val=0.7869  te=0.9066  (3.3s)
+[ 26]  score=0.6102  train=0.6182  val=0.6149  te=0.6409  (5.1s)
+[ 27]  score=0.6233  train=0.6328  val=0.6329  te=0.6743  (9.2s)
+[ 28]  score=0.5811  train=0.5858  val=0.5858  te=0.5941  (9.2s)
+[ 29]  score=0.7247  train=0.7521  val=0.7441  te=0.8024  (7.5s)
+[ 30]  score=0.6337  train=0.6430  val=0.6414  te=0.6746  (15.9s)
+[ 31]  score=0.6268  train=0.6326  val=0.6268  te=0.6428  (17.4s)
+[ 32]  score=0.7043  train=0.7511  val=0.7520  te=0.8983  (2.2s)
+[ 33]  score=0.7438  train=0.7874  val=0.7867  te=0.9098  (5.4s)
+[ 34]  score=0.6856  train=0.7032  val=0.6936  te=0.7302  (12.2s)
+[ 35]  score=0.5519  train=0.5606  val=0.5578  te=0.5544  (11.1s)
+[ 36]  score=0.6460  train=0.6580  val=0.6559  te=0.6975  (14.5s)
+[ 37]  score=0.6622  train=0.6718  val=0.6648  te=0.6937  (15.2s)
+[ 38]  score=0.6975  train=0.7151  val=0.7098  te=0.7560  (34.8s)
+[ 39]  score=0.6422  train=0.6553  val=0.6541  te=0.6934  (2.2s)
+[ 40]  score=0.7163  train=0.7620  val=0.7618  te=0.9019  (5.0s)
+[ 41]  score=0.7477  train=0.7903  val=0.7880  te=0.9079  (3.8s)
+[ 42]  score=0.6178  train=0.6250  val=0.6186  te=0.6314  (23.9s)
+[ 43]  score=0.6576  train=0.6664  val=0.6608  te=0.6809  (24.8s)
+[ 44]  score=0.6272  train=0.6337  val=0.6297  te=0.6489  (13.9s)
+[ 45]  score=0.4932  train=0.4958  val=0.4948  te=0.5025  (32.0s)
+[ 46]  score=0.5882  train=0.5933  val=0.5905  te=0.6012  (7.5s)
+[ 47]  score=0.7570  train=0.7972  val=0.7941  te=0.9063  (5.3s) << best
+[ 48]  score=0.6311  train=0.6396  val=0.6354  te=0.6642  (17.1s)
+[ 49]  score=0.6412  train=0.6516  val=0.6485  te=0.6780  (16.2s)
+
+============================================================
+Best score (proximate / irm / leave_one_domain_out): 0.7570
+Best hyperparameters:
+    grayscale_model: False
+    hidden_dim: 340
+    l2_regularizer_weight: 0.0002524322304507403
+    lr: 0.001926475318213037
+    mode: irm
+    penalty_anneal_iters: 219
+    penalty_weight: 273.2599515914586
+    steps: 101
+
+Results saved to search_results_texture_configproximate_irm_leave_one_domain_out.json
+
+Best command:
+
+python main_texture.py \
+  --config=proximate \
+  --mode=irm \
+  --selection_method=leave_one_domain_out \
+  --hidden_dim=340 \
+  --l2_regularizer_weight=0.0002524322304507403 \
+  --lr=0.001926475318213037 \
+  --penalty_anneal_iters=219 \
+  --penalty_weight=273.2599515914586 \
+  --steps=101 \
+  --n_restarts=10
+All texture searches finished.

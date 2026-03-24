@@ -1,0 +1,37 @@
+{
+  "best": {
+    "hidden_dim": 256,
+    "l2_regularizer_weight": 0.001,
+    "lr": 0.001,
+    "penalty_anneal_iters": 0,
+    "penalty_weight": 0.0,
+    "steps": 501,
+    "grayscale_model": false,
+    "mode": "erm"
+  },
+  "all_trials": [
+    {
+      "train_accs": [
+        0.9249199628829956,
+        0.842199981212616
+      ],
+      "val_accs": [
+        0.9190399646759033,
+        0.8393599987030029
+      ],
+      "test_acc": 0.1251000016927719,
+      "mean_train": 0.8835599720478058,
+      "mean_val": 0.8791999816894531
+    }
+  ],
+  "config": "original",
+  "cfg": {
+    "e_values": [
+      0.1,
+      0.2
+    ],
+    "description": "Original 2-env setup, both spurious features"
+  },
+  "mode": "erm",
+  "selection_method": "oracle"
+}

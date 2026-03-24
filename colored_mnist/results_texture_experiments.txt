@@ -1,0 +1,1603 @@
+============================================================
+  Two Correlated Spurious Features â€” Final Experiments
+============================================================
+--- Config: original e=[0.1, 0.2] ---
+Using device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: erm  |  Selection method: oracle
+
+Flags:
+	config: original
+	grayscale_model: False
+	hidden_dim: 256
+	l2_regularizer_weight: 0.001
+	lr: 0.001
+	mode: erm
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	selection_method: oracle
+	steps: 501
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.74483         0.21538         0.00309         0.50010      
+100             0.31539         0.86768         0.00385         0.49998      
+200             0.29250         0.87934         0.00343         0.49976      
+300             0.28578         0.88344         0.00333         0.49979      
+400             0.29028         0.88296         0.00319         0.49954      
+500             0.27937         0.88744         0.00339         0.49985      
+  Train accs: ['0.9273', '0.8454']
+  Val   accs: ['0.9213', '0.8349']
+  Test  acc:  0.1288
+  Test so far: 0.1288 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70955         0.35190         0.00031         0.49990      
+100             0.31260         0.86852         0.00406         0.49980      
+200             0.29321         0.87820         0.00345         0.49978      
+300             0.29219         0.88184         0.00333         0.49953      
+400             0.28247         0.88562         0.00331         0.49972      
+500             0.27991         0.88674         0.00323         0.49968      
+  Train accs: ['0.9263', '0.8443']
+  Val   accs: ['0.9222', '0.8332']
+  Test  acc:  0.1274
+  Test so far: 0.1281 ± 0.0007
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67991         0.54906         9.38136e-05     0.49987      
+100             0.31002         0.86990         0.00391         0.49964      
+200             0.29514         0.87676         0.00348         0.49999      
+300             0.28528         0.88294         0.00347         0.50009      
+400             0.28106         0.88492         0.00326         0.49976      
+500             0.27741         0.88716         0.00316         0.49997      
+  Train accs: ['0.9283', '0.8472']
+  Val   accs: ['0.9216', '0.8371']
+  Test  acc:  0.1308
+  Test so far: 0.1290 ± 0.0014
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72369         0.45998         0.00127         0.49989      
+100             0.31350         0.86942         0.00397         0.49965      
+200             0.29333         0.87978         0.00356         0.49964      
+300             0.28462         0.88340         0.00345         0.50002      
+400             0.28359         0.88472         0.00323         0.49972      
+500             0.27826         0.88836         0.00329         0.49971      
+  Train accs: ['0.9281', '0.8469']
+  Val   accs: ['0.9221', '0.8350']
+  Test  acc:  0.1316
+  Test so far: 0.1296 ± 0.0017
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69333         0.52348         1.49459e-06     0.49988      
+100             0.31529         0.86702         0.00388         0.50009      
+200             0.30183         0.87636         0.00342         0.49952      
+300             0.28541         0.88172         0.00333         0.49991      
+400             0.28576         0.88430         0.00314         0.49953      
+500             0.27885         0.88534         0.00316         0.49980      
+  Train accs: ['0.9274', '0.8456']
+  Val   accs: ['0.9210', '0.8349']
+  Test  acc:  0.1281
+  Test so far: 0.1293 ± 0.0016
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70254         0.49350         0.00042         0.49988      
+100             0.31195         0.86818         0.00387         0.50011      
+200             0.29790         0.87854         0.00355         0.49958      
+300             0.28650         0.88308         0.00333         0.50014      
+400             0.28214         0.88526         0.00322         0.49965      
+500             0.27752         0.88686         0.00314         0.49998      
+  Train accs: ['0.9277', '0.8466']
+  Val   accs: ['0.9216', '0.8362']
+  Test  acc:  0.1292
+  Test so far: 0.1293 ± 0.0015
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66046         0.62094         0.00081         0.49988      
+100             0.31335         0.86968         0.00409         0.49973      
+200             0.29637         0.87792         0.00345         0.49956      
+300             0.28470         0.88358         0.00338         0.49988      
+400             0.28140         0.88480         0.00321         0.49983      
+500             0.28307         0.88330         0.00314         0.50009      
+  Train accs: ['0.9272', '0.8456']
+  Val   accs: ['0.9205', '0.8358']
+  Test  acc:  0.1304
+  Test so far: 0.1295 ± 0.0014
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66479         0.63930         0.00063         0.49987      
+100             0.30952         0.86926         0.00381         0.49986      
+200             0.29169         0.87828         0.00349         0.50017      
+300             0.28551         0.88224         0.00335         0.49987      
+400             0.28976         0.87998         0.00321         0.50029      
+500             0.27784         0.88730         0.00332         0.49993      
+  Train accs: ['0.9283', '0.8470']
+  Val   accs: ['0.9213', '0.8363']
+  Test  acc:  0.1293
+  Test so far: 0.1294 ± 0.0013
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69700         0.50886         3.68581e-05     0.49988      
+100             0.31228         0.87012         0.00399         0.49965      
+200             0.30208         0.87604         0.00343         0.49954      
+300             0.28587         0.88300         0.00337         0.50006      
+400             0.28095         0.88538         0.00321         0.50003      
+500             0.28748         0.88516         0.00327         0.49954      
+  Train accs: ['0.9254', '0.8449']
+  Val   accs: ['0.9210', '0.8331']
+  Test  acc:  0.1326
+  Test so far: 0.1298 ± 0.0016
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69232         0.50666         2.61554e-05     0.49990      
+100             0.31256         0.86898         0.00395         0.49993      
+200             0.29190         0.87856         0.00363         0.50007      
+300             0.28472         0.88274         0.00333         0.49980      
+400             0.28153         0.88376         0.00322         0.50028      
+500             0.27794         0.88742         0.00344         0.49966      
+  Train accs: ['0.9266', '0.8456']
+  Val   accs: ['0.9211', '0.8330']
+  Test  acc:  0.1293
+  Test so far: 0.1297 ± 0.0015
+
+=== Final results ===
+Config: original  |  e values: [0.1, 0.2]
+Mode: erm  |  Selection: oracle
+Test acc (mean ± std): 0.1297 ± 0.0015
+Using device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection method: oracle
+
+Flags:
+	config: original
+	grayscale_model: False
+	hidden_dim: 87
+	l2_regularizer_weight: 0.0012273293649724259
+	lr: 0.0008833977231323628
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 83
+	penalty_weight: 1607.120188116246
+	seed: 0
+	selection_method: oracle
+	steps: 201
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68872         0.54796         2.38554e-06     0.50092      
+100             0.37029         0.85184         0.00497         0.49980      
+200             0.65876         0.60638         6.17852e-05     0.49961      
+  Train accs: ['0.6141', '0.5980']
+  Val   accs: ['0.6105', '0.6040']
+  Test  acc:  0.5836
+  Test so far: 0.5836 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72614         0.50582         0.00215         0.50506      
+100             0.37624         0.85016         0.00521         0.49985      
+200             0.66417         0.60726         2.81906e-05     0.49876      
+  Train accs: ['0.6168', '0.5968']
+  Val   accs: ['0.6129', '0.6025']
+  Test  acc:  0.5806
+  Test so far: 0.5821 ± 0.0015
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67071         0.54622         0.00026         0.50007      
+100             0.41074         0.83372         0.00386         0.49845      
+200             0.55698         0.64466         0.00078         0.49489      
+  Train accs: ['0.6609', '0.6190']
+  Val   accs: ['0.6596', '0.6260']
+  Test  acc:  0.3880
+  Test so far: 0.5174 ± 0.0915
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67395         0.54708         0.00020         0.49957      
+100             0.37624         0.85268         0.00493         0.49976      
+200             0.66248         0.60868         5.56650e-05     0.49976      
+  Train accs: ['0.6181', '0.5976']
+  Val   accs: ['0.6119', '0.6002']
+  Test  acc:  0.5700
+  Test so far: 0.5305 ± 0.0825
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71694         0.49704         0.00097         0.50245      
+100             0.37194         0.85090         0.00510         0.49985      
+200             0.65904         0.59476         6.87031e-05     0.49846      
+  Train accs: ['0.6028', '0.5882']
+  Val   accs: ['0.5993', '0.5910']
+  Test  acc:  0.5541
+  Test so far: 0.5353 ± 0.0744
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.65182         0.77120         0.00148         0.49976      
+100             0.37631         0.85300         0.00474         0.49964      
+200             0.65872         0.61054         7.29438e-05     0.49906      
+  Train accs: ['0.6200', '0.6006']
+  Val   accs: ['0.6150', '0.6044']
+  Test  acc:  0.5634
+  Test so far: 0.5399 ± 0.0687
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68664         0.53748         2.78169e-05     0.50112      
+100             0.37222         0.85180         0.00522         0.49982      
+200             0.66546         0.57438         3.96097e-05     0.50202      
+  Train accs: ['0.5817', '0.5682']
+  Val   accs: ['0.5780', '0.5676']
+  Test  acc:  0.5885
+  Test so far: 0.5469 ± 0.0658
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70153         0.49350         0.00064         0.49423      
+100             0.38175         0.84990         0.00564         0.49987      
+200             0.67598         0.55628         7.66956e-06     0.49837      
+  Train accs: ['0.5573', '0.5553']
+  Val   accs: ['0.5519', '0.5563']
+  Test  acc:  0.5856
+  Test so far: 0.5517 ± 0.0629
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68655         0.50408         0.00019         0.49588      
+100             0.37327         0.85414         0.00454         0.49961      
+200             0.63309         0.62722         0.00013         0.49671      
+  Train accs: ['0.6366', '0.6172']
+  Val   accs: ['0.6349', '0.6212']
+  Test  acc:  0.5197
+  Test so far: 0.5482 ± 0.0601
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67077         0.62172         0.00040         0.50041      
+100             0.36323         0.85570         0.00471         0.49961      
+200             0.63185         0.65342         0.00016         0.49890      
+  Train accs: ['0.6664', '0.6392']
+  Val   accs: ['0.6602', '0.6405']
+  Test  acc:  0.5459
+  Test so far: 0.5479 ± 0.0571
+
+=== Final results ===
+Config: original  |  e values: [0.1, 0.2]
+Mode: irm  |  Selection: oracle
+Test acc (mean ± std): 0.5479 ± 0.0571
+Using device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection method: train_domain_val
+
+Flags:
+	config: original
+	grayscale_model: False
+	hidden_dim: 215
+	l2_regularizer_weight: 0.0008903070341397012
+	lr: 0.000384100012359557
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 201
+	penalty_weight: 146.70897925451902
+	seed: 0
+	selection_method: train_domain_val
+	steps: 301
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71844         0.49292         0.00208         0.49685      
+100             0.36065         0.85287         0.00594         0.50002      
+200             0.29977         0.87442         0.00359         0.50007      
+300             0.44858         0.79637         0.00077         0.50143      
+  Train accs: ['0.8224', '0.7702']
+  Val   accs: ['0.8108', '0.7582']
+  Test  acc:  0.3462
+  Test so far: 0.3462 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70730         0.50502         0.00068         0.50204      
+100             0.35832         0.85312         0.00584         0.50002      
+200             0.29736         0.87525         0.00351         0.50002      
+300             0.43515         0.80348         0.00080         0.50136      
+  Train accs: ['0.8299', '0.7775']
+  Val   accs: ['0.8186', '0.7680']
+  Test  acc:  0.3393
+  Test so far: 0.3427 ± 0.0035
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73328         0.49695         0.00265         0.50315      
+100             0.36372         0.85270         0.00591         0.50001      
+200             0.30116         0.87375         0.00348         0.49999      
+300             0.43831         0.80445         0.00088         0.50131      
+  Train accs: ['0.8311', '0.7773']
+  Val   accs: ['0.8208', '0.7666']
+  Test  acc:  0.3320
+  Test so far: 0.3392 ± 0.0058
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69929         0.49792         8.65895e-05     0.49899      
+100             0.36478         0.85202         0.00606         0.50001      
+200             0.29848         0.87495         0.00353         0.49995      
+300             0.44237         0.79802         0.00084         0.50143      
+  Train accs: ['0.8234', '0.7730']
+  Val   accs: ['0.8126', '0.7664']
+  Test  acc:  0.3453
+  Test so far: 0.3407 ± 0.0057
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68903         0.49667         4.85106e-06     0.50057      
+100             0.35250         0.85415         0.00570         0.50003      
+200             0.29953         0.87360         0.00350         0.50000      
+300             0.43657         0.80100         0.00082         0.50137      
+  Train accs: ['0.8271', '0.7747']
+  Val   accs: ['0.8180', '0.7662']
+  Test  acc:  0.3371
+  Test so far: 0.3400 ± 0.0053
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66021         0.59857         0.00078         0.49980      
+100             0.33923         0.85623         0.00524         0.50004      
+200             0.29754         0.87540         0.00346         0.50004      
+300             0.42930         0.80682         0.00081         0.50134      
+  Train accs: ['0.8341', '0.7797']
+  Val   accs: ['0.8264', '0.7732']
+  Test  acc:  0.3353
+  Test so far: 0.3392 ± 0.0051
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69666         0.50103         5.29775e-05     0.49957      
+100             0.35693         0.85350         0.00579         0.50003      
+200             0.30110         0.87305         0.00357         0.50002      
+300             0.44525         0.79988         0.00080         0.50138      
+  Train accs: ['0.8256', '0.7745']
+  Val   accs: ['0.8150', '0.7624']
+  Test  acc:  0.3429
+  Test so far: 0.3397 ± 0.0049
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68035         0.49622         3.75045e-05     0.49838      
+100             0.36714         0.85255         0.00603         0.50002      
+200             0.29961         0.87362         0.00357         0.50004      
+300             0.44297         0.80062         0.00077         0.50141      
+  Train accs: ['0.8266', '0.7748']
+  Val   accs: ['0.8170', '0.7668']
+  Test  acc:  0.3418
+  Test so far: 0.3400 ± 0.0047
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71112         0.35768         0.00038         0.50039      
+100             0.36557         0.85220         0.00604         0.50001      
+200             0.29982         0.87372         0.00349         0.50001      
+300             0.44966         0.79167         0.00071         0.50145      
+  Train accs: ['0.8169', '0.7665']
+  Val   accs: ['0.8068', '0.7584']
+  Test  acc:  0.3510
+  Test so far: 0.3412 ± 0.0056
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71016         0.46740         0.00041         0.49879      
+100             0.36115         0.85212         0.00600         0.50001      
+200             0.30003         0.87350         0.00361         0.50003      
+300             0.44589         0.79777         0.00077         0.50141      
+  Train accs: ['0.8252', '0.7702']
+  Val   accs: ['0.8110', '0.7618']
+  Test  acc:  0.3417
+  Test so far: 0.3413 ± 0.0053
+
+=== Final results ===
+Config: original  |  e values: [0.1, 0.2]
+Mode: irm  |  Selection: train_domain_val
+Test acc (mean ± std): 0.3413 ± 0.0053
+Using device: cuda
+Config: original  |  e values: [0.1, 0.2]  |  Description: Original 2-env setup, both spurious features
+Mode: irm  |  Selection method: leave_one_domain_out
+
+Flags:
+	config: original
+	grayscale_model: False
+	hidden_dim: 254
+	l2_regularizer_weight: 0.0001656382312621769
+	lr: 0.0020607266362084172
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 114
+	penalty_weight: 123.26741610799746
+	seed: 0
+	selection_method: leave_one_domain_out
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.65727         0.78072         0.00115         0.49987      
+100             0.30218         0.87348         0.00351         0.50073      
+  Train accs: ['0.9116', '0.8248']
+  Val   accs: ['0.9055', '0.8194']
+  Test  acc:  0.1480
+  Test so far: 0.1480 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71779         0.49474         0.00104         0.49987      
+100             0.30981         0.87218         0.00363         0.49962      
+  Train accs: ['0.9158', '0.8278']
+  Val   accs: ['0.9141', '0.8222']
+  Test  acc:  0.1190
+  Test so far: 0.1335 ± 0.0145
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73392         0.50646         0.00452         0.49987      
+100             0.30634         0.87128         0.00354         0.49996      
+  Train accs: ['0.9161', '0.8276']
+  Val   accs: ['0.9136', '0.8220']
+  Test  acc:  0.1208
+  Test so far: 0.1293 ± 0.0133
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70608         0.38436         0.00020         0.49987      
+100             0.30640         0.87146         0.00356         0.49982      
+  Train accs: ['0.9166', '0.8282']
+  Val   accs: ['0.9152', '0.8218']
+  Test  acc:  0.1180
+  Test so far: 0.1264 ± 0.0125
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70738         0.50652         0.00112         0.49965      
+100             0.30887         0.87066         0.00361         0.50010      
+  Train accs: ['0.9160', '0.8254']
+  Val   accs: ['0.9116', '0.8210']
+  Test  acc:  0.1243
+  Test so far: 0.1260 ± 0.0112
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.64539         0.76064         0.00191         0.49990      
+100             0.30652         0.87304         0.00354         0.50000      
+  Train accs: ['0.9183', '0.8305']
+  Val   accs: ['0.9143', '0.8238']
+  Test  acc:  0.1234
+  Test so far: 0.1256 ± 0.0103
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.65920         0.68746         0.00094         0.49987      
+100             0.31055         0.87046         0.00388         0.49967      
+  Train accs: ['0.9160', '0.8260']
+  Val   accs: ['0.9140', '0.8206']
+  Test  acc:  0.1167
+  Test so far: 0.1243 ± 0.0100
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68325         0.50152         1.62521e-05     0.50028      
+100             0.30762         0.87140         0.00366         0.50003      
+  Train accs: ['0.9164', '0.8254']
+  Val   accs: ['0.9124', '0.8212']
+  Test  acc:  0.1197
+  Test so far: 0.1237 ± 0.0095
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66360         0.66618         0.00074         0.49987      
+100             0.30116         0.87426         0.00343         0.49970      
+  Train accs: ['0.9181', '0.8309']
+  Val   accs: ['0.9156', '0.8242']
+  Test  acc:  0.1193
+  Test so far: 0.1232 ± 0.0090
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.65329         0.62596         0.00114         0.49987      
+100             0.30447         0.87310         0.00343         0.50028      
+  Train accs: ['0.9166', '0.8305']
+  Val   accs: ['0.9124', '0.8230']
+  Test  acc:  0.1301
+  Test so far: 0.1239 ± 0.0088
+
+=== Final results ===
+Config: original  |  e values: [0.1, 0.2]
+Mode: irm  |  Selection: leave_one_domain_out
+Test acc (mean ± std): 0.1239 ± 0.0088
+--- Config: diverse e=[0.1, 0.5] ---
+Using device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: erm  |  Selection method: oracle
+
+Flags:
+	config: diverse
+	grayscale_model: False
+	hidden_dim: 256
+	l2_regularizer_weight: 0.001
+	lr: 0.001
+	mode: erm
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	selection_method: oracle
+	steps: 501
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72546         0.33084         0.00198         0.50069      
+100             0.51249         0.75042         0.01981         0.49925      
+200             0.49300         0.76276         0.01777         0.49955      
+300             0.48638         0.76746         0.01685         0.50071      
+400             0.48211         0.77094         0.01696         0.50013      
+500             0.48071         0.77062         0.01595         0.49833      
+  Train accs: ['0.8878', '0.6477']
+  Val   accs: ['0.8733', '0.6312']
+  Test  acc:  0.3176
+  Test so far: 0.3176 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70356         0.40706         0.00020         0.49997      
+100             0.50861         0.75264         0.01942         0.49948      
+200             0.49441         0.76206         0.01720         0.50161      
+300             0.48589         0.76766         0.01675         0.50012      
+400             0.48349         0.76864         0.01648         0.49896      
+500             0.48092         0.77080         0.01565         0.50101      
+  Train accs: ['0.8907', '0.6546']
+  Val   accs: ['0.8784', '0.6360']
+  Test  acc:  0.3264
+  Test so far: 0.3220 ± 0.0044
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68560         0.53644         8.02578e-05     0.49987      
+100             0.52246         0.74290         0.02052         0.49898      
+200             0.49200         0.76276         0.01792         0.50098      
+300             0.48544         0.76752         0.01667         0.49977      
+400             0.48125         0.77042         0.01621         0.50064      
+500             0.48115         0.77088         0.01655         0.50147      
+  Train accs: ['0.8869', '0.6534']
+  Val   accs: ['0.8762', '0.6365']
+  Test  acc:  0.3302
+  Test so far: 0.3247 ± 0.0053
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71374         0.47520         0.00085         0.50073      
+100             0.50508         0.75518         0.01907         0.50092      
+200             0.49352         0.76222         0.01770         0.49908      
+300             0.49166         0.76128         0.01729         0.49834      
+400             0.48282         0.76928         0.01647         0.49915      
+500             0.47791         0.77356         0.01595         0.50061      
+  Train accs: ['0.8919', '0.6556']
+  Val   accs: ['0.8807', '0.6346']
+  Test  acc:  0.3222
+  Test so far: 0.3241 ± 0.0047
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69344         0.51590         1.85884e-06     0.49996      
+100             0.51230         0.74988         0.01981         0.50096      
+200             0.49264         0.76206         0.01734         0.50078      
+300             0.48791         0.76492         0.01724         0.50016      
+400             0.48428         0.76908         0.01689         0.50026      
+500             0.47828         0.77266         0.01650         0.50067      
+  Train accs: ['0.8931', '0.6527']
+  Val   accs: ['0.8807', '0.6335']
+  Test  acc:  0.3171
+  Test so far: 0.3227 ± 0.0051
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70511         0.49348         0.00054         0.50067      
+100             0.51078         0.75040         0.02043         0.50097      
+200             0.49534         0.76072         0.01838         0.50146      
+300             0.48528         0.76748         0.01654         0.50054      
+400             0.48502         0.76776         0.01674         0.49936      
+500             0.47748         0.77350         0.01618         0.49967      
+  Train accs: ['0.8943', '0.6536']
+  Val   accs: ['0.8822', '0.6345']
+  Test  acc:  0.3116
+  Test so far: 0.3208 ± 0.0062
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67655         0.56558         0.00061         0.50048      
+100             0.50873         0.75256         0.01931         0.50083      
+200             0.49222         0.76438         0.01826         0.50141      
+300             0.48452         0.76918         0.01656         0.50067      
+400             0.48198         0.77198         0.01661         0.50155      
+500             0.48409         0.76864         0.01734         0.50157      
+  Train accs: ['0.8882', '0.6521']
+  Val   accs: ['0.8762', '0.6344']
+  Test  acc:  0.3266
+  Test so far: 0.3217 ± 0.0061
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67899         0.58798         0.00050         0.49987      
+100             0.50946         0.75206         0.02012         0.49913      
+200             0.49357         0.76266         0.01792         0.50136      
+300             0.48600         0.76738         0.01693         0.50113      
+400             0.48124         0.76984         0.01647         0.50084      
+500             0.48319         0.76932         0.01659         0.49861      
+  Train accs: ['0.8932', '0.6452']
+  Val   accs: ['0.8787', '0.6282']
+  Test  acc:  0.3087
+  Test so far: 0.3200 ± 0.0071
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69619         0.50638         2.87849e-05     0.50021      
+100             0.50541         0.75504         0.01911         0.50023      
+200             0.49386         0.76166         0.01740         0.49930      
+300             0.48792         0.76492         0.01687         0.49940      
+400             0.48254         0.77000         0.01647         0.50087      
+500             0.47834         0.77272         0.01567         0.49947      
+  Train accs: ['0.8936', '0.6533']
+  Val   accs: ['0.8794', '0.6361']
+  Test  acc:  0.3155
+  Test so far: 0.3195 ± 0.0069
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69564         0.50268         9.34141e-05     0.50064      
+100             0.51200         0.74880         0.01998         0.50111      
+200             0.49185         0.76296         0.01788         0.50061      
+300             0.48530         0.76812         0.01690         0.50089      
+400             0.48300         0.76946         0.01689         0.49994      
+500             0.47743         0.77414         0.01596         0.49995      
+  Train accs: ['0.8940', '0.6521']
+  Val   accs: ['0.8828', '0.6347']
+  Test  acc:  0.3158
+  Test so far: 0.3192 ± 0.0066
+
+=== Final results ===
+Config: diverse  |  e values: [0.1, 0.5]
+Mode: erm  |  Selection: oracle
+Test acc (mean ± std): 0.3192 ± 0.0066
+Using device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection method: oracle
+
+Flags:
+	config: diverse
+	grayscale_model: False
+	hidden_dim: 437
+	l2_regularizer_weight: 1.1873492278636356e-05
+	lr: 0.0011355285091982394
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 79
+	penalty_weight: 265.2098286875673
+	seed: 0
+	selection_method: oracle
+	steps: 401
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71186         0.50184         0.00084         0.49858      
+100             0.63064         0.65890         0.00018         0.50139      
+200             0.61250         0.67998         9.71100e-06     0.50008      
+300             0.60548         0.68862         8.12023e-06     0.49996      
+400             0.59132         0.70388         4.36705e-06     0.49999      
+  Train accs: ['0.7028', '0.7060']
+  Val   accs: ['0.6990', '0.6982']
+  Test  acc:  0.6989
+  Test so far: 0.6989 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70869         0.40744         0.00045         0.50032      
+100             0.58939         0.70178         0.00055         0.50092      
+200             0.60752         0.68784         1.12255e-05     0.49989      
+300             0.59193         0.70418         1.02980e-05     0.49994      
+400             0.58486         0.71130         1.26242e-05     0.50004      
+  Train accs: ['0.7085', '0.7111']
+  Val   accs: ['0.7043', '0.7002']
+  Test  acc:  0.7009
+  Test so far: 0.6999 ± 0.0010
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68945         0.52068         7.24515e-05     0.49977      
+100             0.59336         0.68808         0.00087         0.50208      
+200             0.61437         0.68190         3.25526e-06     0.49975      
+300             0.59857         0.69656         7.44467e-06     0.50012      
+400             0.58870         0.70754         5.06452e-06     0.50007      
+  Train accs: ['0.7089', '0.7069']
+  Val   accs: ['0.7057', '0.6976']
+  Test  acc:  0.6932
+  Test so far: 0.6977 ± 0.0033
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68799         0.54442         7.70808e-05     0.49987      
+100             0.60827         0.68008         0.00038         0.49791      
+200             0.61755         0.67732         4.18176e-06     0.49935      
+300             0.59813         0.69688         6.00149e-06     0.50007      
+400             0.58685         0.70968         5.49865e-06     0.50007      
+  Train accs: ['0.7071', '0.7122']
+  Val   accs: ['0.7042', '0.7003']
+  Test  acc:  0.7041
+  Test so far: 0.6993 ± 0.0040
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70617         0.49352         0.00063         0.50517      
+100             0.59725         0.69224         0.00095         0.49850      
+200             0.61197         0.68000         3.75537e-06     0.49939      
+300             0.59254         0.70196         1.89296e-05     0.49983      
+400             0.58949         0.70564         9.80765e-06     0.49974      
+  Train accs: ['0.7025', '0.7080']
+  Val   accs: ['0.6998', '0.6985']
+  Test  acc:  0.7046
+  Test so far: 0.7003 ± 0.0041
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68472         0.56392         0.00018         0.49987      
+100             0.61199         0.66730         0.00026         0.49834      
+200             0.60933         0.67978         9.80413e-06     0.49985      
+300             0.59610         0.69572         8.20106e-06     0.49999      
+400             0.58380         0.70982         7.12247e-06     0.50005      
+  Train accs: ['0.7078', '0.7118']
+  Val   accs: ['0.7037', '0.7020']
+  Test  acc:  0.7033
+  Test so far: 0.7008 ± 0.0039
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70464         0.47998         0.00028         0.50044      
+100             0.60300         0.67970         0.00053         0.49757      
+200             0.61395         0.67712         4.68343e-06     0.50051      
+300             0.60423         0.68910         9.71197e-06     0.49988      
+400             0.59362         0.70230         6.30700e-06     0.49998      
+  Train accs: ['0.7017', '0.7040']
+  Val   accs: ['0.6983', '0.6966']
+  Test  acc:  0.7002
+  Test so far: 0.7007 ± 0.0037
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70366         0.45104         0.00021         0.50035      
+100             0.63315         0.64526         0.00019         0.49811      
+200             0.61304         0.67744         4.05846e-06     0.49934      
+300             0.60292         0.69124         8.97301e-06     0.49996      
+400             0.58887         0.70878         7.61669e-06     0.50000      
+  Train accs: ['0.7078', '0.7094']
+  Val   accs: ['0.7037', '0.6999']
+  Test  acc:  0.7030
+  Test so far: 0.7010 ± 0.0035
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67975         0.62532         0.00041         0.49987      
+100             0.60895         0.67682         0.00075         0.50207      
+200             0.60451         0.69080         1.03201e-05     0.49999      
+300             0.58724         0.71078         9.73077e-06     0.50009      
+400             0.57801         0.71872         4.67033e-06     0.49998      
+  Train accs: ['0.7176', '0.7200']
+  Val   accs: ['0.7135', '0.7085']
+  Test  acc:  0.7048
+  Test so far: 0.7014 ± 0.0035
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69282         0.51922         7.57217e-06     0.49988      
+100             0.63105         0.65656         0.00030         0.49855      
+200             0.61335         0.67798         7.25526e-06     0.49990      
+300             0.59637         0.69702         3.58055e-06     0.49989      
+400             0.59122         0.70326         4.76427e-06     0.49997      
+  Train accs: ['0.7020', '0.7054']
+  Val   accs: ['0.6987', '0.6959']
+  Test  acc:  0.7015
+  Test so far: 0.7014 ± 0.0033
+
+=== Final results ===
+Config: diverse  |  e values: [0.1, 0.5]
+Mode: irm  |  Selection: oracle
+Test acc (mean ± std): 0.7014 ± 0.0033
+Using device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection method: train_domain_val
+
+Flags:
+	config: diverse
+	grayscale_model: False
+	hidden_dim: 437
+	l2_regularizer_weight: 1.1873492278636356e-05
+	lr: 0.0011355285091982394
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 79
+	penalty_weight: 265.2098286875673
+	seed: 0
+	selection_method: train_domain_val
+	steps: 401
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68193         0.54192         0.00024         0.49999      
+100             0.60777         0.67390         0.00043         0.49875      
+200             0.61049         0.68268         9.99785e-06     0.49999      
+300             0.59697         0.69447         7.93945e-06     0.50000      
+400             0.58432         0.70605         4.72085e-06     0.49996      
+  Train accs: ['0.7042', '0.7077']
+  Val   accs: ['0.6972', '0.6898']
+  Test  acc:  0.7078
+  Test so far: 0.7078 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71732         0.48960         0.00124         0.50034      
+100             0.61153         0.67750         0.00024         0.49939      
+200             0.61379         0.67402         3.94124e-06     0.49954      
+300             0.59700         0.69633         9.04613e-06     0.49996      
+400             0.58473         0.71007         6.58961e-06     0.49993      
+  Train accs: ['0.7091', '0.7112']
+  Val   accs: ['0.6958', '0.6890']
+  Test  acc:  0.7098
+  Test so far: 0.7088 ± 0.0010
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70279         0.43900         0.00017         0.50002      
+100             0.61107         0.66305         0.00062         0.49870      
+200             0.61296         0.67927         5.00796e-06     0.50013      
+300             0.60248         0.68913         8.09872e-06     0.49997      
+400             0.59134         0.70150         6.03976e-06     0.49995      
+  Train accs: ['0.7010', '0.7021']
+  Val   accs: ['0.6878', '0.6822']
+  Test  acc:  0.7044
+  Test so far: 0.7073 ± 0.0022
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69114         0.52012         4.96455e-05     0.49996      
+100             0.60768         0.67370         0.00046         0.49878      
+200             0.61604         0.67160         4.03038e-06     0.50036      
+300             0.60199         0.68817         8.37467e-06     0.50003      
+400             0.58661         0.70592         4.28352e-06     0.50002      
+  Train accs: ['0.7067', '0.7073']
+  Val   accs: ['0.6964', '0.6876']
+  Test  acc:  0.7064
+  Test so far: 0.7071 ± 0.0020
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.74142         0.46337         0.00468         0.50141      
+100             0.59570         0.68857         0.00083         0.49919      
+200             0.60998         0.68230         5.79994e-06     0.50019      
+300             0.59450         0.69720         7.19858e-06     0.50007      
+400             0.58534         0.70525         4.17276e-06     0.49995      
+  Train accs: ['0.7054', '0.7077']
+  Val   accs: ['0.6912', '0.6886']
+  Test  acc:  0.7000
+  Test so far: 0.7057 ± 0.0033
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.73154         0.49292         0.00391         0.50317      
+100             0.63757         0.62942         0.00100         0.49898      
+200             0.61299         0.67772         5.76114e-06     0.50007      
+300             0.60467         0.68327         8.63866e-06     0.49998      
+400             0.59075         0.69790         9.20414e-06     0.50001      
+  Train accs: ['0.6924', '0.7002']
+  Val   accs: ['0.6822', '0.6832']
+  Test  acc:  0.7084
+  Test so far: 0.7061 ± 0.0032
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68759         0.51095         5.05502e-05     0.49999      
+100             0.60247         0.68800         0.00071         0.50101      
+200             0.61544         0.67405         3.91904e-06     0.50044      
+300             0.60106         0.69300         7.30491e-06     0.50006      
+400             0.58871         0.70555         6.05356e-06     0.50000      
+  Train accs: ['0.7063', '0.7054']
+  Val   accs: ['0.7002', '0.6852']
+  Test  acc:  0.7059
+  Test so far: 0.7061 ± 0.0030
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69256         0.49912         4.75835e-06     0.50000      
+100             0.60569         0.68740         0.00014         0.50019      
+200             0.61155         0.68210         8.80716e-06     0.49997      
+300             0.59655         0.69790         5.20437e-06     0.49997      
+400             0.59215         0.70195         3.99701e-06     0.49996      
+  Train accs: ['0.6974', '0.7057']
+  Val   accs: ['0.6868', '0.6798']
+  Test  acc:  0.7036
+  Test so far: 0.7058 ± 0.0029
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71394         0.45382         0.00089         0.50037      
+100             0.60735         0.67205         0.00040         0.49917      
+200             0.61304         0.67702         5.41361e-06     0.50017      
+300             0.60405         0.68665         8.34202e-06     0.50002      
+400             0.58890         0.70305         8.21750e-06     0.49995      
+  Train accs: ['0.6997', '0.7054']
+  Val   accs: ['0.6834', '0.6842']
+  Test  acc:  0.7033
+  Test so far: 0.7055 ± 0.0028
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68904         0.51680         3.32264e-05     0.50003      
+100             0.60111         0.68172         0.00048         0.49919      
+200             0.60648         0.68792         5.51260e-06     0.50016      
+300             0.59814         0.69700         9.30407e-06     0.49992      
+400             0.58665         0.70755         6.48755e-06     0.49998      
+  Train accs: ['0.7121', '0.7107']
+  Val   accs: ['0.7022', '0.6924']
+  Test  acc:  0.7046
+  Test so far: 0.7054 ± 0.0027
+
+=== Final results ===
+Config: diverse  |  e values: [0.1, 0.5]
+Mode: irm  |  Selection: train_domain_val
+Test acc (mean ± std): 0.7054 ± 0.0027
+Using device: cuda
+Config: diverse  |  e values: [0.1, 0.5]  |  Description: High diversity, both spurious features
+Mode: irm  |  Selection method: leave_one_domain_out
+
+Flags:
+	config: diverse
+	grayscale_model: False
+	hidden_dim: 437
+	l2_regularizer_weight: 1.1873492278636356e-05
+	lr: 0.0011355285091982394
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 79
+	penalty_weight: 265.2098286875673
+	seed: 0
+	selection_method: leave_one_domain_out
+	steps: 401
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71186         0.50184         0.00084         0.49858      
+100             0.63064         0.65890         0.00018         0.50139      
+200             0.61250         0.67998         9.71100e-06     0.50008      
+300             0.60548         0.68862         8.12023e-06     0.49996      
+400             0.59132         0.70388         4.36705e-06     0.49999      
+  Train accs: ['0.7028', '0.7060']
+  Val   accs: ['0.6990', '0.6982']
+  Test  acc:  0.6989
+  Test so far: 0.6989 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70869         0.40744         0.00045         0.50032      
+100             0.58939         0.70178         0.00055         0.50092      
+200             0.60752         0.68784         1.12255e-05     0.49989      
+300             0.59193         0.70418         1.02980e-05     0.49994      
+400             0.58486         0.71130         1.26242e-05     0.50004      
+  Train accs: ['0.7085', '0.7111']
+  Val   accs: ['0.7043', '0.7002']
+  Test  acc:  0.7009
+  Test so far: 0.6999 ± 0.0010
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68945         0.52068         7.24515e-05     0.49977      
+100             0.59336         0.68808         0.00087         0.50208      
+200             0.61437         0.68190         3.25526e-06     0.49975      
+300             0.59857         0.69656         7.44467e-06     0.50012      
+400             0.58870         0.70754         5.06452e-06     0.50007      
+  Train accs: ['0.7089', '0.7069']
+  Val   accs: ['0.7057', '0.6976']
+  Test  acc:  0.6932
+  Test so far: 0.6977 ± 0.0033
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68799         0.54442         7.70808e-05     0.49987      
+100             0.60827         0.68008         0.00038         0.49791      
+200             0.61755         0.67732         4.18176e-06     0.49935      
+300             0.59813         0.69688         6.00149e-06     0.50007      
+400             0.58685         0.70968         5.49865e-06     0.50007      
+  Train accs: ['0.7071', '0.7122']
+  Val   accs: ['0.7042', '0.7003']
+  Test  acc:  0.7041
+  Test so far: 0.6993 ± 0.0040
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70617         0.49352         0.00063         0.50517      
+100             0.59725         0.69224         0.00095         0.49850      
+200             0.61197         0.68000         3.75537e-06     0.49939      
+300             0.59254         0.70196         1.89296e-05     0.49983      
+400             0.58949         0.70564         9.80765e-06     0.49974      
+  Train accs: ['0.7025', '0.7080']
+  Val   accs: ['0.6998', '0.6985']
+  Test  acc:  0.7046
+  Test so far: 0.7003 ± 0.0041
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68472         0.56392         0.00018         0.49987      
+100             0.61199         0.66730         0.00026         0.49834      
+200             0.60933         0.67978         9.80413e-06     0.49985      
+300             0.59610         0.69572         8.20106e-06     0.49999      
+400             0.58380         0.70982         7.12247e-06     0.50005      
+  Train accs: ['0.7078', '0.7118']
+  Val   accs: ['0.7037', '0.7020']
+  Test  acc:  0.7033
+  Test so far: 0.7008 ± 0.0039
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70464         0.47998         0.00028         0.50044      
+100             0.60300         0.67970         0.00053         0.49757      
+200             0.61395         0.67712         4.68343e-06     0.50051      
+300             0.60423         0.68910         9.71197e-06     0.49988      
+400             0.59362         0.70230         6.30700e-06     0.49998      
+  Train accs: ['0.7017', '0.7040']
+  Val   accs: ['0.6983', '0.6966']
+  Test  acc:  0.7002
+  Test so far: 0.7007 ± 0.0037
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70366         0.45104         0.00021         0.50035      
+100             0.63315         0.64526         0.00019         0.49811      
+200             0.61304         0.67744         4.05846e-06     0.49934      
+300             0.60292         0.69124         8.97301e-06     0.49996      
+400             0.58887         0.70878         7.61669e-06     0.50000      
+  Train accs: ['0.7078', '0.7094']
+  Val   accs: ['0.7037', '0.6999']
+  Test  acc:  0.7030
+  Test so far: 0.7010 ± 0.0035
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67975         0.62532         0.00041         0.49987      
+100             0.60895         0.67682         0.00075         0.50207      
+200             0.60451         0.69080         1.03201e-05     0.49999      
+300             0.58724         0.71078         9.73077e-06     0.50009      
+400             0.57801         0.71872         4.67033e-06     0.49998      
+  Train accs: ['0.7176', '0.7200']
+  Val   accs: ['0.7135', '0.7085']
+  Test  acc:  0.7048
+  Test so far: 0.7014 ± 0.0035
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69282         0.51922         7.57217e-06     0.49988      
+100             0.63105         0.65656         0.00030         0.49855      
+200             0.61335         0.67798         7.25526e-06     0.49990      
+300             0.59637         0.69702         3.58055e-06     0.49989      
+400             0.59122         0.70326         4.76427e-06     0.49997      
+  Train accs: ['0.7020', '0.7054']
+  Val   accs: ['0.6987', '0.6959']
+  Test  acc:  0.7015
+  Test so far: 0.7014 ± 0.0033
+
+=== Final results ===
+Config: diverse  |  e values: [0.1, 0.5]
+Mode: irm  |  Selection: leave_one_domain_out
+Test acc (mean ± std): 0.7014 ± 0.0033
+--- Config: proximate e=[0.7, 0.8] ---
+Using device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: erm  |  Selection method: oracle
+
+Flags:
+	config: proximate
+	grayscale_model: False
+	hidden_dim: 256
+	l2_regularizer_weight: 0.001
+	lr: 0.001
+	mode: erm
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	selection_method: oracle
+	steps: 501
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66634         0.68160         0.00059         0.50013      
+100             0.45342         0.78874         0.00259         0.50036      
+200             0.43292         0.80448         0.00246         0.49988      
+300             0.42518         0.81090         0.00245         0.49988      
+400             0.42186         0.81222         0.00220         0.49999      
+500             0.41719         0.81528         0.00221         0.50024      
+  Train accs: ['0.7820', '0.8534']
+  Val   accs: ['0.7671', '0.8448']
+  Test  acc:  0.9214
+  Test so far: 0.9214 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68541         0.57128         5.05975e-05     0.50013      
+100             0.45265         0.78928         0.00255         0.50065      
+200             0.43047         0.80640         0.00246         0.50031      
+300             0.42590         0.81014         0.00230         0.50036      
+400             0.42059         0.81484         0.00243         0.50022      
+500             0.41925         0.81380         0.00220         0.50040      
+  Train accs: ['0.7798', '0.8522']
+  Val   accs: ['0.7660', '0.8425']
+  Test  acc:  0.9189
+  Test so far: 0.9201 ± 0.0012
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70340         0.49308         0.00021         0.50022      
+100             0.45188         0.79112         0.00267         0.49996      
+200             0.43867         0.80150         0.00221         0.50069      
+300             0.42614         0.81030         0.00232         0.50061      
+400             0.42436         0.81124         0.00221         0.49992      
+500             0.42205         0.81242         0.00214         0.49978      
+  Train accs: ['0.7759', '0.8463']
+  Val   accs: ['0.7604', '0.8406']
+  Test  acc:  0.9175
+  Test so far: 0.9193 ± 0.0016
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68303         0.52330         3.86948e-05     0.50017      
+100             0.45418         0.79058         0.00248         0.49991      
+200             0.43142         0.80628         0.00251         0.50006      
+300             0.42802         0.80848         0.00226         0.50040      
+400             0.42176         0.81356         0.00229         0.50049      
+500             0.41888         0.81546         0.00234         0.50003      
+  Train accs: ['0.7808', '0.8515']
+  Val   accs: ['0.7665', '0.8448']
+  Test  acc:  0.9206
+  Test so far: 0.9196 ± 0.0015
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69397         0.48966         3.56163e-06     0.50014      
+100             0.45177         0.79028         0.00267         0.50045      
+200             0.43301         0.80558         0.00241         0.50060      
+300             0.42821         0.80808         0.00225         0.49974      
+400             0.42371         0.81166         0.00224         0.50058      
+500             0.42088         0.81394         0.00234         0.49991      
+  Train accs: ['0.7784', '0.8495']
+  Val   accs: ['0.7640', '0.8428']
+  Test  acc:  0.9187
+  Test so far: 0.9194 ± 0.0014
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71306         0.49318         0.00096         0.50037      
+100             0.45356         0.79088         0.00259         0.49989      
+200             0.43393         0.80418         0.00234         0.50033      
+300             0.42576         0.81132         0.00239         0.50050      
+400             0.42393         0.81124         0.00225         0.50049      
+500             0.41797         0.81712         0.00246         0.50058      
+  Train accs: ['0.7774', '0.8494']
+  Val   accs: ['0.7648', '0.8374']
+  Test  acc:  0.9096
+  Test so far: 0.9178 ± 0.0039
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72540         0.39224         0.00138         0.50039      
+100             0.45136         0.79012         0.00254         0.50022      
+200             0.43240         0.80414         0.00236         0.50022      
+300             0.42576         0.81118         0.00247         0.50052      
+400             0.42310         0.81200         0.00225         0.50048      
+500             0.41594         0.81786         0.00239         0.50004      
+  Train accs: ['0.7811', '0.8515']
+  Val   accs: ['0.7662', '0.8449']
+  Test  acc:  0.9205
+  Test so far: 0.9182 ± 0.0037
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.72295         0.42570         0.00119         0.49998      
+100             0.45478         0.78910         0.00269         0.49992      
+200             0.43545         0.80260         0.00238         0.49984      
+300             0.42972         0.80608         0.00224         0.49990      
+400             0.42219         0.81284         0.00243         0.49998      
+500             0.41872         0.81522         0.00242         0.50073      
+  Train accs: ['0.7745', '0.8436']
+  Val   accs: ['0.7618', '0.8316']
+  Test  acc:  0.9032
+  Test so far: 0.9163 ± 0.0060
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69359         0.49804         7.90257e-06     0.50014      
+100             0.45182         0.79020         0.00266         0.50038      
+200             0.43170         0.80564         0.00254         0.50010      
+300             0.42798         0.80662         0.00228         0.50012      
+400             0.42133         0.81408         0.00235         0.50039      
+500             0.41635         0.81754         0.00242         0.50040      
+  Train accs: ['0.7810', '0.8528']
+  Val   accs: ['0.7670', '0.8410']
+  Test  acc:  0.9174
+  Test so far: 0.9164 ± 0.0057
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70600         0.48972         0.00037         0.50013      
+100             0.45404         0.79158         0.00264         0.49989      
+200             0.43359         0.80520         0.00254         0.49984      
+300             0.42650         0.80994         0.00229         0.50052      
+400             0.42379         0.81188         0.00224         0.50060      
+500             0.41781         0.81658         0.00226         0.49991      
+  Train accs: ['0.7792', '0.8500']
+  Val   accs: ['0.7644', '0.8429']
+  Test  acc:  0.9195
+  Test so far: 0.9167 ± 0.0055
+
+=== Final results ===
+Config: proximate  |  e values: [0.7, 0.8]
+Mode: erm  |  Selection: oracle
+Test acc (mean ± std): 0.9167 ± 0.0055
+Using device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection method: oracle
+
+Flags:
+	config: proximate
+	grayscale_model: False
+	hidden_dim: 340
+	l2_regularizer_weight: 0.0002524322304507403
+	lr: 0.001926475318213037
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 219
+	penalty_weight: 273.2599515914586
+	seed: 0
+	selection_method: oracle
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71330         0.44544         0.00056         0.50007      
+100             0.47515         0.77884         0.00304         0.49901      
+  Train accs: ['0.7291', '0.8017']
+  Val   accs: ['0.7240', '0.8070']
+  Test  acc:  0.8842
+  Test so far: 0.8842 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67456         0.66122         0.00030         0.50013      
+100             0.45187         0.79024         0.00240         0.50052      
+  Train accs: ['0.7524', '0.8284']
+  Val   accs: ['0.7418', '0.8260']
+  Test  acc:  0.9088
+  Test so far: 0.8965 ± 0.0123
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71970         0.30700         0.00084         0.50013      
+100             0.45215         0.78990         0.00239         0.50058      
+  Train accs: ['0.7528', '0.8256']
+  Val   accs: ['0.7430', '0.8256']
+  Test  acc:  0.9053
+  Test so far: 0.8994 ± 0.0109
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69466         0.50880         1.23505e-05     0.50013      
+100             0.45171         0.79122         0.00232         0.50033      
+  Train accs: ['0.7534', '0.8305']
+  Val   accs: ['0.7447', '0.8281']
+  Test  acc:  0.9098
+  Test so far: 0.9020 ± 0.0104
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70897         0.45530         0.00036         0.50014      
+100             0.45065         0.79128         0.00235         0.50041      
+  Train accs: ['0.7529', '0.8291']
+  Val   accs: ['0.7453', '0.8282']
+  Test  acc:  0.9085
+  Test so far: 0.9033 ± 0.0097
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69195         0.49506         6.52770e-05     0.50031      
+100             0.44598         0.79458         0.00216         0.50025      
+  Train accs: ['0.7591', '0.8329']
+  Val   accs: ['0.7507', '0.8316']
+  Test  acc:  0.9108
+  Test so far: 0.9046 ± 0.0093
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66958         0.60728         0.00041         0.50010      
+100             0.45479         0.78932         0.00238         0.50060      
+  Train accs: ['0.7532', '0.8269']
+  Val   accs: ['0.7427', '0.8252']
+  Test  acc:  0.9049
+  Test so far: 0.9046 ± 0.0086
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71080         0.49350         0.00201         0.50675      
+100             0.45574         0.78844         0.00225         0.50042      
+  Train accs: ['0.7532', '0.8284']
+  Val   accs: ['0.7435', '0.8271']
+  Test  acc:  0.9071
+  Test so far: 0.9049 ± 0.0081
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68842         0.50830         4.57963e-05     0.50195      
+100             0.48044         0.77530         0.00236         0.49995      
+  Train accs: ['0.7364', '0.8213']
+  Val   accs: ['0.7295', '0.8242']
+  Test  acc:  0.9101
+  Test so far: 0.9055 ± 0.0078
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68953         0.53892         4.17454e-06     0.50026      
+100             0.45213         0.79144         0.00233         0.50032      
+  Train accs: ['0.7528', '0.8302']
+  Val   accs: ['0.7445', '0.8307']
+  Test  acc:  0.9110
+  Test so far: 0.9060 ± 0.0076
+
+=== Final results ===
+Config: proximate  |  e values: [0.7, 0.8]
+Mode: irm  |  Selection: oracle
+Test acc (mean ± std): 0.9060 ± 0.0076
+Using device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection method: train_domain_val
+
+Flags:
+	config: proximate
+	grayscale_model: False
+	hidden_dim: 340
+	l2_regularizer_weight: 0.0002524322304507403
+	lr: 0.001926475318213037
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 219
+	penalty_weight: 273.2599515914586
+	seed: 0
+	selection_method: train_domain_val
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68800         0.51825         5.07461e-06     0.49999      
+100             0.45921         0.78780         0.00177         0.49982      
+  Train accs: ['0.7474', '0.8238']
+  Val   accs: ['0.7462', '0.8142']
+  Test  acc:  0.9029
+  Test so far: 0.9029 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71442         0.36373         0.00056         0.50003      
+100             0.45171         0.79182         0.00197         0.49990      
+  Train accs: ['0.7515', '0.8288']
+  Val   accs: ['0.7532', '0.8180']
+  Test  acc:  0.9077
+  Test so far: 0.9053 ± 0.0024
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69536         0.49635         4.31722e-05     0.50011      
+100             0.44750         0.79565         0.00181         0.50010      
+  Train accs: ['0.7574', '0.8331']
+  Val   accs: ['0.7606', '0.8250']
+  Test  acc:  0.9096
+  Test so far: 0.9067 ± 0.0028
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69014         0.51855         1.55367e-06     0.50006      
+100             0.45119         0.79265         0.00186         0.49992      
+  Train accs: ['0.7515', '0.8291']
+  Val   accs: ['0.7508', '0.8188']
+  Test  acc:  0.9067
+  Test so far: 0.9067 ± 0.0024
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69616         0.47787         2.21477e-05     0.50000      
+100             0.45355         0.79043         0.00180         0.49986      
+  Train accs: ['0.7513', '0.8297']
+  Val   accs: ['0.7530', '0.8186']
+  Test  acc:  0.9065
+  Test so far: 0.9067 ± 0.0022
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68973         0.50308         1.08796e-05     0.50039      
+100             0.44812         0.79408         0.00175         0.49993      
+  Train accs: ['0.7543', '0.8316']
+  Val   accs: ['0.7550', '0.8196']
+  Test  acc:  0.9064
+  Test so far: 0.9066 ± 0.0020
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.74484         0.49247         0.00538         0.50314      
+100             0.45065         0.79327         0.00190         0.50011      
+  Train accs: ['0.7540', '0.8320']
+  Val   accs: ['0.7586', '0.8234']
+  Test  acc:  0.9080
+  Test so far: 0.9068 ± 0.0019
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68795         0.56963         2.00002e-05     0.50018      
+100             0.45181         0.79157         0.00210         0.49993      
+  Train accs: ['0.7537', '0.8305']
+  Val   accs: ['0.7524', '0.8154']
+  Test  acc:  0.9093
+  Test so far: 0.9071 ± 0.0020
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68777         0.57562         2.26524e-05     0.50001      
+100             0.44620         0.79487         0.00183         0.50024      
+  Train accs: ['0.7603', '0.8315']
+  Val   accs: ['0.7538', '0.8250']
+  Test  acc:  0.9053
+  Test so far: 0.9069 ± 0.0019
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71225         0.49300         0.00092         0.50222      
+100             0.45303         0.79057         0.00182         0.50010      
+  Train accs: ['0.7530', '0.8298']
+  Val   accs: ['0.7538', '0.8198']
+  Test  acc:  0.9081
+  Test so far: 0.9070 ± 0.0019
+
+=== Final results ===
+Config: proximate  |  e values: [0.7, 0.8]
+Mode: irm  |  Selection: train_domain_val
+Test acc (mean ± std): 0.9070 ± 0.0019
+Using device: cuda
+Config: proximate  |  e values: [0.7, 0.8]  |  Description: High proximity, both spurious features
+Mode: irm  |  Selection method: leave_one_domain_out
+
+Flags:
+	config: proximate
+	grayscale_model: False
+	hidden_dim: 340
+	l2_regularizer_weight: 0.0002524322304507403
+	lr: 0.001926475318213037
+	mode: irm
+	n_restarts: 10
+	penalty_anneal_iters: 219
+	penalty_weight: 273.2599515914586
+	seed: 0
+	selection_method: leave_one_domain_out
+	steps: 101
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71330         0.44544         0.00056         0.50007      
+100             0.47515         0.77884         0.00304         0.49901      
+  Train accs: ['0.7291', '0.8017']
+  Val   accs: ['0.7240', '0.8070']
+  Test  acc:  0.8842
+  Test so far: 0.8842 ± 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.67456         0.66122         0.00030         0.50013      
+100             0.45187         0.79024         0.00240         0.50052      
+  Train accs: ['0.7524', '0.8284']
+  Val   accs: ['0.7418', '0.8260']
+  Test  acc:  0.9088
+  Test so far: 0.8965 ± 0.0123
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71970         0.30700         0.00084         0.50013      
+100             0.45215         0.78990         0.00239         0.50058      
+  Train accs: ['0.7528', '0.8256']
+  Val   accs: ['0.7430', '0.8256']
+  Test  acc:  0.9053
+  Test so far: 0.8994 ± 0.0109
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69466         0.50880         1.23505e-05     0.50013      
+100             0.45171         0.79122         0.00232         0.50033      
+  Train accs: ['0.7534', '0.8305']
+  Val   accs: ['0.7447', '0.8281']
+  Test  acc:  0.9098
+  Test so far: 0.9020 ± 0.0104
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.70897         0.45530         0.00036         0.50014      
+100             0.45065         0.79128         0.00235         0.50041      
+  Train accs: ['0.7529', '0.8291']
+  Val   accs: ['0.7453', '0.8282']
+  Test  acc:  0.9085
+  Test so far: 0.9033 ± 0.0097
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.69195         0.49506         6.52770e-05     0.50031      
+100             0.44598         0.79458         0.00216         0.50025      
+  Train accs: ['0.7591', '0.8329']
+  Val   accs: ['0.7507', '0.8316']
+  Test  acc:  0.9108
+  Test so far: 0.9046 ± 0.0093
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.66958         0.60728         0.00041         0.50010      
+100             0.45479         0.78932         0.00238         0.50060      
+  Train accs: ['0.7532', '0.8269']
+  Val   accs: ['0.7427', '0.8252']
+  Test  acc:  0.9049
+  Test so far: 0.9046 ± 0.0086
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.71080         0.49350         0.00201         0.50675      
+100             0.45574         0.78844         0.00225         0.50042      
+  Train accs: ['0.7532', '0.8284']
+  Val   accs: ['0.7435', '0.8271']
+  Test  acc:  0.9071
+  Test so far: 0.9049 ± 0.0081
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68842         0.50830         4.57963e-05     0.50195      
+100             0.48044         0.77530         0.00236         0.49995      
+  Train accs: ['0.7364', '0.8213']
+  Val   accs: ['0.7295', '0.8242']
+  Test  acc:  0.9101
+  Test so far: 0.9055 ± 0.0078
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty   test_acc     
+0               0.68953         0.53892         4.17454e-06     0.50026      
+100             0.45213         0.79144         0.00233         0.50032      
+  Train accs: ['0.7528', '0.8302']
+  Val   accs: ['0.7445', '0.8307']
+  Test  acc:  0.9110
+  Test so far: 0.9060 ± 0.0076
+
+=== Final results ===
+Config: proximate  |  e values: [0.7, 0.8]
+Mode: irm  |  Selection: leave_one_domain_out
+Test acc (mean ± std): 0.9060 ± 0.0076
+All texture experiments finished.
