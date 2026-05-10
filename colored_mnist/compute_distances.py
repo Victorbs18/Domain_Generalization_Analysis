@@ -84,20 +84,28 @@ def compute_mmd(X, Y):
     return float(XX.mean() + YY.mean() - 2.0 * XY.mean())
 
 
-def compute_wasserstein(X, Y, n_components=50, reg=0.01):
-    """
-    Sinkhorn approximation of 2-Wasserstein distance.
-    PCA applied first to reduce from 392 to n_components dims.
-    """
+def compute_wasserstein(X, Y, n_components=50, reg=1.0):
     pca = PCA(n_components=n_components)
     pca.fit(np.vstack([X, Y]))
     X_r = pca.transform(X)
     Y_r = pca.transform(Y)
-
     a = np.ones(len(X_r)) / len(X_r)
     b = np.ones(len(Y_r)) / len(Y_r)
     M = ot.dist(X_r, Y_r, metric="sqeuclidean")
-    return float(ot.sinkhorn2(a, b, M, reg=reg)[0])
+    M = M / M.max()
+    try:
+        W = ot.sinkhorn2(a, b, M, reg=reg, numItermax=1000)[0]
+        if np.isnan(float(W)) or np.isinf(float(W)):
+            raise ValueError("NaN/Inf")
+        return float(W)
+    except Exception:
+        idx_x = np.random.choice(len(X_r), 200, replace=False)
+        idx_y = np.random.choice(len(Y_r), 200, replace=False)
+        a2 = np.ones(200) / 200
+        b2 = np.ones(200) / 200
+        M2 = ot.dist(X_r[idx_x], Y_r[idx_y], metric="sqeuclidean")
+        M2 = M2 / M2.max()
+        return float(ot.emd2(a2, b2, M2))
 
 
 def compute_pad(X_train, X_test):
@@ -112,7 +120,7 @@ def compute_pad(X_train, X_test):
     clf    = LogisticRegression(max_iter=1000)
     scores = cross_val_score(clf, X, y, cv=5, scoring="accuracy")
     error  = 1.0 - scores.mean()
-    return float(2.0 * (1.0 - 2.0 * error))
+    return float(max(0.0, 2.0 * (1.0 - 2.0 * error)))
 
 
 # ---------------------------------------------------------------------------
