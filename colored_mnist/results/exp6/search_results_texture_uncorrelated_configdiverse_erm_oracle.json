@@ -1,0 +1,37 @@
+{
+  "best": {
+    "hidden_dim": 256,
+    "l2_regularizer_weight": 0.001,
+    "lr": 0.001,
+    "penalty_anneal_iters": 0,
+    "penalty_weight": 0.0,
+    "steps": 501,
+    "grayscale_model": false,
+    "mode": "erm"
+  },
+  "all_trials": [
+    {
+      "train_accs": [
+        0.8926399946212769,
+        0.6499199867248535
+      ],
+      "val_accs": [
+        0.8827999830245972,
+        0.6376799941062927
+      ],
+      "test_acc": 0.31349998712539673,
+      "mean_train": 0.7712799906730652,
+      "mean_val": 0.760239988565445
+    }
+  ],
+  "config": "diverse",
+  "cfg": {
+    "e_values": [
+      0.1,
+      0.5
+    ],
+    "description": "High diversity \u2014 color and texture ANTI-correlated"
+  },
+  "mode": "erm",
+  "selection_method": "oracle"
+}
