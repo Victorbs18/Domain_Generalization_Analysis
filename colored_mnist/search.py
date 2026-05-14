@@ -1,5 +1,5 @@
 """
-search.py — Random hyperparameter search for IRM on Colored MNIST.
+search.py : Random hyperparameter search for IRM on Colored MNIST.
 
 Replicates the search ranges described in the original paper:
 
@@ -10,7 +10,7 @@ Replicates the search ranges described in the original paper:
     penalty_weight        = 10 ** U(2, 6)
     steps                 in {101, 201, 301, 401, 501}
 
-Selection criterion (same as paper):
+Selection criterion: (oracle)
     maximize  min(train_env0_acc, train_env1_acc, test_acc)
 
 Usage
