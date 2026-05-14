@@ -2,7 +2,7 @@
 # Arjovsky et al., 2019 — https://arxiv.org/abs/1907.02893
 #
 # Colored MNIST experiment.
-# Hyperparameters are NOT copied from the paper; they are found via search.py.
+# Hyperparameters are not copied from the paper. They are found via search.py using same ranges.
 
 import argparse
 import numpy as np
@@ -51,8 +51,8 @@ def make_environment(images, labels, e, device):
     Environment construction:
         - Binary label: digit < 5 → 1, else 0; flipped with prob 0.25
         - Color assigned based on label, then flipped with prob e
-        - e=0.2 / e=0.1 → color strongly correlated with label (train)
-        - e=0.9 → color anti-correlated with label (test)
+        - e=0.2 / e=0.1 : color strongly correlated with label (train)
+        - e=0.9 : color anti-correlated with label (test)
     """
     def torch_bernoulli(p, size):
         return (torch.rand(size) < p).float()
@@ -63,7 +63,7 @@ def make_environment(images, labels, e, device):
     # 2x subsample for computational convenience
     images = images.reshape((-1, 28, 28))[:, ::2, ::2]
 
-    # Binary label: digit < 5 → 1; flip with prob 0.25
+    # Binary label: digit < 5 : 1; flip with prob 0.25
     labels = (labels < 5).float()
     labels = torch_xor(labels, torch_bernoulli(0.25, len(labels)))
 
@@ -85,7 +85,7 @@ def load_colored_mnist(device):
     Download MNIST and return three environments:
         env[0]: train split A, e=0.2  (strong spurious correlation)
         env[1]: train split B, e=0.1  (stronger spurious correlation)
-        env[2]: val / test,    e=0.9  (color is anti-correlated → hard)
+        env[2]: val / test,    e=0.9  (color is anti-correlated : hard)
     """
     mnist = datasets.MNIST("~/datasets/mnist", train=True, download=True)
     train_data = (mnist.data[:50000], mnist.targets[:50000])
