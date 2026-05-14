@@ -98,11 +98,11 @@ run_experiments.bat > results.txt 2>&1
 
 ### Results
 
-| Method | Test Accuracy | Paper (reported) |
+| Method | Test Accuracy | IRM Paper |
 |--------|:-------------:|:----------------:|
-| ERM | 17.50% ± 0.51% | ~17% |
-| IRM | 66.27% ± 1.44% | ~70% |
-| Grayscale ERM (oracle) | 73.21% ± 0.19% | ~73% |
+| ERM | 17.50% ± 0.51% | 17.1% ± 0.6% |
+| IRM | 66.27% ± 1.44% | 66.9% ± 2.5% |
+| Grayscale ERM (oracle) | 73.21% ± 0.19% | 73.0 ± 0.4% |
 
 ---
 
