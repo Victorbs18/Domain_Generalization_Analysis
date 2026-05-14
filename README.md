@@ -17,13 +17,17 @@ With additional experiments inspired by:
 
 ## Overview
 
+## Overview
+
 This repository reproduces the Colored MNIST IRM experiments and extends
-them along two original research directions:
+them along three original research directions:
 
 1. **Model selection methods** — does IRM's advantage hold under realistic
    (non-oracle) hyperparameter selection?
-2. **Number of environments** — how many training environments does IRM need,
-   and does diversity matter more than quantity?
+2. **Number of environments** — how many training environments does IRM
+   need, and does diversity matter more than quantity?
+3. **Distribution distance** — how does the distributional distance between
+   train and test environments relate to OOD performance?
 
 ---
 
@@ -51,6 +55,13 @@ Domain_Generalization_Analysis/
     ├── search_similar_env.py        # Search for fixed range environments
     ├── run_similar_env_search.bat   # Run fixed range searches
     └── run_similar_env_experiments.bat  # Run fixed range experiments
+    │
+    ├── main_dist_sweep.py               # Experiment 7 — distance sweep
+    ├── search_dist_sweep.py             # Search for distance sweep
+    ├── compute_distances.py             # MMD, Wasserstein, PAD computation
+    ├── plot_dist_sweep.py               # Distance sweep plots
+    ├── run_dist_sweep_search.bat        # Run distance sweep search
+    └── run_dist_sweep_experiments.bat   # Run distance sweep experiments
 ```
 
 ---
@@ -401,6 +412,61 @@ run_texture_experiments.bat > results_texture_experiments.txt 2>&1
 | diverse {0.1, 0.5} | 71.71% ± 0.19% | 70.14% ± 0.33% | -1.6% ≈ |
 | proximate {0.7, 0.8} | 81.69% ± 0.35% | 90.60% ± 0.76% | **+8.9%** ↑ |
 
+## Experiment 7 — Performance vs Distribution Distance
+
+Tests how the distributional distance between the single training 
+environment and the fixed test environment (e=0.9) relates to OOD 
+performance for IRM and ERM. Distance is quantified using three metrics:
+MMD, Wasserstein, and Proxy A-Distance (PAD).
+
+**Research question:** Does distributional distance between train and test
+environments predict OOD performance, and does IRM degrade differently
+from ERM as this distance increases?
+
+### Distance metrics
+
+| Metric | Description |
+|--------|-------------|
+| **MMD** | Maximum Mean Discrepancy with RBF kernel and median heuristic |
+| **Wasserstein** | Earth Mover's Distance with PCA-50 + Sinkhorn approximation |
+| **PAD** | Proxy A-Distance via logistic regression classifier |
+
+### Design
+
+Single training environment swept across e ∈ {0.1, 0.2, ..., 0.9}.
+Test environment always fixed at e=0.9. Selection method: train domain val.
+
+| e_train | Distance to test | Expected performance |
+|---------|-----------------|---------------------|
+| 0.1 | Large | Low |
+| 0.5 | Medium | Medium |
+| 0.9 | ~0 | High |
+
+### How to run
+```bash
+# Step 1 — Compute distances (once)
+python compute_distances.py --n_samples 1000
+
+# Step 2 — Run experiments
+run_dist_sweep_experiments.bat > results_dist_sweep.txt 2>&1
+
+# Step 3 — Generate plots
+python plot_dist_sweep.py --selection_method train_domain_val
+```
+
+### Results
+
+| e_train | IRM Test Acc | ERM Test Acc | MMD |
+|---------|:------------:|:------------:|:----|
+| 0.1 | 9.9% ± 0.1% | 9.9% ± 0.0% | 0.00230 |
+| 0.2 | 17.7% ± 3.4% | 23.2% ± 2.4% | 0.00183 |
+| 0.3 | 48.8% ± 2.5% | 47.8% ± 3.0% | 0.00163 |
+| 0.4 | 69.3% ± 4.4% | 64.5% ± 0.7% | 0.00105 |
+| 0.5 | 73.1% ± 0.5% | 72.9% ± 0.7% | 0.00082 |
+| 0.6 | 74.0% ± 2.3% | 76.5% ± 1.1% | 0.00064 |
+| 0.7 | 80.3% ± 0.9% | 81.0% ± 0.6% | 0.00053 |
+| 0.8 | 88.2% ± 0.3% | 87.1% ± 0.6% | 0.00060 |
+| 0.9 | 90.1% ± 0.0% | 90.1% ± 0.0% | 0.00056 |
 ---
 
 ## Key Findings
