@@ -17,8 +17,6 @@ With additional experiments inspired by:
 
 ## Overview
 
-## Overview
-
 This repository reproduces the Colored MNIST IRM experiments and extends
 them along three original research directions:
 
