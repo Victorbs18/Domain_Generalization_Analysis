@@ -79,13 +79,13 @@ model selection** (test environment used for hyperparameter selection).
 
 ### How to run
 ```bash
-# Step 1 — Find hyperparameters
+# Find hyperparameters (results already saved in results/exp1/)
 python search.py --mode irm --n_trials 50
 python search.py --mode grayscale --n_trials 50
 python search.py --mode erm
 
-# Step 2 — Run final experiments
-run_experiments.bat > results.txt 2>&1
+# Run final experiments
+run_experiments.bat > results/exp1/results.txt 2>&1
 ```
 
 ### Hyperparameters found
