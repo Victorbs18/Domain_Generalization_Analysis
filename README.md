@@ -35,40 +35,64 @@ Domain_Generalization_Analysis/
 ├── environment.yaml
 ├── README.md
 └── colored_mnist/
-    │
-    ├── main.py                      # Original IRM reproduction
-    ├── search.py                    # Oracle hyperparameter search
-    ├── run_experiments.bat          # Run original 3 conditions
-    │
-    ├── main_realistic.py            # Realistic model selection data splits
-    ├── search_realistic.py          # Search with selection_method flag
-    ├── run_realistic.bat            # Run realistic selection experiments
-    │
-    ├── main_env.py                  # Variable environments (increasing diversity)
-    ├── search_env.py                # Search for variable environments
-    ├── run_env_search.bat           # Run all environment searches
-    ├── run_env_experiments.bat      # Run all environment experiments
-    │
-    ├── main_similar_env.py          # Variable environments (fixed range)
-    ├── search_similar_env.py        # Search for fixed range environments
-    ├── run_similar_env_search.bat   # Run fixed range searches
-    └── run_similar_env_experiments.bat  # Run fixed range experiments
-    │
-    ├── main_dist_sweep.py               # Experiment 7 — distance sweep
-    ├── search_dist_sweep.py             # Search for distance sweep
-    ├── compute_distances.py             # MMD, Wasserstein, PAD computation
-    ├── plot_dist_sweep.py               # Distance sweep plots
-    ├── run_dist_sweep_search.bat        # Run distance sweep search
-    └── run_dist_sweep_experiments.bat   # Run distance sweep experiments
-```
+├── utils/
+│   ├── dataset.py       # make_environment, load_mnist
+│   ├── model.py         # MLP
+│   ├── losses.py        # mean_nll, mean_accuracy, irm_penalty
+│   ├── search.py        # sample_irm, sample_grayscale, ERM_FIXED
+│   ├── selection.py     # load_environments, scoring functions
+│   └── trainer.py       # train_one_restart
+├── src/
+│   ├── exp1/
+│   │   ├── main_exp1.py
+│   │   ├── search_exp1.py
+│   │   └── run_exp1.bat
+│   ├── exp2/
+│   │   ├── main_exp2.py
+│   │   ├── search_exp2.py
+│   │   └── run_exp2.bat
+│   ├── exp3/
+│   │   ├── main_exp3.py
+│   │   ├── search_exp3.py
+│   │   └── run_exp3.bat
+│   ├── exp4/
+│   │   ├── main_exp4.py
+│   │   ├── search_exp4.py
+│   │   └── run_exp4.bat
+│   ├── exp5/
+│   │   ├── main_exp5.py
+│   │   ├── search_exp5.py
+│   │   └── run_exp5.bat
+│   ├── exp6/
+│   │   ├── dataset_texture.py
+│   │   ├── main_exp6.py
+│   │   ├── search_exp6.py
+│   │   └── run_exp6.bat
+│   └── exp7/
+│       ├── compute_distances.py
+│       ├── plot_exp7.py
+│       ├── main_exp7.py
+│       ├── search_exp7.py
+│       └── run_exp7.bat
+└── results/
+├── exp1/
+├── exp2/
+├── exp3/
+├── exp4/
+├── exp5/
+├── exp6/
+└── exp7/
 
 ---
 
 ## Setup
+
 ```bash
 conda env create -f environment.yaml
 conda activate irm_reproduction
 ```
+
+All scripts must be run from the `colored_mnist/` root directory.
 
 ---
 
@@ -78,32 +102,55 @@ Reproduces the three conditions from the original paper under **oracle
 model selection** (test environment used for hyperparameter selection).
 
 ### How to run
-```bash
-# Find hyperparameters (results already saved in results/exp1/)
-python search.py --mode irm --n_trials 50
-python search.py --mode grayscale --n_trials 50
-python search.py --mode erm
 
-# Run final experiments
-run_experiments.bat > results/exp1/results.txt 2>&1
+---
+
+## Setup
+
+```bash
+conda env create -f environment.yaml
+conda activate irm_reproduction
 ```
+
+All scripts must be run from the `colored_mnist/` root directory.
+
+---
+
+## Experiment 1 — IRM Reproduction
+
+Reproduces the three conditions from the original paper under **oracle
+model selection** (test environment used for hyperparameter selection).
+
+### How to run
+
+```bash
+# Run from colored_mnist/ root
+src\exp1\run_exp1.bat > results\exp1\results.txt 2>&1
+```
+
+This runs hyperparameter search (50 trials, seed=0) followed by
+final experiments (10 restarts). Search results are saved to
+`results/exp1/search_results_{mode}.json` and automatically
+loaded by the final experiment scripts.
 
 ### Hyperparameters found
 
 | Method | hidden_dim | lr | l2_reg | penalty_anneal_iters | penalty_weight | steps |
 |--------|:----------:|:--:|:------:|:--------------------:|:--------------:|:-----:|
-| IRM | 256 | 0.00116 | 0.000259 | 65 | 34583.8 | 401 |
+| IRM | 383 | 0.000438 | 5.51e-05 | 70 | 72189.5 | 401 |
 | ERM | 256 | 0.001 | 0.001 | 0 | 0.0 | 501 |
-| Grayscale | 255 | 0.00191 | 0.001305 | 0 | 0.0 | 401 |
+| Grayscale | 82 | 0.001403 | 0.001028 | 0 | 0.0 | 201 |
 
 ### Results
 
-| Method | Test Accuracy | IRM Paper |
+| Method | Test Accuracy | Paper (reported) |
 |--------|:-------------:|:----------------:|
-| ERM | 17.50% ± 0.51% | 17.1% ± 0.6% |
-| IRM | 66.27% ± 1.44% | 66.9% ± 2.5% |
-| Grayscale ERM (oracle) | 73.21% ± 0.19% | 73.0 ± 0.4% |
+| ERM | 16.31% +- 0.59% | 17.1% +- 0.6% |
+| IRM | 65.90% +- 0.55% | 66.9% +- 2.5% |
+| Grayscale ERM (oracle) | 73.74% +- 0.09% | 73.0% +- 0.4% |
 
+> Note: the theoretical accuracy ceiling is ~75% due to 25% label noise introduced during environment construction.
+> 
 ---
 
 ## Experiment 2 — Model Selection Methods
