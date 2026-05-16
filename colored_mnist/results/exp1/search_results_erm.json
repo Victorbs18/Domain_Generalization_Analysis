@@ -1,0 +1,28 @@
+{
+  "best": {
+    "hidden_dim": 256,
+    "l2_regularizer_weight": 0.001,
+    "lr": 0.001,
+    "penalty_anneal_iters": 0,
+    "penalty_weight": 0.0,
+    "steps": 501,
+    "grayscale_model": false
+  },
+  "all_trials": [
+    {
+      "trial": 0,
+      "score": 0.171999990940094,
+      "env0_acc": 0.8338399529457092,
+      "env1_acc": 0.9091999530792236,
+      "test_acc": 0.171999990940094,
+      "elapsed": 27.705260753631592,
+      "hidden_dim": 256,
+      "l2_regularizer_weight": 0.001,
+      "lr": 0.001,
+      "penalty_anneal_iters": 0,
+      "penalty_weight": 0.0,
+      "steps": 501,
+      "grayscale_model": false
+    }
+  ]
+}
