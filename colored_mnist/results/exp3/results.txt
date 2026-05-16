@@ -1,0 +1,239 @@
+============================================================
+  Experiment 3 -- Number of Environments (Increasing Diversity)
+  bash src/exp3/run_exp3.sh > results/exp3/results.txt 2>&1
+============================================================
+[IRM - n_envs=1 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=1 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=1 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=2 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=2 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/search_exp3.py", line 23, in <module>
+    from utils.selection import load_environments, score_oracle, score_train_domain_val, score_leave_one_domain_out
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=1 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=1 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=1 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=2 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=2 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=2 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=3 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=4 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - oracle]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - train_domain_val]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[IRM - n_envs=5 - leave_one_domain_out]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+[ERM - all n_envs]
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/main_exp3.py", line 33, in <module>
+    from utils.selection import load_environments
+  File "/workspace/Domain_Generalization_Analysis/colored_mnist/src/exp3/../../utils/selection.py", line 92
+    folds = [{"train": all_envs, "val": all_envs[0]}]	
+TabError: inconsistent use of tabs and spaces in indentation
+All experiments finished.
