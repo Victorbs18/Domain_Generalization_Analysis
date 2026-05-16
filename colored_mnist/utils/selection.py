@@ -2,15 +2,14 @@
 # Model selection criteria for Colored MNIST experiments.
 #
 # Three selection strategies:
-#   oracle:               uses test accuracy directly: unrealistic upper bound
+#   oracle:               uses test accuracy directly — unrealistic upper bound
 #   train_domain_val:     uses held-out 20% of each training environment
 #   leave_one_domain_out: trains n_envs models each leaving one env out
-                       
+#                         n=1: degenerate — train and val on same environment
+#                         n=2: each fold trains on 1 env — IRM degrades to ERM
+#                         n>=3: each fold trains on n_envs-1 envs — IRM works properly
 
 import numpy as np
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 from utils.dataset import make_environment
 
 
@@ -58,7 +57,7 @@ def load_environments(
             train_pool[1][start:end],
             e, device))
 
-    # Test environment: always fixed at e=0.9
+    # Test environment — always fixed at e=0.9
     test_env = make_environment(
         test_pool[0], test_pool[1], 0.9, device)
 
@@ -66,8 +65,8 @@ def load_environments(
         train_envs = []
         val_envs   = []
         for i, e in enumerate(e_values):
-            start = i * split_size
-            end   = start + split_size if i < n_envs - 1 else n_total
+            start      = i * split_size
+            end        = start + split_size if i < n_envs - 1 else n_total
             env_images = train_pool[0][start:end]
             env_labels = train_pool[1][start:end]
             n_val      = int(len(env_images) * val_fraction)
@@ -84,17 +83,18 @@ def load_environments(
         }
 
     elif selection_method == "leave_one_domain_out":
-        # Build n_envs folds each leaving one environment out
-        # For n=2: each fold trains on 1 env: IRM degrades to ERM
-        # For n>=3: each fold trains on n_envs-1 envs: IRM works properly
-        folds = []
-        for i in range(n_envs):
-            fold_train = [all_envs[j] for j in range(n_envs) if j != i]
-            fold_val   = all_envs[i]
-            folds.append({
-                "train": fold_train,
-                "val":   fold_val,
-            })
+        if n_envs == 1:
+            # Degenerate case — train and validate on same environment
+            folds = [{"train": all_envs, "val": all_envs[0]}]
+        else:
+            folds = []
+            for i in range(n_envs):
+                fold_train = [all_envs[j] for j in range(n_envs) if j != i]
+                fold_val   = all_envs[i]
+                folds.append({
+                    "train": fold_train,
+                    "val":   fold_val,
+                })
         return {
             "train": all_envs,
             "val":   all_envs,
@@ -103,7 +103,7 @@ def load_environments(
         }
 
     else:
-        # Oracle: no split needed
+        # Oracle — no split needed
         return {
             "train": all_envs,
             "val":   all_envs,
@@ -117,17 +117,28 @@ def load_environments(
 # ---------------------------------------------------------------------------
 
 def score_oracle(train_accs: list, val_accs: list, test_acc: float) -> float:
-
+    """
+    Oracle: min(train_accs + [test_acc])
+    Unrealistic — uses test accuracy directly.
+    """
     return min(min(train_accs), test_acc)
 
 
 def score_train_domain_val(train_accs: list, val_accs: list, test_acc: float) -> float:
- 
+    """
+    Train domain val: min(val_accs)
+    Val set is genuinely held out from training.
+    """
     return min(val_accs)
 
 
 def score_leave_one_domain_out(fold_val_accs: list) -> float:
-
+    """
+    Leave one domain out: min(val_acc from each fold)
+    For n=1: degenerate — val = train data
+    For n=2: each fold trains on 1 env — IRM degrades to ERM
+    For n>=3: each fold trains on n_envs-1 envs — IRM works properly
+    """
     return min(fold_val_accs)
 
 
