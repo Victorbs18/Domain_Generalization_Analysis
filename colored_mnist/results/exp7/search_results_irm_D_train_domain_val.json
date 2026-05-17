@@ -1,0 +1,12 @@
+{
+  "best": {
+    "hidden_dim": 121,
+    "l2_regularizer_weight": 6.449266990763335e-05,
+    "lr": 0.0023073857394357747,
+    "penalty_anneal_iters": 177,
+    "penalty_weight": 11036.36415969081,
+    "steps": 501,
+    "grayscale_model": false,
+    "mode": "irm"
+  }
+}
