@@ -64,6 +64,8 @@ def main():
 
     hparams["n_restarts"] = args.n_restarts
     hparams["seed"]       = args.seed
+    if args.mode == "grayscale":
+        hparams["grayscale_model"] = True
     flags = SimpleNamespace(**hparams)
 
     torch.manual_seed(flags.seed)

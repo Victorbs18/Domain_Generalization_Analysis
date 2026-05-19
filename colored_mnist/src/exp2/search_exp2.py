@@ -85,7 +85,7 @@ else:
     candidates = [sample_irm(rng) for _ in range(args.n_trials)]
 
 for trial, hparams in enumerate(candidates):
-    hparams["grayscale_model"] = False
+    hparams["grayscale_model"] = (args.mode == "grayscale")
     flags = SimpleNamespace(**hparams)
     t0    = time.time()
 
