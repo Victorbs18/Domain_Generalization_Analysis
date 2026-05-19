@@ -10,56 +10,56 @@ El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proc
 Using device: cuda
 Mode: irm  |  Selection: train_domain_val  |  Trials: 50
 
-Trial 00 | score: 0.8088 | val: ['0.8088', '0.8910'] | test: 0.1081 | elapsed: 5.6s
-Trial 01 | score: 0.5688 | val: ['0.5688', '0.5806'] | test: 0.4763 | elapsed: 21.8s
-Trial 02 | score: 0.7990 | val: ['0.7990', '0.8688'] | test: 0.1890 | elapsed: 4.7s
-Trial 03 | score: 0.6468 | val: ['0.6490', '0.6468'] | test: 0.6095 | elapsed: 5.0s
-Trial 04 | score: 0.7078 | val: ['0.7078', '0.7140'] | test: 0.5760 | elapsed: 10.4s
-Trial 05 | score: 0.6356 | val: ['0.6482', '0.6356'] | test: 0.6083 | elapsed: 11.4s
-Trial 06 | score: 0.7190 | val: ['0.7190', '0.7286'] | test: 0.6399 | elapsed: 16.4s
-Trial 07 | score: 0.7168 | val: ['0.7168', '0.7248'] | test: 0.6086 | elapsed: 13.4s
-Trial 08 | score: 0.7602 | val: ['0.7602', '0.7718'] | test: 0.5369 | elapsed: 6.9s
-Trial 09 | score: 0.7086 | val: ['0.7092', '0.7086'] | test: 0.6403 | elapsed: 7.0s
-Trial 10 | score: 0.7168 | val: ['0.7168', '0.7334'] | test: 0.5374 | elapsed: 4.5s
-Trial 11 | score: 0.7332 | val: ['0.7332', '0.7604'] | test: 0.4947 | elapsed: 5.4s
-Trial 12 | score: 0.7040 | val: ['0.7040', '0.7102'] | test: 0.6518 | elapsed: 8.7s
-Trial 13 | score: 0.7688 | val: ['0.7688', '0.8134'] | test: 0.4390 | elapsed: 8.1s
-Trial 14 | score: 0.6612 | val: ['0.6612', '0.6624'] | test: 0.6226 | elapsed: 17.8s
-Trial 15 | score: 0.7592 | val: ['0.7592', '0.7706'] | test: 0.5918 | elapsed: 14.6s
-Trial 16 | score: 0.7392 | val: ['0.7392', '0.7526'] | test: 0.6156 | elapsed: 17.4s
-Trial 17 | score: 0.7796 | val: ['0.7796', '0.8182'] | test: 0.4315 | elapsed: 4.2s
-Trial 18 | score: 0.6262 | val: ['0.6262', '0.6404'] | test: 0.5186 | elapsed: 35.7s
-Trial 19 | score: 0.7698 | val: ['0.7698', '0.8000'] | test: 0.4712 | elapsed: 38.6s
-Trial 20 | score: 0.7642 | val: ['0.7642', '0.7918'] | test: 0.5036 | elapsed: 16.0s
-Trial 21 | score: 0.7972 | val: ['0.7972', '0.8528'] | test: 0.2466 | elapsed: 3.5s
-Trial 22 | score: 0.8052 | val: ['0.8052', '0.8798'] | test: 0.1460 | elapsed: 3.8s
-Trial 23 | score: 0.6902 | val: ['0.6902', '0.7142'] | test: 0.4719 | elapsed: 16.4s
-Trial 24 | score: 0.7634 | val: ['0.7634', '0.7832'] | test: 0.5442 | elapsed: 8.9s
-Trial 25 | score: 0.8088 | val: ['0.8088', '0.8924'] | test: 0.0987 | elapsed: 2.6s
-Trial 26 | score: 0.7340 | val: ['0.7340', '0.7466'] | test: 0.5971 | elapsed: 10.8s
-Trial 27 | score: 0.7114 | val: ['0.7114', '0.7164'] | test: 0.6326 | elapsed: 15.9s
-Trial 28 | score: 0.8092 | val: ['0.8092', '0.8876'] | test: 0.1177 | elapsed: 3.6s
-Trial 29 | score: 0.7780 | val: ['0.7780', '0.8156'] | test: 0.3813 | elapsed: 22.1s
-Trial 30 | score: 0.6432 | val: ['0.6432', '0.6536'] | test: 0.5563 | elapsed: 11.3s
-Trial 31 | score: 0.6696 | val: ['0.6696', '0.6972'] | test: 0.4336 | elapsed: 22.2s
-Trial 32 | score: 0.7044 | val: ['0.7044', '0.7082'] | test: 0.6237 | elapsed: 16.8s
-Trial 33 | score: 0.7680 | val: ['0.7680', '0.7962'] | test: 0.4693 | elapsed: 15.6s
-Trial 34 | score: 0.8088 | val: ['0.8088', '0.8924'] | test: 0.0987 | elapsed: 3.1s
-Trial 35 | score: 0.7516 | val: ['0.7516', '0.7586'] | test: 0.6098 | elapsed: 25.5s
-Trial 36 | score: 0.7040 | val: ['0.7052', '0.7040'] | test: 0.6462 | elapsed: 22.1s
-Trial 37 | score: 0.7544 | val: ['0.7544', '0.7720'] | test: 0.5670 | elapsed: 7.5s
-Trial 38 | score: 0.8082 | val: ['0.8082', '0.8920'] | test: 0.1013 | elapsed: 2.7s
-Trial 39 | score: 0.7778 | val: ['0.7778', '0.8090'] | test: 0.4262 | elapsed: 16.8s
-Trial 40 | score: 0.8080 | val: ['0.8080', '0.8834'] | test: 0.1263 | elapsed: 2.7s
-Trial 41 | score: 0.6980 | val: ['0.6980', '0.7302'] | test: 0.4065 | elapsed: 10.8s
-Trial 42 | score: 0.7318 | val: ['0.7318', '0.7454'] | test: 0.5633 | elapsed: 10.6s
-Trial 43 | score: 0.6712 | val: ['0.6780', '0.6712'] | test: 0.6199 | elapsed: 14.5s
-Trial 44 | score: 0.7988 | val: ['0.7988', '0.8712'] | test: 0.1916 | elapsed: 7.5s
-Trial 45 | score: 0.7012 | val: ['0.7012', '0.7050'] | test: 0.6252 | elapsed: 14.6s
-Trial 46 | score: 0.7870 | val: ['0.7870', '0.8312'] | test: 0.3525 | elapsed: 17.1s
-Trial 47 | score: 0.7878 | val: ['0.7878', '0.8516'] | test: 0.2814 | elapsed: 10.5s
-Trial 48 | score: 0.6596 | val: ['0.6596', '0.6626'] | test: 0.6041 | elapsed: 7.0s
-Trial 49 | score: 0.8074 | val: ['0.8074', '0.8870'] | test: 0.1208 | elapsed: 3.4s
+Trial 00 | score: 0.8088 | val: ['0.8088', '0.8910'] | test: 0.1081 | elapsed: 4.9s
+Trial 01 | score: 0.5688 | val: ['0.5688', '0.5806'] | test: 0.4763 | elapsed: 20.7s
+Trial 02 | score: 0.7990 | val: ['0.7990', '0.8688'] | test: 0.1890 | elapsed: 4.4s
+Trial 03 | score: 0.6468 | val: ['0.6490', '0.6468'] | test: 0.6095 | elapsed: 4.6s
+Trial 04 | score: 0.7078 | val: ['0.7078', '0.7140'] | test: 0.5760 | elapsed: 9.3s
+Trial 05 | score: 0.6356 | val: ['0.6482', '0.6356'] | test: 0.6083 | elapsed: 10.5s
+Trial 06 | score: 0.7190 | val: ['0.7190', '0.7286'] | test: 0.6399 | elapsed: 15.5s
+Trial 07 | score: 0.7168 | val: ['0.7168', '0.7248'] | test: 0.6086 | elapsed: 11.8s
+Trial 08 | score: 0.7602 | val: ['0.7602', '0.7718'] | test: 0.5369 | elapsed: 6.2s
+Trial 09 | score: 0.7086 | val: ['0.7092', '0.7086'] | test: 0.6403 | elapsed: 6.8s
+Trial 10 | score: 0.7168 | val: ['0.7168', '0.7334'] | test: 0.5374 | elapsed: 4.3s
+Trial 11 | score: 0.7332 | val: ['0.7332', '0.7604'] | test: 0.4947 | elapsed: 4.5s
+Trial 12 | score: 0.7040 | val: ['0.7040', '0.7102'] | test: 0.6518 | elapsed: 8.0s
+Trial 13 | score: 0.7688 | val: ['0.7688', '0.8134'] | test: 0.4390 | elapsed: 7.8s
+Trial 14 | score: 0.6612 | val: ['0.6612', '0.6624'] | test: 0.6226 | elapsed: 16.5s
+Trial 15 | score: 0.7592 | val: ['0.7592', '0.7706'] | test: 0.5918 | elapsed: 13.4s
+Trial 16 | score: 0.7392 | val: ['0.7392', '0.7526'] | test: 0.6156 | elapsed: 16.2s
+Trial 17 | score: 0.7796 | val: ['0.7796', '0.8182'] | test: 0.4315 | elapsed: 4.0s
+Trial 18 | score: 0.6262 | val: ['0.6262', '0.6404'] | test: 0.5186 | elapsed: 34.4s
+Trial 19 | score: 0.7698 | val: ['0.7698', '0.8000'] | test: 0.4712 | elapsed: 37.0s
+Trial 20 | score: 0.7642 | val: ['0.7642', '0.7918'] | test: 0.5036 | elapsed: 13.7s
+Trial 21 | score: 0.7972 | val: ['0.7972', '0.8528'] | test: 0.2466 | elapsed: 3.0s
+Trial 22 | score: 0.8052 | val: ['0.8052', '0.8798'] | test: 0.1460 | elapsed: 3.3s
+Trial 23 | score: 0.6902 | val: ['0.6902', '0.7142'] | test: 0.4719 | elapsed: 14.3s
+Trial 24 | score: 0.7634 | val: ['0.7634', '0.7832'] | test: 0.5442 | elapsed: 8.1s
+Trial 25 | score: 0.8088 | val: ['0.8088', '0.8924'] | test: 0.0987 | elapsed: 2.3s
+Trial 26 | score: 0.7340 | val: ['0.7340', '0.7466'] | test: 0.5971 | elapsed: 9.3s
+Trial 27 | score: 0.7114 | val: ['0.7114', '0.7164'] | test: 0.6326 | elapsed: 13.6s
+Trial 28 | score: 0.8092 | val: ['0.8092', '0.8876'] | test: 0.1177 | elapsed: 3.1s
+Trial 29 | score: 0.7780 | val: ['0.7780', '0.8156'] | test: 0.3813 | elapsed: 20.5s
+Trial 30 | score: 0.6432 | val: ['0.6432', '0.6536'] | test: 0.5563 | elapsed: 9.4s
+Trial 31 | score: 0.6696 | val: ['0.6696', '0.6972'] | test: 0.4336 | elapsed: 19.9s
+Trial 32 | score: 0.7044 | val: ['0.7044', '0.7082'] | test: 0.6237 | elapsed: 13.3s
+Trial 33 | score: 0.7680 | val: ['0.7680', '0.7962'] | test: 0.4693 | elapsed: 11.7s
+Trial 34 | score: 0.8088 | val: ['0.8088', '0.8924'] | test: 0.0987 | elapsed: 2.5s
+Trial 35 | score: 0.7516 | val: ['0.7516', '0.7586'] | test: 0.6098 | elapsed: 23.0s
+Trial 36 | score: 0.7040 | val: ['0.7052', '0.7040'] | test: 0.6462 | elapsed: 20.6s
+Trial 37 | score: 0.7544 | val: ['0.7544', '0.7720'] | test: 0.5670 | elapsed: 6.9s
+Trial 38 | score: 0.8082 | val: ['0.8082', '0.8920'] | test: 0.1013 | elapsed: 2.3s
+Trial 39 | score: 0.7778 | val: ['0.7778', '0.8090'] | test: 0.4262 | elapsed: 15.8s
+Trial 40 | score: 0.8080 | val: ['0.8080', '0.8834'] | test: 0.1263 | elapsed: 2.4s
+Trial 41 | score: 0.6980 | val: ['0.6980', '0.7302'] | test: 0.4065 | elapsed: 9.9s
+Trial 42 | score: 0.7318 | val: ['0.7318', '0.7454'] | test: 0.5633 | elapsed: 9.1s
+Trial 43 | score: 0.6712 | val: ['0.6780', '0.6712'] | test: 0.6199 | elapsed: 13.2s
+Trial 44 | score: 0.7988 | val: ['0.7988', '0.8712'] | test: 0.1916 | elapsed: 7.1s
+Trial 45 | score: 0.7012 | val: ['0.7012', '0.7050'] | test: 0.6252 | elapsed: 13.9s
+Trial 46 | score: 0.7870 | val: ['0.7870', '0.8312'] | test: 0.3525 | elapsed: 16.2s
+Trial 47 | score: 0.7878 | val: ['0.7878', '0.8516'] | test: 0.2814 | elapsed: 9.9s
+Trial 48 | score: 0.6596 | val: ['0.6596', '0.6626'] | test: 0.6041 | elapsed: 6.4s
+Trial 49 | score: 0.8074 | val: ['0.8074', '0.8870'] | test: 0.1208 | elapsed: 3.3s
 
 Best score: 0.8092
 Best hparams: {'hidden_dim': 201, 'l2_regularizer_weight': 0.0006050240032290988, 'lr': 0.0022299298870545386, 'penalty_anneal_iters': 238, 'penalty_weight': 4227.088563333383, 'steps': 101, 'grayscale_model': False}
@@ -69,56 +69,56 @@ Saved -> results/exp2/search_results_irm_train_domain_val.json
 Using device: cuda
 Mode: irm  |  Selection: leave_one_domain_out  |  Trials: 50
 
-Trial 00 | score: 0.7990 | val: ['0.7990', '0.8906'] | test: 0.1166 | elapsed: 6.1s
-Trial 01 | score: 0.7868 | val: ['0.7868', '0.8007'] | test: 0.3537 | elapsed: 26.3s
-Trial 02 | score: 0.7922 | val: ['0.7922', '0.8570'] | test: 0.2264 | elapsed: 6.5s
-Trial 03 | score: 0.7990 | val: ['0.7990', '0.8968'] | test: 0.1001 | elapsed: 7.0s
-Trial 04 | score: 0.7984 | val: ['0.7984', '0.8612'] | test: 0.1751 | elapsed: 15.3s
-Trial 05 | score: 0.7990 | val: ['0.7990', '0.8967'] | test: 0.1007 | elapsed: 15.9s
-Trial 06 | score: 0.7988 | val: ['0.7988', '0.8710'] | test: 0.1609 | elapsed: 22.6s
-Trial 07 | score: 0.7989 | val: ['0.7989', '0.8822'] | test: 0.1323 | elapsed: 19.1s
-Trial 08 | score: 0.7859 | val: ['0.7859', '0.8041'] | test: 0.3549 | elapsed: 9.4s
-Trial 09 | score: 0.7982 | val: ['0.7982', '0.8604'] | test: 0.1785 | elapsed: 8.6s
-Trial 10 | score: 0.7907 | val: ['0.7972', '0.7907'] | test: 0.3395 | elapsed: 6.2s
-Trial 11 | score: 0.7940 | val: ['0.7940', '0.7962'] | test: 0.3227 | elapsed: 7.3s
-Trial 12 | score: 0.7990 | val: ['0.7990', '0.8819'] | test: 0.1337 | elapsed: 12.2s
-Trial 13 | score: 0.7978 | val: ['0.7978', '0.8581'] | test: 0.1860 | elapsed: 11.3s
-Trial 14 | score: 0.7990 | val: ['0.7990', '0.8954'] | test: 0.1027 | elapsed: 25.0s
-Trial 15 | score: 0.7985 | val: ['0.7985', '0.8177'] | test: 0.2696 | elapsed: 20.7s
-Trial 16 | score: 0.7988 | val: ['0.7988', '0.8674'] | test: 0.1673 | elapsed: 24.9s
-Trial 17 | score: 0.7990 | val: ['0.7990', '0.8138'] | test: 0.2477 | elapsed: 6.2s
-Trial 18 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 45.8s
-Trial 19 | score: 0.7776 | val: ['0.7776', '0.8258'] | test: 0.3293 | elapsed: 48.1s
-Trial 20 | score: 0.7987 | val: ['0.7987', '0.8630'] | test: 0.1772 | elapsed: 21.0s
-Trial 21 | score: 0.7979 | val: ['0.7979', '0.8431'] | test: 0.2233 | elapsed: 4.7s
-Trial 22 | score: 0.7975 | val: ['0.7975', '0.8598'] | test: 0.1820 | elapsed: 5.1s
-Trial 23 | score: 0.7990 | val: ['0.7990', '0.8968'] | test: 0.1006 | elapsed: 22.2s
-Trial 24 | score: 0.7984 | val: ['0.7984', '0.8621'] | test: 0.1766 | elapsed: 12.0s
-Trial 25 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 3.7s
-Trial 26 | score: 0.7988 | val: ['0.7988', '0.8745'] | test: 0.1475 | elapsed: 14.4s
-Trial 27 | score: 0.7989 | val: ['0.7989', '0.8878'] | test: 0.1201 | elapsed: 20.6s
-Trial 28 | score: 0.7984 | val: ['0.7984', '0.8641'] | test: 0.1737 | elapsed: 4.8s
-Trial 29 | score: 0.7767 | val: ['0.7767', '0.8511'] | test: 0.2953 | elapsed: 27.0s
-Trial 30 | score: 0.7990 | val: ['0.7990', '0.8969'] | test: 0.1019 | elapsed: 15.6s
-Trial 31 | score: 0.7990 | val: ['0.7990', '0.8977'] | test: 0.0987 | elapsed: 29.2s
-Trial 32 | score: 0.7988 | val: ['0.7988', '0.8368'] | test: 0.2251 | elapsed: 20.5s
-Trial 33 | score: 0.7907 | val: ['0.7907', '0.8175'] | test: 0.2845 | elapsed: 18.9s
-Trial 34 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 4.2s
-Trial 35 | score: 0.7930 | val: ['0.7930', '0.8417'] | test: 0.2578 | elapsed: 32.4s
-Trial 36 | score: 0.7988 | val: ['0.7988', '0.8819'] | test: 0.1343 | elapsed: 29.1s
-Trial 37 | score: 0.7916 | val: ['0.7916', '0.8056'] | test: 0.3339 | elapsed: 10.7s
-Trial 38 | score: 0.7989 | val: ['0.7989', '0.8850'] | test: 0.1242 | elapsed: 3.9s
-Trial 39 | score: 0.7712 | val: ['0.7712', '0.8079'] | test: 0.3543 | elapsed: 23.6s
-Trial 40 | score: 0.7987 | val: ['0.7987', '0.8707'] | test: 0.1578 | elapsed: 3.9s
-Trial 41 | score: 0.7990 | val: ['0.7990', '0.8973'] | test: 0.0992 | elapsed: 14.5s
-Trial 42 | score: 0.7989 | val: ['0.7989', '0.8850'] | test: 0.1265 | elapsed: 15.0s
-Trial 43 | score: 0.7990 | val: ['0.7990', '0.8940'] | test: 0.1047 | elapsed: 20.3s
-Trial 44 | score: 0.7988 | val: ['0.7988', '0.8825'] | test: 0.1328 | elapsed: 9.4s
-Trial 45 | score: 0.7990 | val: ['0.7990', '0.8849'] | test: 0.1286 | elapsed: 20.5s
-Trial 46 | score: 0.7961 | val: ['0.7961', '0.8526'] | test: 0.2135 | elapsed: 23.7s
-Trial 47 | score: 0.7770 | val: ['0.7770', '0.8924'] | test: 0.1984 | elapsed: 14.5s
-Trial 48 | score: 0.7990 | val: ['0.7990', '0.8958'] | test: 0.1024 | elapsed: 11.3s
-Trial 49 | score: 0.7989 | val: ['0.7989', '0.8578'] | test: 0.1854 | elapsed: 4.9s
+Trial 00 | score: 0.7990 | val: ['0.7990', '0.8906'] | test: 0.1166 | elapsed: 5.9s
+Trial 01 | score: 0.7868 | val: ['0.7868', '0.8007'] | test: 0.3537 | elapsed: 25.5s
+Trial 02 | score: 0.7922 | val: ['0.7922', '0.8570'] | test: 0.2264 | elapsed: 6.4s
+Trial 03 | score: 0.7990 | val: ['0.7990', '0.8968'] | test: 0.1001 | elapsed: 6.7s
+Trial 04 | score: 0.7984 | val: ['0.7984', '0.8612'] | test: 0.1751 | elapsed: 13.8s
+Trial 05 | score: 0.7990 | val: ['0.7990', '0.8967'] | test: 0.1007 | elapsed: 15.1s
+Trial 06 | score: 0.7988 | val: ['0.7988', '0.8710'] | test: 0.1609 | elapsed: 21.4s
+Trial 07 | score: 0.7989 | val: ['0.7989', '0.8822'] | test: 0.1323 | elapsed: 17.4s
+Trial 08 | score: 0.7859 | val: ['0.7859', '0.8041'] | test: 0.3549 | elapsed: 8.6s
+Trial 09 | score: 0.7982 | val: ['0.7982', '0.8604'] | test: 0.1785 | elapsed: 8.3s
+Trial 10 | score: 0.7907 | val: ['0.7972', '0.7907'] | test: 0.3395 | elapsed: 6.0s
+Trial 11 | score: 0.7940 | val: ['0.7940', '0.7962'] | test: 0.3227 | elapsed: 6.4s
+Trial 12 | score: 0.7990 | val: ['0.7990', '0.8819'] | test: 0.1337 | elapsed: 11.4s
+Trial 13 | score: 0.7978 | val: ['0.7978', '0.8581'] | test: 0.1860 | elapsed: 10.8s
+Trial 14 | score: 0.7990 | val: ['0.7990', '0.8954'] | test: 0.1027 | elapsed: 23.6s
+Trial 15 | score: 0.7985 | val: ['0.7985', '0.8177'] | test: 0.2696 | elapsed: 19.3s
+Trial 16 | score: 0.7988 | val: ['0.7988', '0.8674'] | test: 0.1673 | elapsed: 23.2s
+Trial 17 | score: 0.7990 | val: ['0.7990', '0.8138'] | test: 0.2477 | elapsed: 5.8s
+Trial 18 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 43.6s
+Trial 19 | score: 0.7776 | val: ['0.7776', '0.8258'] | test: 0.3293 | elapsed: 45.7s
+Trial 20 | score: 0.7987 | val: ['0.7987', '0.8630'] | test: 0.1772 | elapsed: 19.6s
+Trial 21 | score: 0.7979 | val: ['0.7979', '0.8431'] | test: 0.2233 | elapsed: 4.2s
+Trial 22 | score: 0.7975 | val: ['0.7975', '0.8598'] | test: 0.1820 | elapsed: 4.8s
+Trial 23 | score: 0.7990 | val: ['0.7990', '0.8968'] | test: 0.1006 | elapsed: 20.7s
+Trial 24 | score: 0.7984 | val: ['0.7984', '0.8621'] | test: 0.1766 | elapsed: 10.8s
+Trial 25 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 3.3s
+Trial 26 | score: 0.7988 | val: ['0.7988', '0.8745'] | test: 0.1475 | elapsed: 13.4s
+Trial 27 | score: 0.7989 | val: ['0.7989', '0.8878'] | test: 0.1201 | elapsed: 19.1s
+Trial 28 | score: 0.7984 | val: ['0.7984', '0.8641'] | test: 0.1737 | elapsed: 4.5s
+Trial 29 | score: 0.7767 | val: ['0.7767', '0.8511'] | test: 0.2953 | elapsed: 25.6s
+Trial 30 | score: 0.7990 | val: ['0.7990', '0.8969'] | test: 0.1019 | elapsed: 14.0s
+Trial 31 | score: 0.7990 | val: ['0.7990', '0.8977'] | test: 0.0987 | elapsed: 27.4s
+Trial 32 | score: 0.7988 | val: ['0.7988', '0.8368'] | test: 0.2251 | elapsed: 19.1s
+Trial 33 | score: 0.7907 | val: ['0.7907', '0.8175'] | test: 0.2845 | elapsed: 18.4s
+Trial 34 | score: 0.7990 | val: ['0.7990', '0.8976'] | test: 0.0987 | elapsed: 3.8s
+Trial 35 | score: 0.7930 | val: ['0.7930', '0.8417'] | test: 0.2578 | elapsed: 31.2s
+Trial 36 | score: 0.7988 | val: ['0.7988', '0.8819'] | test: 0.1343 | elapsed: 27.9s
+Trial 37 | score: 0.7916 | val: ['0.7916', '0.8056'] | test: 0.3339 | elapsed: 10.4s
+Trial 38 | score: 0.7989 | val: ['0.7989', '0.8850'] | test: 0.1242 | elapsed: 3.5s
+Trial 39 | score: 0.7712 | val: ['0.7712', '0.8079'] | test: 0.3543 | elapsed: 22.7s
+Trial 40 | score: 0.7987 | val: ['0.7987', '0.8707'] | test: 0.1578 | elapsed: 3.4s
+Trial 41 | score: 0.7990 | val: ['0.7990', '0.8973'] | test: 0.0992 | elapsed: 13.7s
+Trial 42 | score: 0.7989 | val: ['0.7989', '0.8850'] | test: 0.1265 | elapsed: 13.9s
+Trial 43 | score: 0.7990 | val: ['0.7990', '0.8940'] | test: 0.1047 | elapsed: 19.0s
+Trial 44 | score: 0.7988 | val: ['0.7988', '0.8825'] | test: 0.1328 | elapsed: 8.7s
+Trial 45 | score: 0.7990 | val: ['0.7990', '0.8849'] | test: 0.1286 | elapsed: 19.4s
+Trial 46 | score: 0.7961 | val: ['0.7961', '0.8526'] | test: 0.2135 | elapsed: 22.1s
+Trial 47 | score: 0.7770 | val: ['0.7770', '0.8924'] | test: 0.1984 | elapsed: 13.6s
+Trial 48 | score: 0.7990 | val: ['0.7990', '0.8958'] | test: 0.1024 | elapsed: 10.3s
+Trial 49 | score: 0.7989 | val: ['0.7989', '0.8578'] | test: 0.1854 | elapsed: 4.4s
 
 Best score: 0.7990
 Best hparams: {'hidden_dim': 148, 'l2_regularizer_weight': 3.940389322146108e-05, 'lr': 0.00038972031563995723, 'penalty_anneal_iters': 174, 'penalty_weight': 1565.9739427482425, 'steps': 301, 'grayscale_model': False}
@@ -128,7 +128,7 @@ Saved -> results/exp2/search_results_irm_leave_one_domain_out.json
 Using device: cuda
 Mode: erm  |  Selection: train_domain_val  |  Trials: 50
 
-Trial 00 | score: 0.8030 | val: ['0.8030', '0.8662'] | test: 0.2061 | elapsed: 18.5s
+Trial 00 | score: 0.8030 | val: ['0.8030', '0.8662'] | test: 0.2061 | elapsed: 17.6s
 
 Best score: 0.8030
 Best hparams: {'hidden_dim': 256, 'l2_regularizer_weight': 0.001, 'lr': 0.001, 'penalty_anneal_iters': 0, 'penalty_weight': 0.0, 'steps': 501, 'grayscale_model': False}
@@ -138,7 +138,7 @@ Saved -> results/exp2/search_results_erm_train_domain_val.json
 Using device: cuda
 Mode: erm  |  Selection: leave_one_domain_out  |  Trials: 50
 
-Trial 00 | score: 0.7945 | val: ['0.7945', '0.8304'] | test: 0.2559 | elapsed: 25.5s
+Trial 00 | score: 0.7945 | val: ['0.7945', '0.8304'] | test: 0.2559 | elapsed: 23.7s
 
 Best score: 0.7945
 Best hparams: {'hidden_dim': 256, 'l2_regularizer_weight': 0.001, 'lr': 0.001, 'penalty_anneal_iters': 0, 'penalty_weight': 0.0, 'steps': 501, 'grayscale_model': False}
@@ -148,56 +148,56 @@ Saved -> results/exp2/search_results_erm_leave_one_domain_out.json
 Using device: cuda
 Mode: grayscale  |  Selection: train_domain_val  |  Trials: 50
 
-Trial 00 | score: 0.7178 | val: ['0.7232', '0.7178'] | test: 0.7234 | elapsed: 4.4s
-Trial 01 | score: 0.7086 | val: ['0.7156', '0.7086'] | test: 0.7092 | elapsed: 4.6s
-Trial 02 | score: 0.7006 | val: ['0.7140', '0.7006'] | test: 0.7128 | elapsed: 8.1s
-Trial 03 | score: 0.7078 | val: ['0.7166', '0.7078'] | test: 0.7117 | elapsed: 12.4s
-Trial 04 | score: 0.7126 | val: ['0.7234', '0.7126'] | test: 0.7192 | elapsed: 4.1s
-Trial 05 | score: 0.7206 | val: ['0.7294', '0.7206'] | test: 0.7274 | elapsed: 7.4s
-Trial 06 | score: 0.7230 | val: ['0.7338', '0.7230'] | test: 0.7299 | elapsed: 4.9s
-Trial 07 | score: 0.6886 | val: ['0.6940', '0.6886'] | test: 0.6882 | elapsed: 10.4s
-Trial 08 | score: 0.7122 | val: ['0.7212', '0.7122'] | test: 0.7165 | elapsed: 15.5s
-Trial 09 | score: 0.7224 | val: ['0.7306', '0.7224'] | test: 0.7293 | elapsed: 4.7s
-Trial 10 | score: 0.7196 | val: ['0.7308', '0.7196'] | test: 0.7267 | elapsed: 2.5s
-Trial 11 | score: 0.7046 | val: ['0.7172', '0.7046'] | test: 0.7137 | elapsed: 12.9s
-Trial 12 | score: 0.7052 | val: ['0.7220', '0.7052'] | test: 0.7186 | elapsed: 6.3s
-Trial 13 | score: 0.7186 | val: ['0.7310', '0.7186'] | test: 0.7254 | elapsed: 12.1s
-Trial 14 | score: 0.7226 | val: ['0.7330', '0.7226'] | test: 0.7305 | elapsed: 17.9s
-Trial 15 | score: 0.7028 | val: ['0.7190', '0.7028'] | test: 0.7148 | elapsed: 12.3s
-Trial 16 | score: 0.7212 | val: ['0.7302', '0.7212'] | test: 0.7286 | elapsed: 11.3s
-Trial 17 | score: 0.7152 | val: ['0.7204', '0.7152'] | test: 0.7197 | elapsed: 2.7s
-Trial 18 | score: 0.6600 | val: ['0.6730', '0.6600'] | test: 0.6748 | elapsed: 15.5s
-Trial 19 | score: 0.7204 | val: ['0.7348', '0.7204'] | test: 0.7294 | elapsed: 6.7s
-Trial 20 | score: 0.7072 | val: ['0.7148', '0.7072'] | test: 0.7096 | elapsed: 9.9s
-Trial 21 | score: 0.6754 | val: ['0.6862', '0.6754'] | test: 0.6906 | elapsed: 14.2s
-Trial 22 | score: 0.7044 | val: ['0.7100', '0.7044'] | test: 0.7054 | elapsed: 35.3s
-Trial 23 | score: 0.6882 | val: ['0.6974', '0.6882'] | test: 0.7019 | elapsed: 11.8s
-Trial 24 | score: 0.7210 | val: ['0.7328', '0.7210'] | test: 0.7302 | elapsed: 13.6s
-Trial 25 | score: 0.7186 | val: ['0.7302', '0.7186'] | test: 0.7282 | elapsed: 12.5s
-Trial 26 | score: 0.6932 | val: ['0.7026', '0.6932'] | test: 0.7049 | elapsed: 6.6s
-Trial 27 | score: 0.6318 | val: ['0.6438', '0.6318'] | test: 0.6468 | elapsed: 33.7s
-Trial 28 | score: 0.7208 | val: ['0.7282', '0.7208'] | test: 0.7279 | elapsed: 12.9s
-Trial 29 | score: 0.7098 | val: ['0.7144', '0.7098'] | test: 0.7099 | elapsed: 9.3s
-Trial 30 | score: 0.6798 | val: ['0.6962', '0.6798'] | test: 0.6970 | elapsed: 12.3s
-Trial 31 | score: 0.7174 | val: ['0.7260', '0.7174'] | test: 0.7226 | elapsed: 4.3s
-Trial 32 | score: 0.7144 | val: ['0.7240', '0.7144'] | test: 0.7216 | elapsed: 4.2s
-Trial 33 | score: 0.6342 | val: ['0.6450', '0.6342'] | test: 0.6467 | elapsed: 20.3s
-Trial 34 | score: 0.6954 | val: ['0.6988', '0.6954'] | test: 0.6976 | elapsed: 12.7s
-Trial 35 | score: 0.6730 | val: ['0.6838', '0.6730'] | test: 0.6870 | elapsed: 15.3s
-Trial 36 | score: 0.6698 | val: ['0.6818', '0.6698'] | test: 0.6833 | elapsed: 25.0s
-Trial 37 | score: 0.7022 | val: ['0.7064', '0.7022'] | test: 0.7098 | elapsed: 6.5s
-Trial 38 | score: 0.6918 | val: ['0.7024', '0.6918'] | test: 0.6975 | elapsed: 9.5s
-Trial 39 | score: 0.7000 | val: ['0.7064', '0.7000'] | test: 0.7029 | elapsed: 16.6s
-Trial 40 | score: 0.6848 | val: ['0.6886', '0.6848'] | test: 0.6855 | elapsed: 15.7s
-Trial 41 | score: 0.6704 | val: ['0.6726', '0.6704'] | test: 0.6720 | elapsed: 2.8s
-Trial 42 | score: 0.7240 | val: ['0.7282', '0.7240'] | test: 0.7276 | elapsed: 4.8s
-Trial 43 | score: 0.7188 | val: ['0.7308', '0.7188'] | test: 0.7259 | elapsed: 2.8s
-Trial 44 | score: 0.7186 | val: ['0.7292', '0.7186'] | test: 0.7303 | elapsed: 9.9s
+Trial 00 | score: 0.7178 | val: ['0.7232', '0.7178'] | test: 0.7234 | elapsed: 3.9s
+Trial 01 | score: 0.7086 | val: ['0.7156', '0.7086'] | test: 0.7092 | elapsed: 4.2s
+Trial 02 | score: 0.7006 | val: ['0.7140', '0.7006'] | test: 0.7128 | elapsed: 7.5s
+Trial 03 | score: 0.7078 | val: ['0.7166', '0.7078'] | test: 0.7117 | elapsed: 10.9s
+Trial 04 | score: 0.7126 | val: ['0.7234', '0.7126'] | test: 0.7192 | elapsed: 3.8s
+Trial 05 | score: 0.7206 | val: ['0.7294', '0.7206'] | test: 0.7274 | elapsed: 6.8s
+Trial 06 | score: 0.7230 | val: ['0.7338', '0.7230'] | test: 0.7299 | elapsed: 4.3s
+Trial 07 | score: 0.6886 | val: ['0.6940', '0.6886'] | test: 0.6882 | elapsed: 9.8s
+Trial 08 | score: 0.7122 | val: ['0.7212', '0.7122'] | test: 0.7165 | elapsed: 14.2s
+Trial 09 | score: 0.7224 | val: ['0.7306', '0.7224'] | test: 0.7293 | elapsed: 4.5s
+Trial 10 | score: 0.7196 | val: ['0.7308', '0.7196'] | test: 0.7267 | elapsed: 2.3s
+Trial 11 | score: 0.7046 | val: ['0.7172', '0.7046'] | test: 0.7137 | elapsed: 12.0s
+Trial 12 | score: 0.7052 | val: ['0.7220', '0.7052'] | test: 0.7186 | elapsed: 6.0s
+Trial 13 | score: 0.7186 | val: ['0.7310', '0.7186'] | test: 0.7254 | elapsed: 10.8s
+Trial 14 | score: 0.7226 | val: ['0.7330', '0.7226'] | test: 0.7305 | elapsed: 17.5s
+Trial 15 | score: 0.7028 | val: ['0.7190', '0.7028'] | test: 0.7148 | elapsed: 11.0s
+Trial 16 | score: 0.7212 | val: ['0.7302', '0.7212'] | test: 0.7286 | elapsed: 10.1s
+Trial 17 | score: 0.7152 | val: ['0.7204', '0.7152'] | test: 0.7197 | elapsed: 2.4s
+Trial 18 | score: 0.6600 | val: ['0.6730', '0.6600'] | test: 0.6748 | elapsed: 14.7s
+Trial 19 | score: 0.7204 | val: ['0.7348', '0.7204'] | test: 0.7294 | elapsed: 6.6s
+Trial 20 | score: 0.7072 | val: ['0.7148', '0.7072'] | test: 0.7096 | elapsed: 9.3s
+Trial 21 | score: 0.6754 | val: ['0.6862', '0.6754'] | test: 0.6906 | elapsed: 13.6s
+Trial 22 | score: 0.7044 | val: ['0.7100', '0.7044'] | test: 0.7054 | elapsed: 33.6s
+Trial 23 | score: 0.6882 | val: ['0.6974', '0.6882'] | test: 0.7019 | elapsed: 10.7s
+Trial 24 | score: 0.7210 | val: ['0.7328', '0.7210'] | test: 0.7302 | elapsed: 12.6s
+Trial 25 | score: 0.7186 | val: ['0.7302', '0.7186'] | test: 0.7282 | elapsed: 11.0s
+Trial 26 | score: 0.6932 | val: ['0.7026', '0.6932'] | test: 0.7049 | elapsed: 6.4s
+Trial 27 | score: 0.6318 | val: ['0.6438', '0.6318'] | test: 0.6468 | elapsed: 32.7s
+Trial 28 | score: 0.7208 | val: ['0.7282', '0.7208'] | test: 0.7279 | elapsed: 12.3s
+Trial 29 | score: 0.7098 | val: ['0.7144', '0.7098'] | test: 0.7099 | elapsed: 8.9s
+Trial 30 | score: 0.6798 | val: ['0.6962', '0.6798'] | test: 0.6970 | elapsed: 11.3s
+Trial 31 | score: 0.7174 | val: ['0.7260', '0.7174'] | test: 0.7226 | elapsed: 3.9s
+Trial 32 | score: 0.7144 | val: ['0.7240', '0.7144'] | test: 0.7216 | elapsed: 3.8s
+Trial 33 | score: 0.6342 | val: ['0.6450', '0.6342'] | test: 0.6467 | elapsed: 19.6s
+Trial 34 | score: 0.6954 | val: ['0.6988', '0.6954'] | test: 0.6976 | elapsed: 11.0s
+Trial 35 | score: 0.6730 | val: ['0.6838', '0.6730'] | test: 0.6870 | elapsed: 14.4s
+Trial 36 | score: 0.6698 | val: ['0.6818', '0.6698'] | test: 0.6833 | elapsed: 24.5s
+Trial 37 | score: 0.7022 | val: ['0.7064', '0.7022'] | test: 0.7098 | elapsed: 6.2s
+Trial 38 | score: 0.6918 | val: ['0.7024', '0.6918'] | test: 0.6975 | elapsed: 8.9s
+Trial 39 | score: 0.7000 | val: ['0.7064', '0.7000'] | test: 0.7029 | elapsed: 15.4s
+Trial 40 | score: 0.6848 | val: ['0.6886', '0.6848'] | test: 0.6855 | elapsed: 14.5s
+Trial 41 | score: 0.6704 | val: ['0.6726', '0.6704'] | test: 0.6720 | elapsed: 2.6s
+Trial 42 | score: 0.7240 | val: ['0.7282', '0.7240'] | test: 0.7276 | elapsed: 4.4s
+Trial 43 | score: 0.7188 | val: ['0.7308', '0.7188'] | test: 0.7259 | elapsed: 2.4s
+Trial 44 | score: 0.7186 | val: ['0.7292', '0.7186'] | test: 0.7303 | elapsed: 9.0s
 Trial 45 | score: 0.7174 | val: ['0.7244', '0.7174'] | test: 0.7222 | elapsed: 6.1s
-Trial 46 | score: 0.6886 | val: ['0.6910', '0.6886'] | test: 0.6880 | elapsed: 11.1s
-Trial 47 | score: 0.6808 | val: ['0.6888', '0.6808'] | test: 0.6930 | elapsed: 10.0s
-Trial 48 | score: 0.6996 | val: ['0.7146', '0.6996'] | test: 0.7079 | elapsed: 18.4s
-Trial 49 | score: 0.6638 | val: ['0.6684', '0.6638'] | test: 0.6731 | elapsed: 12.5s
+Trial 46 | score: 0.6886 | val: ['0.6910', '0.6886'] | test: 0.6880 | elapsed: 10.3s
+Trial 47 | score: 0.6808 | val: ['0.6888', '0.6808'] | test: 0.6930 | elapsed: 9.1s
+Trial 48 | score: 0.6996 | val: ['0.7146', '0.6996'] | test: 0.7079 | elapsed: 17.9s
+Trial 49 | score: 0.6638 | val: ['0.6684', '0.6638'] | test: 0.6731 | elapsed: 11.4s
 
 Best score: 0.7240
 Best hparams: {'hidden_dim': 354, 'l2_regularizer_weight': 0.00017625932885228994, 'lr': 0.0021369973581874756, 'penalty_anneal_iters': 0, 'penalty_weight': 0.0, 'steps': 101, 'grayscale_model': True}
@@ -208,55 +208,55 @@ Using device: cuda
 Mode: grayscale  |  Selection: leave_one_domain_out  |  Trials: 50
 
 Trial 00 | score: 0.7225 | val: ['0.7225', '0.7241'] | test: 0.7248 | elapsed: 5.1s
-Trial 01 | score: 0.7123 | val: ['0.7133', '0.7123'] | test: 0.7130 | elapsed: 6.3s
-Trial 02 | score: 0.6837 | val: ['0.7062', '0.6837'] | test: 0.6943 | elapsed: 11.1s
-Trial 03 | score: 0.7152 | val: ['0.7152', '0.7187'] | test: 0.7176 | elapsed: 18.0s
-Trial 04 | score: 0.6984 | val: ['0.7081', '0.6984'] | test: 0.7039 | elapsed: 5.9s
-Trial 05 | score: 0.7173 | val: ['0.7210', '0.7173'] | test: 0.7180 | elapsed: 11.2s
-Trial 06 | score: 0.7225 | val: ['0.7225', '0.7233'] | test: 0.7227 | elapsed: 7.4s
-Trial 07 | score: 0.6893 | val: ['0.6910', '0.6893'] | test: 0.6904 | elapsed: 15.7s
-Trial 08 | score: 0.6872 | val: ['0.7032', '0.6872'] | test: 0.6958 | elapsed: 21.8s
-Trial 09 | score: 0.7258 | val: ['0.7258', '0.7267'] | test: 0.7279 | elapsed: 7.3s
-Trial 10 | score: 0.7167 | val: ['0.7250', '0.7167'] | test: 0.7203 | elapsed: 3.9s
-Trial 11 | score: 0.6864 | val: ['0.6940', '0.6864'] | test: 0.6949 | elapsed: 18.9s
-Trial 12 | score: 0.6933 | val: ['0.7006', '0.6933'] | test: 0.6957 | elapsed: 9.0s
-Trial 13 | score: 0.7098 | val: ['0.7166', '0.7098'] | test: 0.7134 | elapsed: 18.7s
-Trial 14 | score: 0.7282 | val: ['0.7282', '0.7291'] | test: 0.7289 | elapsed: 25.0s
-Trial 15 | score: 0.6972 | val: ['0.7021', '0.6972'] | test: 0.7008 | elapsed: 18.2s
-Trial 16 | score: 0.7270 | val: ['0.7270', '0.7288'] | test: 0.7285 | elapsed: 15.9s
-Trial 17 | score: 0.7182 | val: ['0.7182', '0.7190'] | test: 0.7192 | elapsed: 4.0s
-Trial 18 | score: 0.6466 | val: ['0.6600', '0.6466'] | test: 0.6540 | elapsed: 22.4s
+Trial 01 | score: 0.7123 | val: ['0.7133', '0.7123'] | test: 0.7130 | elapsed: 5.9s
+Trial 02 | score: 0.6837 | val: ['0.7062', '0.6837'] | test: 0.6943 | elapsed: 10.7s
+Trial 03 | score: 0.7152 | val: ['0.7152', '0.7187'] | test: 0.7176 | elapsed: 16.7s
+Trial 04 | score: 0.6984 | val: ['0.7081', '0.6984'] | test: 0.7039 | elapsed: 5.4s
+Trial 05 | score: 0.7173 | val: ['0.7210', '0.7173'] | test: 0.7180 | elapsed: 10.0s
+Trial 06 | score: 0.7225 | val: ['0.7225', '0.7233'] | test: 0.7227 | elapsed: 6.8s
+Trial 07 | score: 0.6893 | val: ['0.6910', '0.6893'] | test: 0.6904 | elapsed: 14.4s
+Trial 08 | score: 0.6872 | val: ['0.7032', '0.6872'] | test: 0.6958 | elapsed: 20.2s
+Trial 09 | score: 0.7258 | val: ['0.7258', '0.7267'] | test: 0.7279 | elapsed: 6.8s
+Trial 10 | score: 0.7167 | val: ['0.7250', '0.7167'] | test: 0.7203 | elapsed: 3.4s
+Trial 11 | score: 0.6864 | val: ['0.6940', '0.6864'] | test: 0.6949 | elapsed: 17.9s
+Trial 12 | score: 0.6933 | val: ['0.7006', '0.6933'] | test: 0.6957 | elapsed: 8.5s
+Trial 13 | score: 0.7098 | val: ['0.7166', '0.7098'] | test: 0.7134 | elapsed: 16.7s
+Trial 14 | score: 0.7282 | val: ['0.7282', '0.7291'] | test: 0.7289 | elapsed: 23.7s
+Trial 15 | score: 0.6972 | val: ['0.7021', '0.6972'] | test: 0.7008 | elapsed: 16.9s
+Trial 16 | score: 0.7270 | val: ['0.7270', '0.7288'] | test: 0.7285 | elapsed: 15.0s
+Trial 17 | score: 0.7182 | val: ['0.7182', '0.7190'] | test: 0.7192 | elapsed: 3.6s
+Trial 18 | score: 0.6466 | val: ['0.6600', '0.6466'] | test: 0.6540 | elapsed: 20.6s
 Trial 19 | score: 0.7248 | val: ['0.7248', '0.7254'] | test: 0.7254 | elapsed: 9.1s
-Trial 20 | score: 0.7111 | val: ['0.7111', '0.7129'] | test: 0.7117 | elapsed: 13.6s
-Trial 21 | score: 0.6576 | val: ['0.6684', '0.6576'] | test: 0.6668 | elapsed: 20.6s
-Trial 22 | score: 0.7067 | val: ['0.7067', '0.7090'] | test: 0.7066 | elapsed: 48.4s
-Trial 23 | score: 0.6704 | val: ['0.6704', '0.6708'] | test: 0.6718 | elapsed: 16.3s
-Trial 24 | score: 0.7114 | val: ['0.7130', '0.7114'] | test: 0.7129 | elapsed: 19.7s
-Trial 25 | score: 0.7076 | val: ['0.7186', '0.7076'] | test: 0.7150 | elapsed: 18.5s
-Trial 26 | score: 0.6854 | val: ['0.6854', '0.6878'] | test: 0.6882 | elapsed: 9.3s
-Trial 27 | score: 0.6402 | val: ['0.6435', '0.6402'] | test: 0.6375 | elapsed: 45.4s
-Trial 28 | score: 0.7266 | val: ['0.7266', '0.7276'] | test: 0.7289 | elapsed: 17.6s
-Trial 29 | score: 0.7109 | val: ['0.7109', '0.7120'] | test: 0.7103 | elapsed: 12.8s
-Trial 30 | score: 0.6618 | val: ['0.6618', '0.6643'] | test: 0.6635 | elapsed: 17.1s
-Trial 31 | score: 0.7189 | val: ['0.7189', '0.7192'] | test: 0.7175 | elapsed: 5.7s
-Trial 32 | score: 0.7032 | val: ['0.7054', '0.7032'] | test: 0.7048 | elapsed: 5.8s
-Trial 33 | score: 0.6391 | val: ['0.6391', '0.6400'] | test: 0.6399 | elapsed: 28.6s
-Trial 34 | score: 0.6752 | val: ['0.6782', '0.6752'] | test: 0.6781 | elapsed: 18.1s
-Trial 35 | score: 0.6643 | val: ['0.6673', '0.6643'] | test: 0.6689 | elapsed: 21.7s
-Trial 36 | score: 0.6625 | val: ['0.6674', '0.6625'] | test: 0.6648 | elapsed: 34.9s
-Trial 37 | score: 0.6918 | val: ['0.6918', '0.6964'] | test: 0.6909 | elapsed: 8.9s
-Trial 38 | score: 0.6745 | val: ['0.6832', '0.6745'] | test: 0.6790 | elapsed: 13.2s
-Trial 39 | score: 0.7046 | val: ['0.7046', '0.7062'] | test: 0.7049 | elapsed: 23.4s
-Trial 40 | score: 0.6753 | val: ['0.6762', '0.6753'] | test: 0.6692 | elapsed: 22.2s
-Trial 41 | score: 0.6671 | val: ['0.6671', '0.6681'] | test: 0.6684 | elapsed: 4.0s
-Trial 42 | score: 0.7054 | val: ['0.7054', '0.7122'] | test: 0.7090 | elapsed: 6.6s
-Trial 43 | score: 0.7150 | val: ['0.7192', '0.7150'] | test: 0.7174 | elapsed: 3.7s
-Trial 44 | score: 0.6974 | val: ['0.7084', '0.6974'] | test: 0.7027 | elapsed: 14.9s
-Trial 45 | score: 0.7130 | val: ['0.7161', '0.7130'] | test: 0.7152 | elapsed: 7.9s
-Trial 46 | score: 0.6648 | val: ['0.6796', '0.6648'] | test: 0.6704 | elapsed: 15.8s
-Trial 47 | score: 0.6585 | val: ['0.6658', '0.6585'] | test: 0.6603 | elapsed: 15.1s
-Trial 48 | score: 0.6863 | val: ['0.6955', '0.6863'] | test: 0.6910 | elapsed: 23.2s
-Trial 49 | score: 0.6592 | val: ['0.6592', '0.6608'] | test: 0.6568 | elapsed: 18.8s
+Trial 20 | score: 0.7111 | val: ['0.7111', '0.7129'] | test: 0.7117 | elapsed: 12.8s
+Trial 21 | score: 0.6576 | val: ['0.6684', '0.6576'] | test: 0.6668 | elapsed: 19.2s
+Trial 22 | score: 0.7067 | val: ['0.7067', '0.7090'] | test: 0.7066 | elapsed: 46.5s
+Trial 23 | score: 0.6704 | val: ['0.6704', '0.6708'] | test: 0.6718 | elapsed: 15.3s
+Trial 24 | score: 0.7114 | val: ['0.7130', '0.7114'] | test: 0.7129 | elapsed: 18.1s
+Trial 25 | score: 0.7076 | val: ['0.7186', '0.7076'] | test: 0.7150 | elapsed: 17.2s
+Trial 26 | score: 0.6854 | val: ['0.6854', '0.6878'] | test: 0.6882 | elapsed: 9.1s
+Trial 27 | score: 0.6402 | val: ['0.6435', '0.6402'] | test: 0.6375 | elapsed: 43.6s
+Trial 28 | score: 0.7266 | val: ['0.7266', '0.7276'] | test: 0.7289 | elapsed: 17.1s
+Trial 29 | score: 0.7109 | val: ['0.7109', '0.7120'] | test: 0.7103 | elapsed: 11.9s
+Trial 30 | score: 0.6618 | val: ['0.6618', '0.6643'] | test: 0.6635 | elapsed: 16.0s
+Trial 31 | score: 0.7189 | val: ['0.7189', '0.7192'] | test: 0.7175 | elapsed: 5.4s
+Trial 32 | score: 0.7032 | val: ['0.7054', '0.7032'] | test: 0.7048 | elapsed: 5.5s
+Trial 33 | score: 0.6391 | val: ['0.6391', '0.6400'] | test: 0.6399 | elapsed: 27.4s
+Trial 34 | score: 0.6752 | val: ['0.6782', '0.6752'] | test: 0.6781 | elapsed: 16.9s
+Trial 35 | score: 0.6643 | val: ['0.6673', '0.6643'] | test: 0.6689 | elapsed: 20.6s
+Trial 36 | score: 0.6625 | val: ['0.6674', '0.6625'] | test: 0.6648 | elapsed: 33.6s
+Trial 37 | score: 0.6918 | val: ['0.6918', '0.6964'] | test: 0.6909 | elapsed: 8.6s
+Trial 38 | score: 0.6745 | val: ['0.6832', '0.6745'] | test: 0.6790 | elapsed: 12.6s
+Trial 39 | score: 0.7046 | val: ['0.7046', '0.7062'] | test: 0.7049 | elapsed: 21.9s
+Trial 40 | score: 0.6753 | val: ['0.6762', '0.6753'] | test: 0.6692 | elapsed: 20.5s
+Trial 41 | score: 0.6671 | val: ['0.6671', '0.6681'] | test: 0.6684 | elapsed: 3.6s
+Trial 42 | score: 0.7054 | val: ['0.7054', '0.7122'] | test: 0.7090 | elapsed: 6.0s
+Trial 43 | score: 0.7150 | val: ['0.7192', '0.7150'] | test: 0.7174 | elapsed: 3.5s
+Trial 44 | score: 0.6974 | val: ['0.7084', '0.6974'] | test: 0.7027 | elapsed: 13.7s
+Trial 45 | score: 0.7130 | val: ['0.7161', '0.7130'] | test: 0.7152 | elapsed: 7.6s
+Trial 46 | score: 0.6648 | val: ['0.6796', '0.6648'] | test: 0.6704 | elapsed: 14.8s
+Trial 47 | score: 0.6585 | val: ['0.6658', '0.6585'] | test: 0.6603 | elapsed: 13.7s
+Trial 48 | score: 0.6863 | val: ['0.6955', '0.6863'] | test: 0.6910 | elapsed: 22.8s
+Trial 49 | score: 0.6592 | val: ['0.6592', '0.6608'] | test: 0.6568 | elapsed: 17.1s
 
 Best score: 0.7282
 Best hparams: {'hidden_dim': 361, 'l2_regularizer_weight': 0.0022977084556509257, 'lr': 0.0005487435682759062, 'penalty_anneal_iters': 0, 'penalty_weight': 0.0, 'steps': 401, 'grayscale_model': True}
@@ -1173,3 +1173,124 @@ Train acc (mean +- std): 0.7504 +- 0.0012
 Test  acc (mean +- std): 0.7281 +- 0.0025
 
 [Grayscale - leave_one_domain_out]
+Using device: cuda
+
+Mode: grayscale  |  Selection: leave_one_domain_out
+Flags:
+	grayscale_model: True
+	hidden_dim: 361
+	l2_regularizer_weight: 0.0022977084556509257
+	lr: 0.0005487435682759062
+	n_restarts: 10
+	penalty_anneal_iters: 0
+	penalty_weight: 0.0
+	seed: 0
+	steps: 401
+
+
+--- Restart 0 ---
+step            train_nll       train_acc       train_penalty
+0               0.69679         0.48852         3.17914e-05  
+100             0.58790         0.72678         0.00053      
+200             0.57424         0.73694         0.00058      
+300             0.57038         0.73902         0.00060      
+400             0.56836         0.74000         0.00063      
+  Train acc so far: 0.7400 +- 0.0000
+  Test  acc so far: 0.7343 +- 0.0000
+
+--- Restart 1 ---
+step            train_nll       train_acc       train_penalty
+0               0.69432         0.50294         5.86209e-05  
+100             0.59178         0.72248         0.00053      
+200             0.57628         0.73600         0.00056      
+300             0.57149         0.73830         0.00057      
+400             0.56907         0.73952         0.00061      
+  Train acc so far: 0.7398 +- 0.0002
+  Test  acc so far: 0.7330 +- 0.0012
+
+--- Restart 2 ---
+step            train_nll       train_acc       train_penalty
+0               0.69775         0.47892         3.89217e-05  
+100             0.58843         0.72544         0.00055      
+200             0.57412         0.73656         0.00059      
+300             0.57010         0.73874         0.00061      
+400             0.56810         0.74064         0.00062      
+  Train acc so far: 0.7400 +- 0.0003
+  Test  acc so far: 0.7329 +- 0.0010
+
+--- Restart 3 ---
+step            train_nll       train_acc       train_penalty
+0               0.69684         0.49252         3.53384e-05  
+100             0.58926         0.72526         0.00052      
+200             0.57499         0.73668         0.00057      
+300             0.57094         0.73824         0.00059      
+400             0.56885         0.73952         0.00062      
+  Train acc so far: 0.7399 +- 0.0003
+  Test  acc so far: 0.7329 +- 0.0009
+
+--- Restart 4 ---
+step            train_nll       train_acc       train_penalty
+0               0.69667         0.51064         6.07071e-05  
+100             0.59077         0.72238         0.00051      
+200             0.57564         0.73624         0.00057      
+300             0.57138         0.73836         0.00058      
+400             0.56919         0.73994         0.00059      
+  Train acc so far: 0.7398 +- 0.0003
+  Test  acc so far: 0.7330 +- 0.0008
+
+--- Restart 5 ---
+step            train_nll       train_acc       train_penalty
+0               0.69002         0.51426         3.61349e-06  
+100             0.59134         0.72208         0.00053      
+200             0.57524         0.73676         0.00057      
+300             0.57108         0.73806         0.00059      
+400             0.56905         0.73938         0.00059      
+  Train acc so far: 0.7397 +- 0.0003
+  Test  acc so far: 0.7330 +- 0.0007
+
+--- Restart 6 ---
+step            train_nll       train_acc       train_penalty
+0               0.70677         0.50416         0.00073      
+100             0.59430         0.71902         0.00052      
+200             0.57725         0.73506         0.00055      
+300             0.57211         0.73818         0.00057      
+400             0.56965         0.73910         0.00060      
+  Train acc so far: 0.7397 +- 0.0003
+  Test  acc so far: 0.7329 +- 0.0007
+
+--- Restart 7 ---
+step            train_nll       train_acc       train_penalty
+0               0.69303         0.52002         3.07874e-06  
+100             0.58776         0.72552         0.00053      
+200             0.57389         0.73634         0.00059      
+300             0.57001         0.73862         0.00062      
+400             0.56801         0.73966         0.00063      
+  Train acc so far: 0.7397 +- 0.0003
+  Test  acc so far: 0.7330 +- 0.0008
+
+--- Restart 8 ---
+step            train_nll       train_acc       train_penalty
+0               0.69992         0.48434         0.00011      
+100             0.59128         0.72226         0.00052      
+200             0.57588         0.73498         0.00058      
+300             0.57140         0.73818         0.00059      
+400             0.56915         0.73966         0.00059      
+  Train acc so far: 0.7396 +- 0.0003
+  Test  acc so far: 0.7330 +- 0.0007
+
+--- Restart 9 ---
+step            train_nll       train_acc       train_penalty
+0               0.69421         0.50670         1.69491e-05  
+100             0.59061         0.72320         0.00053      
+200             0.57531         0.73622         0.00057      
+300             0.57118         0.73870         0.00057      
+400             0.56911         0.73944         0.00061      
+  Train acc so far: 0.7397 +- 0.0003
+  Test  acc so far: 0.7330 +- 0.0007
+
+=== Final results ===
+Mode: grayscale  |  Selection: leave_one_domain_out
+Train acc (mean +- std): 0.7397 +- 0.0003
+Test  acc (mean +- std): 0.7330 +- 0.0007
+
+All experiments finished.
